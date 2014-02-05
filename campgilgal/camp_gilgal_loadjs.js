@@ -23,9 +23,7 @@ window.addEvent('domready', function() {
 		$("total_reg_fee").value = totalFee.toFixed(2);
 		$("total_reg_fee_label").innerHTML = totalFee.toFixed(2);
 	}
-	
-	
-	
+		
 	// Array to hold all elements that have a price of $25
 	var fees_25 = new Array("child_1_camp_0","child_1_camp_4","child_1_camp_8","child_1_camp_9","child_2_camp_0","child_2_camp_8","child_2_camp_9","child_3_camp_0","child_3_camp_4","child_3_camp_8","child_3_camp_9","child_4_camp_0","child_4_camp_4","child_4_camp_8","child_4_camp_9","child_5_camp_0","child_5_camp_4","child_5_camp_8","child_5_camp_9","child_6_camp_0","child_6_camp_4","child_6_camp_8","child_6_camp_9","child_7_camp_0","child_7_camp_4","child_7_camp_8","child_7_camp_9","child_8_camp_0","child_8_camp_4","child_8_camp_8","child_8_camp_9","child_9_camp_0","child_9_camp_4","child_9_camp_8","child_9_camp_9","child_10_camp_0","child_10_camp_4","child_10_camp_8","child_10_camp_9");
 
@@ -38,19 +36,70 @@ window.addEvent('domready', function() {
 		camp_title = this.value;
 		camper_id = camper_id.substring(4,camper_id.length);
 		selected_list = "";
+		
 		if(this.checked){
 			if(fees_25.indexOf(this.id) > -1 ){
 				totalFee = totalFee + 25;
 			}else if(fees_50.indexOf(this.id) > -1 ){
 				totalFee = totalFee + 50;
 			}
+			console.log(this.value);
+				// add camp fee
+				switch(this.value){
+					case "Junior Camp (Midwest)":
+					case "Junior Camp (West)":
+					case "Junior Camp (East)":
+						totalFee = totalFee + 650;
+						break;
+					case "Teen Camp (Midwest)":
+					case "Teen Camp (West)":
+					case "Teen Camp (East)":
+						totalFee = totalFee + 325;
+						break;
+					case "Adventure Camp (Midwest)":
+					case "Adventure Camp (West)":
+					case "Adventure Camp (East)":
+						totalFee = totalFee + 325;
+						break;
+					case "Wonderful Winter Weekend (Midwest)":
+					case "Wonderful Winter Weekend (East)":
+					case "WWW Northern California (West)":
+					case "WWW Southern California (West)":
+						totalFee = totalFee + 95;
+						break;
+				}
 		}else{
+			console.log(this.value);
 			if(fees_25.indexOf(this.id) > -1 ){
 				totalFee = totalFee - 25;
 			}else if(fees_50.indexOf(this.id) > -1 ){
 				totalFee = totalFee - 50;
 			}
-		};	
+				// subtract camp fee
+				switch(this.value){
+					case "Junior Camp (Midwest)":
+					case "Junior Camp (West)":
+					case "Junior Camp (East)":
+						totalFee = totalFee - 650;
+						break;
+					case "Teen Camp (Midwest)":
+					case "Teen Camp (West)":
+					case "Teen Camp (East)":
+						totalFee = totalFee - 325;
+						break;
+					case "Adventure Camp (Midwest)":
+					case "Adventure Camp (West)":
+					case "Adventure Camp (East)":
+						totalFee = totalFee - 325;
+						break;
+					case "Wonderful Winter Weekend (Midwest)":
+					case "Wonderful Winter Weekend (East)":
+					case "WWW Northern California (West)":
+					case "WWW Southern California (West)":
+						totalFee = totalFee - 95;
+						break;
+				}			
+		}	
 			// get all sibling checkboxes
 			checkboxes_group = this.getParent().getElementsByTagName('input');
 				for(j = 0; j < checkboxes_group.length; j++){
@@ -124,12 +173,24 @@ window.addEvent('domready', function() {
 	add_validation_gift();
 	
 	// Binding for additional gift field; on blur
-	$('additional_gift').addEvent('blur',function(){
-		console.log(this.value);
-		Number(this.value);
-		totalFee = totalFee + this.value;
-		console.log(totalFee);
-		//changeFee();
+	$('additional_gift_input').addEvent('blur',function(){
+		// if user enters zero or wipes out what was entered set hidden input to zero 
+		// must also adjust total accodingly
+		if(this.value == "" || Number(this.value) == 0){
+			current_gift = $('additional_gift').value; // get current donation amount
+			$('additional_gift').value = 0; // set hidden input to zero
+			totalFee = totalFee - Number(current_gift); // remove the previously given donation amount from total fee
+			changeFee();
+		}else{
+			current_gift = $('additional_gift').value; // get current donation
+			totalFee = totalFee - Number(current_gift); // subtract the previously entered donation amount from total fee	
+			changeFee();
+			
+			$('additional_gift').value = Number(this.value); // set hidden input to new value
+			totalFee = totalFee + Number(this.value); // add new donation amount to total fee
+			changeFee();
+		}	
+		
 	});
 					
 }); // End doc ready; onload
