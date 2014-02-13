@@ -18,9 +18,9 @@ TABLE OF CONTENTS
 ************************************/
 
 
-
-    @media only screen and (max-width: 796px){
-		#optional {display:none;}
+   @media only screen and (max-width: 800px) 
+	{
+		#optional {display:none;} /* 796px */
     }
 	
 
@@ -29,9 +29,7 @@ TABLE OF CONTENTS
 ====================================*/
 
  td, tr { padding:0!important; margin:0!important; border:none; }
-
- 
- 
+  
  /*====================================
 2. Header and Nav styles (menu structure, lists, ordered and unordered)
 ====================================*/
@@ -70,7 +68,7 @@ pagenav.pagination ul a, ul.pagenav a, dl.article-info a:focus {
 3. Main Body Content (paragraphs, image styling)
 ====================================*/
 
-
+.main {max-width:1000px; }
 
 #ja-container blockquote p { 
 	padding:0 30px;
@@ -94,21 +92,69 @@ pagenav.pagination ul a, ul.pagenav a, dl.article-info a:focus {
 	color: #94510F!important;
 	margin-left: 25px;
 }
-dl.article-info {margin-left:25px;} /* ? */
-dd.category-name  /* ? */
-{ 
-background-color: #487093;
-padding: 0px 15px;
-font-size: 30px;
-font-family: Constantia;
-font-weight: bold;
-color: #A3C6E5;
-margin-left: -66px!important;
-margin-right: -26px!important;
+
+/* ? */
+
+#Mod792 {
+	width:244px; /*height: 806px;*/
+	border-color: #B73522;
+	border-style: solid;
+	border-radius: 15px;
+	padding-top: 5px;
+	margin: 0px 0px 10px 0px!important;
+	
+
+}
+#ja-right1 div.moduletable-inner, #ja-left1 div.moduletable-inner {
+	margin: 0px;
+	padding:10px;
+
+}
+
+.item-page {
+	background-image: url(/joomlajfj/htmlpages/htkg/brown-side.png);
+	padding-left: 66px;
+	background-position: 0px;
+	background-repeat: repeat-y;
+	margin-left: 0px;
+}
+.intro-box {margin: 30px 0px;
+	margin-top: 60px!important;}
+.intro-wrapper {
+	border:3px; 
+	border-style:solid; 
+	border-color:#7ba5ca;
+	background-color:#F5F5F5;
+	}
+	
+a.category-name {color:#A3C6E5;}
+
+	
+#ja-container a, dl.article-info a:focus { color: #A3C6E5!important; }
+
+#dl.article-info a:hover, dl.article-info a:focus { color: #A3C6E5!important; }	
+
+dl.article-info {margin-left:25px;} 
+
+.column dd { margin-left: 0px; }
+
+dd.category-name { 
+	background-color: #487093;
+	padding: 0px 15px;
+	font-size: 30px;
+	font-family: Constantia;
+	font-weight: bold;
+	color: #A3C6E5;
+	margin-left: -66px!important;
+	margin-right: -26px!important;
 }
 
 
+ /* ? */
+
 /* INTRO TEXT TABLE STYLES */	
+
+/* change FFFFCC to ##7ea5c4; */
 
 #corner {
 	display:block;
@@ -147,12 +193,18 @@ margin-right: -26px!important;
 div.optionalimage {
 	display:block;
 	width: 244px; /*244*/
-	height: 196px;
+	height: 204px; /*196*/
 	border-width: 2px 2px 2px 0;
 	background-repeat: no-repeat;
 	background-position: center center;
 	}
-		
+	/*?
+	
+	border-color:#7ba5ca;
+	border-style: solid;
+	margin-collapse: none;
+	
+	?*/	
 
 .introtext p {
 	color: #666666;
@@ -200,6 +252,7 @@ table {
 4. Side bar content (adds, search bar, )
 ====================================*/	
 
+.bookend {background-color:#7ba5ca;}
 
 #ja-content-main {
 	background-image: url(/joomlajfj/htmlpages/htkg/brown-side.png);
