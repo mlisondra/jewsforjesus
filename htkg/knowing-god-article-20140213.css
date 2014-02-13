@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/************************************
+====================================
+TABLE OF CONTENTS
+0. Reset
+1. Universal Styles
+2. Header and Nav styles (menu structure, lists, ordered and unordered)
+3. Main Body Content (paragraphs, image styling)
+4. Side bar content (adds, search bar, )
+5. Widget Content (not necessarily in the side)
+6. Footer Content (images, forms, twitter, facebook icons)
+7. Comments and Forms
+====================================
+************************************/
+
+
+/*====================================
+0. Reset
+====================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, p, blockquote, pre, a, abbr, acronymn, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	/*margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inhertit;
+	font-style: inherit;*/
+	/*font-size: 100%;*/
+	/*font-family: inherit;*/
+	/*vertical-align: baseline;*/
+}
+#ja-container .main .main-inner1 {width:100%; }
+.main {max-width:1000px;
+}
+ td, tr { padding:0!important; margin:0!important; border:none; }
+dd.category-name {background-color: #487093;
+padding: 0px 15px;
+font-size: 30px;
+font-family: Constantia;
+font-weight: bold;
+color: #A3C6E5;
+}
+a.category-name {color:#A3C6E5;}
+.column dd {
+margin-left: 0px;
+}
+#ja-container a, dl.article-info a:focus {
+color: #A3C6E5!important;
+}
+#dl.article-info a:hover, dl.article-info a:focus {
+color: #A3C6E5!important;
+}
+#Mod792 {width:244px;
+/*height: 806px;*/
+	border-color: #B73522;
+	border-style: solid;
+	border-radius: 15px;
+	padding-top: 5px;
+	margin: 0px 0px 10px 0px!important;
+	
+
+}
+#ja-right1 div.moduletable-inner, #ja-left1 div.moduletable-inner {
+margin: 0px;
+padding:10px;
+
+}
+/*====================================
+3. Main Body Content (paragraphs, image styling)
+====================================*/
+
+
+    @media only screen and (max-width: 796px){
+		#optional {display:none;}
+    }
+#corner {
+	display:block;
+	width: 5px;
+	height: 5px;
+	background-color:#FFFFCC;
+	}	
+	
+ .corner {
+	max-width:5px;
+	max-height:5px;
+	} 
+
+ #corner, .borderleft, .borderright, div.optionalimage 
+  { 
+	}
+	
+.borderleft { border-width: 0 2px 0 0; }
+.borderright { border-width: 0 0 0 2px; }	
+.bowtop, .bowbottom { background-repeat: repeat-x; border:none; }
+
+.bowtop {
+	background-image: url(http://www.jewsforjesus.org/htmlpages/htkg/bow-top.png);
+	background-position: center bottom;
+	}
+	
+.bowbottom {
+	background-image: url(http://www.jewsforjesus.org/htmlpages/htkg/bow-bottom.png);
+	background-position: center top;
+	}
+
+div.optionalimage {
+	display:block;
+	width: 244px; /*244*/
+	height: 204px;
+	border-width: 3px 3px 3px 2px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-color:#7ba5ca;
+	border-style: solid;
+	margin-collapse: none;
+
+	}
+	
+.item-page {
+	background-image: url(/joomlajfj/htmlpages/htkg/brown-side.png);
+	padding-left: 66px;
+	background-position: 0px;
+	background-repeat: repeat-y;
+	margin-left: 0px;
+}
+
+
+	.intro-box {margin: 30px 0px;
+	margin-top: 60px!important;}
+.intro-wrapper {
+	border:3px; 
+	border-style:solid; 
+	border-color:#7ba5ca;
+	background-color:#F5F5F5;
+	}
+table.introtext {}
+.bookend {background-color:#7ba5ca;}
+.introtext p {
+	color: #666666;
+	/*font-style:italic;*/
+	font-size: 16px; /*16px*/
+	line-height: 26px; /*26px*/
+	padding: 1em;
+	}	
+	
+
+.introtext p:first-child:first-letter { 
+	float: left; 
+	color: #6f438e; 
+	font-size: 75px; 
+	line-height: 60px; 
+	padding-top: 4px; 
+	padding-right: 8px; 
+	padding-left: 3px;  
+	}
+
+table { 
+	border-spacing: 0px
+	border-collapse: seperate!important;
+}
+
+#ja-container blockquote p { 
+	padding:0 30px;
+	/*line-height: 3em;*/
+	font-size:1.2em;
+	font-style:italic;
+	text-shadow:none;
+	margin: 0px 0px 15px;
+	
+	}
+#ja-container p { padding-bottom:0px; }	
+#ja-container blockquote { 
+	background-color: #F1ECD0!important; 
+	margin: 18px 0px 18px 30px!important
+	padding 0 0 20px 0;
+	width: 94%!important;
+	}
+.ja-content-main h2 {
+	font-size: 200%!important;
+	color: #94510F!important;
+	margin-left: 25px;
+}
+.pagination ul, ul.pagenav {
+	float: left;
+	margin: 0px 0;
+	background-color: #487093;
+	width: 100%;
+	padding: 15px;
+	font-size: 20px;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	color:#FFF;
+}
+pagenav.pagination ul a, ul.pagenav a, dl.article-info a:focus {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	color:#FFF!important;
+	font-weight:normal;
+	text-decoration:underline;
+}
+.pagenav-prev {float:none!important;}
+.pagenav-next{float:none!important;}
+
+
+/*FOR 2-10-14*/
+dl.article-info {margin-left:25px;}
+dd.category-name {
+background-color: #487093;
+padding: 0px 15px;
+font-size: 30px;
+font-family: Constantia;
+font-weight: bold;
+color: #A3C6E5;
+margin-left: -66px!important;
+margin-right: -26px!important;
+}
+#ja-content-main {
+	background-image: url(/joomlajfj/htmlpages/htkg/brown-side.png);
+	padding-right: 68px;
+	background-position: right;
+	background-repeat: repeat-y;
+	margin-right: -49px;
+}
+
+
+ul.pagenav {
+	float: left;
+	margin: 0px 0px 0px -58px;
+	background-color: #487093;
+	width: 108%;
+	padding: 15px;
+	font-size: 20px;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	color: #FFF;
+}
+
+#htkg-article {
+	padding: 0 25px;
+}
+
+.itp-social-buttons-box {
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	clear: both;
+	border-top: none;
+	border:none;
+	width: 50px;
+padding-left: -16px;
+margin-left: -48px;
+float: left;
+}
+.itp-sbb-bothl{border:none;}
