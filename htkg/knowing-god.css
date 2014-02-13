@@ -1,0 +1,809 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+/************************************
+====================================
+TABLE OF CONTENTS
+0. Reset
+1. Universal Styles
+2. Header and Nav styles (menu structure, lists, ordered and unordered)
+3. Main Body Content (paragraphs, image styling)
+4. Side bar content (adds, search bar, )
+5. Widget Content (not necessarily in the side)
+6. Footer Content (images, forms, twitter, facebook icons)
+7. Comments and Forms
+====================================
+************************************/
+
+
+/*====================================
+0. Reset
+====================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, p, blockquote, pre, a, abbr, acronymn, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	/*margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inhertit;
+	font-style: inherit;*/
+	/*font-size: 100%;*/
+	/*font-family: inherit;*/
+	/*vertical-align: baseline;*/
+}
+#ja-content { margin-top: 0px;}
+
+/*====================================
+1. UNIVERSAL STYLES
+
+COLOR GUIDE:
+# Light Yellow: #FFFFCC (body background, article background)
+# Mid Yellow: #c6be97 (left sidebar)
+# Dark Yellow: #afa985 (navigation bar)
+# Toupe: #e7dec1 (roman numerals)
+# Dark Violet: #663399 (article header)
+# Violet: #6f438e (drop cap, bible verse link)
+# Mid Blue: #6699cc (border for into, image border)
+# Light Grey: #f5f5f5 (intro background, verse background)
+# Grey: #595959 (intro text)
+# Coal: #585858 (main category header, paragraph text)
+# Dark Grey: #666666 (scroll bar)
+
+TYPOGRAPHY GUIDE:
+# font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif
+
+Headings - Georgia (14px  - 36px)
+Body - Arial 12px
+Quotes - Georgia, Italic 12px
+====================================*/
+
+
+:focus { outline: 0; }
+html { background: #FFFFFF; }
+body { /*line-height: 1; color: #585858; background: #FFFFCC;*/ }
+body#bd { background-color:#FFFFFF; }
+#ja-container {background-color: #FFFFE4;}
+#ja-slider {background-color: #FFFFE4;}
+		#ja-container .main .main-inner1 {width:1225px; }
+    @media only screen and (max-width: 796px){
+	#ja-container .main .main-inner1 {width:100%;}
+    }
+.main {width:1205px;
+}
+#ja-mainnav{
+	float: right;
+	margin: -70px 0px 0px;
+}
+#ja-top {height:0px;}
+
+h1.componentheading, .componentheading {
+visibility: hidden;
+height: 0px;	
+}
+
+/* iframe {}  http://css-tricks.com/custom-scrollbars-in-webkit/ */
+h1, h2, h3, h4, h5, p,
+span.breadcrumbs, .subheading-category 
+ {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	/*width: 100%!important;*/
+	}
+
+#ja-container h2.contentheading a:hover, h2.contentheading a:focus, h2.contentheading a:active, h2.contentheading, .contentheading a, .contentheading a:hover, .contentheading a:active, .contentheading a:focus, h2.contentheading a, .ja-content-main h2, .contentheading, .componentheading	
+ { 
+	color: #663399!important; 
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-weight:bold;
+	font-size: 1.55em!important; 
+}	
+
+	
+#ja-container p { font-size: 1.1em; /*line-height: 2.25em;*/ padding-bottom: 30px; } /* 12px; line-height: 24px; padding-bottom: 30px; */
+#ja-container blockquote {}
+#ja-container a, dl.article-info a:hover, dl.article-info a:focus { color: #6f438e!important; }
+#ja-container h2 a, dl.article-info h2 a:hover, dl.article-info h2 a:focus {
+	color: #844B12!important;
+}
+
+em {}
+#ja-content img { border: 1px #6699cc; padding: 15px; }
+strike {}
+strong {}
+sub {}
+sup {}
+ol {}
+ul {}
+li {}
+form {}
+table {
+	border-collapse: seperate;
+	border-spacing: 0;
+}
+caption {}
+tbody {}
+tr {}
+td {}
+
+/*====================================
+2. Header and Nav styles (menu structure, lists, ordered and unordered)
+====================================*/
+
+div#Mod17, ul.menutopnavjfj { display: none; }
+
+span.breadcrumbs, .subheading-category, .ja-megamenu .childcontent-inner, .ja-megamenu .level1 .childcontent-inner  { }
+
+div#ja-megamenu, #ja-top  { background:none; }
+
+.ja-megamenu a { color: #FFF; }
+
+/*for Article Template*/
+dd.category-name {
+	/*font-size: 30px;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-weight: bold;
+	color: white;
+	background-color: #A1B9DD;*/
+}
+
+/*====================================
+3. Main Body Content (paragraphs, image styling)
+
+EXAMPLES 
+.column-a { width: 70%; float: left; }
+.column-b { width: 30%; float: right;}
+.button {
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-boder-radius: 6px;
+}
+.green {  background: green; }
+.left { float: left; }
+.right { float: right; }
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after, q:before, q:after  { content: "";}
+blockquote, q { quotes: "" ""; }
+====================================*/
+#ja-container .subheading-category {
+	font-size: 2.25em;
+	color: #585858;
+	}
+
+div.moduletable div.moduletable-inner, div.moduletable div.moduletable-inner, #ja-mainbody, p.readmore a, p.readmore a:hover  { 
+	border: none; 
+	background: #FFFFE4; 
+	color:#585858; 
+	}
+
+/*UNUSED*/
+
+.drop-cap { 
+font-size: 50px; 
+color: #6f438e; 
+}
+
+
+/*====================================
+4. Side bar content (adds, search bar, )
+====================================*/
+
+
+/*====================================
+5. Widget Content 
+====================================*/
+
+
+#questions {
+	font-size: 18px;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	width: 100%!important;
+	/*max-width: 580px!important;*/
+	margin-left: -50%; left: 50%; position: relative;
+	float:left;
+	max-width:660px;
+}
+#questions li {	/*margin-bottom:30px;*/}
+
+#questions .inputbox, input[type="text"], input[type="password"], input[type="email"]  {
+	background:#ECF7FF; 
+	width:100px;
+	}
+#questions .inputbox, select  {
+	background:#ECF7FF;
+	}
+#questions ol { 
+	margin-left: 100px; 
+	}
+
+#questions li {
+	font-size: 4em;
+	color: #5D87C7;
+	border:#CBBDB0;
+	border-bottom-style:solid;
+	color: #5D87C7;
+	background-color: #F6EBD3;
+	border-radius: 15px;
+	padding: 14px;
+}
+#questions li li {
+	border: aliceblue;
+	border-style: none;
+}
+#questions ol {
+	line-height: 180%;
+}
+#questions li {
+	line-height: 100%;
+}
+
+#ja-container a.lbsBibleRef, dl.article-info a.lbsBibleRef:hover, dl.article-info a.lbsBibleRef:focus {
+	text-decoration: underline;
+	/*color: #FF9099!important */
+}
+#questions p { 
+	display: inline-block; 
+	vertical-align: text-top; 
+	font-size: 0.3em; 
+	line-height: 2.0; 
+	color:#515151;
+	/*padding-left: 2em;*/ 
+	padding-bottom:0px;
+	}
+
+.passage {
+	display: block;
+	overflow-y: auto;
+	max-height: 200px;
+	background-color: white;
+	background-image:url(/joomlajfj/htmlpages/htkg/paper-bkg.jpg);
+	background-position:center;
+	background-size:100%;
+	border-radius: 25px;
+	padding: 8px 25px;	
+	color:#883A06;
+	font-size: 16px;
+	font-style: oblique;
+	/*margin: 10px 20px;*/
+	font-weight: bold;
+	line-height: 1.8em;
+	}
+	
+.passage::-webkit-scrollbar {
+    width: 12px;
+}
+
+.passage::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.passage::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}	
+.answer_list {
+	font-size:0.08em;
+	margin-left: 40px!important;
+	}
+.answer_list li:hover {
+	background-color: #EFDCB2!important;
+	border-radius: 10px;
+}
+.correct-answer {
+	color: #FFF;
+	font-weight: bold;
+	background-color: green;
+	border-radius: 18px;
+	padding: 14px;
+	margin-top: 10px;
+}
+.incorrect-response {
+	color: brown;
+	border-color: #B73522;
+	border-style: solid;
+	border-radius: 15px;
+	padding: 14px;
+	font-size: 20px;
+	margin-top: 10px;
+}
+
+#biblia_search {
+	/*position:fixed; 
+	right:0; 
+	display:block;
+	margin-left:10px;
+	padding-right:20px;
+	float:left;
+	width: 300px;*/
+}
+#example3 {
+	position: relative;
+	width: 265px!important;
+	height: 346px;
+	overflow-y: hidden;
+
+}
+#toggle_search{	
+	/*margin: 0px 0px 0px 10px!important;*/
+}
+#container{
+	border-color: #B73522;
+	border-style: solid;
+	border-radius: 15px;
+	padding-top: 5px;
+	width: 265px!important;
+	/*height: 2800px;*/
+	margin: 0px 0px 10px 0px!important;
+	float:right;
+}
+#sidebar-menu	{
+	 display:none; 
+	 width:265px; 
+	 background:#EEEEEE; 
+	 border:1px solid #DFDFDF;
+	 padding:0px; 
+	 -webkit-border-radius:10px; 
+	 -moz-border-radius:10px; 
+	 }
+#sidebar-menu ul{ 
+	padding:0; 
+	list-style-type:none; 
+	}
+#sidebar-menu a	{ 
+	/*color:#fff; 
+	display:block; 
+	height:48px; 
+	width:48px; 
+	text-indent:-3000px; 
+	overflow:hidden; */
+	padding-left: 10px;
+	}
+.ja-megamenu li
+{
+	display:inline;
+	list-style-type:none;
+	float:left;
+	padding: 0px 20px 0px 0px;
+	color: #000!important; 
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-weight:bold;
+	font-size: 1.10em!important; 
+	margin-bottom: 0px;
+
+}
+.ja-megamenu li a {
+	color:#000000;}
+
+.ja-megamenu li
+{
+	display:inline;
+	list-style-type:none;
+	float:left;
+	padding: 0px 20px 0px 0px;
+	color: #000!important; 
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	font-weight:bold;
+	font-size: 1.10em!important; 
+	margin-bottom: 0px;
+
+}
+.menuhorizontal_menu li a {
+	color:#000000;}
+.ja-megamenu ul.level0 li.mega {
+	border-top: 0px solid #353637!important;
+	border-bottom: 0px solid #e5e6e7!important;
+	height: 20px;
+	padding-top: 10px;
+}
+
+#menu5585
+{
+
+	}
+h1.logo a {
+	width: 50px!important;
+	height:50px!important;
+	background-image:url(/htmlpages/htkg/htkg-logo.png)!important;
+	float:left!important;
+	background-repeat:no-repeat!important;
+	background-position: left 0px!important;
+}
+
+h1.logo {
+	width: 50px!important;
+	height:50px!important;
+		float:left!important;
+
+}
+
+/*====================================
+6. Footer Content (images, forms, twitter, facebook icons)
+====================================*/
+
+/*====================================
+7. Comments and Forms
+====================================*/
+
+
+#ja-content img {
+border: 0px;
+padding: 0px;}
+
+
+
+
+
+/*HOME PAGE*/
+
+
+
+#home-wrapper {
+	width:1280px;
+}
+
+#home-video-title {
+	display:inline-block;
+	width:489px;
+	height:90px;
+}
+#home-intro-video {
+	display:inline-block;
+	width:489px;
+	height:424px;
+}
+#home-intro-categories {
+	display:inline-block;
+	width:491px;
+	height:424px;
+}
+
+#home-who-is-god {
+	display:inline-block;
+	width:244px;
+	height:212px;
+}
+
+#home-who-is-jesus {
+	display:inline-block;
+	width:244px;
+	height:212px;
+}
+
+#home-video {
+	display:inline-block;
+	width:489px;
+	height:295px;
+	background-color:#000000;
+}
+
+#home-relationship {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#home-experience {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#home-video-footer {
+	display:inline-block;
+	width:489px;
+	height:44px;
+}
+
+/*#home-text-box {
+	display:inline-block;
+	width:100%;
+	max-width:696px;
+	height:191px;
+	background-color:#007C96;
+	margin:0px;
+	padding-bottom: 10px; 
+	padding-left: 20px; 
+	padding-right: 20px; 
+	padding-top: 10px; 
+}*/
+
+#home-text-box {
+display: inline-block;
+width: 100%;
+max-width: 489px;
+height: 211px;
+background-color: #007C96;
+margin: 0px;
+}
+ #who-is-god-text {
+	color: #FFFFFF; 
+	font-size: 19px; 
+	/*line-height: 1.5em!important; */
+		font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+
+	margin: 0px;
+	padding: 0px;
+}
+#home-faith-video {
+	display:inline-block;
+	width:489px;
+	height:211px;
+}
+
+
+
+
+
+/*JESUS CATEGORY*/
+
+#Table_01 {
+	width:1200px;
+}
+
+#who-is-jesus-heading {
+	display:inline-block;
+	width:491px;
+	height:287px;
+}
+
+#jesus-category-980-04 {
+	display:inline-block;
+	width:489px;
+	height:287px;
+}
+
+#born-to-virgin {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#live-sinless-life {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#greatest-teacher-of-all-time {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#healed-sick-raised-dead {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#substitutionary-sacrifice {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#came-back-to-life {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#return-to-heaven {
+	display:inline-block;
+	width:489px;
+	height:211px;
+}
+
+#famous-rabbi {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#jesus-messiah {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#who-is-jesus-study-guide {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#whats-next {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+#next-bar-sample {
+	display:inline-block;
+	width:980px;
+	height:67px;
+}
+
+
+/*WHO IS GOD CATEGORY*/
+
+
+
+#who-is-god-wrapper {
+	display:inline-block;
+	width:1205px;
+}
+
+#who-is-god-heading {
+	display:inline-block;
+	width:491px;
+	height:287px;
+}
+
+#layout-god-cat-1-web-02 {
+	display:inline-block;
+	width:489px;
+	height:287px;
+}
+
+#god-is-one {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#god-created-heavens-earth {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#god-is-all-powerful {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#god-knows-everything {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#god-loves-us {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#god-forgives-our-sins1 {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#who-is-god-interactive-study-guide {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#connect-with-god-2 {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+/*PERSONAL RELATIONSHIP*/
+
+#relationship-wrapper {
+	display:inline-block;
+	width: 1205px;
+}
+
+#how-to-have-a-personal-relationship-with-god {
+	display:inline-block;
+	width:491px;
+	height:287px;
+}
+
+#relationship-video {
+	display:inline-block;
+	width:489px;
+	height:287px;
+}
+
+#repentance {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#faith {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#god-forgives-our-sins {
+	display:inline-block;
+	width:491px;
+	height:428px;
+}
+
+#personal-relationship-interactive-study-guide {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#connect-with-god-2 {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+#boxes-relationship {
+	display:inline-block;
+	width:491px;
+	height:428px;
+}
+
+/*EXPERIENCE GOD DAILY CATEGORY*/
+
+
+#experience-wrapper {
+	display:inline-block;
+	width:1205px;
+}
+
+#how-to-experience-god-daily {
+	display:inline-block;
+	width:489px;
+	height:288px;
+}
+
+#experience-video {
+	display:inline-block;
+	width:489px;
+	height:288px;
+}
+
+#experience-god-daily-textbox {
+	display:inline-block;
+	width:489px;
+	height:211px;
+}
+
+#talk-to-god-daily {
+	display:inline-block;
+	width:489px;
+	height:211px;
+}
+
+#listen-to-god-daily {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#spend-time-with-other-followers-of-jesus {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#experience-god-daily-study-guide {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
+#connect-with-god-4 {
+	display:inline-block;
+	width:244px;
+	height:211px;
+}
+
