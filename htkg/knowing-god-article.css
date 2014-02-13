@@ -74,14 +74,16 @@ padding:10px;
 ====================================*/
 
 
-    @media only screen and (max-width: 796px){
-		#optional {display:none;}
+    @media only screen and (max-width: 800px) 
+	{
+		#optional {display:none;} /* 796px */
     }
+
 #corner {
 	display:block;
 	width: 5px;
 	height: 5px;
-	background-color:#FFFFCC;
+	background-color:#7ea5c4;
 	}	
 	
  .corner {
@@ -111,7 +113,7 @@ div.optionalimage {
 	display:block;
 	width: 244px; /*244*/
 	height: 204px;
-	border-width: 3px 3px 3px 2px;
+	/*border-width: 3px 3px 3px 2px;*/
 	background-repeat: no-repeat;
 	background-position: center center;
 	border-color:#7ba5ca;
@@ -236,9 +238,9 @@ ul.pagenav {
 	color: #FFF;
 }
 
-#htkg-article {
+/*#htkg-article {
 	padding: 0 25px;
-}
+}*/
 
 .itp-social-buttons-box {
 	width: 100%;
