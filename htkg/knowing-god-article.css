@@ -18,22 +18,97 @@ TABLE OF CONTENTS
 ************************************/
 
 
+
+    @media only screen and (max-width: 796px){
+		#optional {display:none;}
+    }
+	
+
 /*====================================
-0. Reset
+1. UNIVERSAL STYLES
 ====================================*/
 
  td, tr { padding:0!important; margin:0!important; border:none; }
+
+ 
+ 
+ /*====================================
+2. Header and Nav styles (menu structure, lists, ordered and unordered)
+====================================*/
+ 
+ ul.pagenav {
+	float: left;
+	margin: 0px 0px 0px -58px;
+	background-color: #487093;
+	width: 108%;
+	padding: 15px;
+	font-size: 20px;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	color: #FFF;
+}
+pagenav.pagination ul a, ul.pagenav a, dl.article-info a:focus {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	color:#FFF!important;
+	font-weight:normal;
+	text-decoration:underline;
+}
+.pagenav-prev {float:none!important;}
+.pagenav-next{float:none!important;}
+.pagination ul, ul.pagenav {
+	float: left;
+	margin: 0px 0;
+	background-color: #487093;
+	width: 100%;
+	padding: 15px;
+	font-size: 20px;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	color:#FFF;
+}
+ 
 
 /*====================================
 3. Main Body Content (paragraphs, image styling)
 ====================================*/
 
 
-    @media only screen and (max-width: 796px){
-		#optional {display:none;}
-    }
+
+#ja-container blockquote p { 
+	padding:0 30px;
+	/*line-height: 3em;*/
+	font-size:1.2em;
+	font-style:italic;
+	text-shadow:none;
+	margin: 0px 0px 15px;
 	
-	
+	}
+ #ja-container p { padding-bottom:0px; }	
+
+#ja-container blockquote { 
+	background-color: #F1ECD0!important; 
+	margin: 18px 0px 18px 30px!important
+	padding 0 0 20px 0;
+	width: 94%!important;
+	}
+.ja-content-main h2 {
+	font-size: 200%!important;
+	color: #94510F!important;
+	margin-left: 25px;
+}
+dl.article-info {margin-left:25px;} /* ? */
+dd.category-name  /* ? */
+{ 
+background-color: #487093;
+padding: 0px 15px;
+font-size: 30px;
+font-family: Constantia;
+font-weight: bold;
+color: #A3C6E5;
+margin-left: -66px!important;
+margin-right: -26px!important;
+}
+
+
+/* INTRO TEXT TABLE STYLES */	
 
 #corner {
 	display:block;
@@ -119,3 +194,46 @@ table {
 	width: 75%;
 	
 	}	/*FFFFCC*/
+	
+
+/*====================================
+4. Side bar content (adds, search bar, )
+====================================*/	
+
+
+#ja-content-main {
+	background-image: url(/joomlajfj/htmlpages/htkg/brown-side.png);
+	padding-right: 68px;
+	background-position: right;
+	background-repeat: repeat-y;
+	margin-right: -49px;
+}
+
+/*====================================
+5. Widget Content 
+====================================*/	
+
+.itp-social-buttons-box {
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	clear: both;
+	border-top: none;
+	border:none;
+	width: 50px;
+	padding-left: -16px;
+	margin-left: -48px;
+	float: left;
+}
+.itp-sbb-bothl{border:none;}
+	
+/*====================================
+6. Footer Content (images, forms, twitter, facebook icons)
+====================================*/
+
+
+
+/*====================================
+7. Comments and Forms
+====================================*/	
+	

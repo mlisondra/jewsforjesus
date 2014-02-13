@@ -105,13 +105,12 @@ h1.logo {
 		float:left!important;
 
 }	
+
+h1.componentheading, .componentheading {
+	visibility: hidden;
+	height: 0px;	
+}
 	
-table {
-	border-collapse: seperate;!important
-	border-spacing: 0;
-}	
-
-
 /*====================================
 2. Header and Nav styles (menu structure, lists, ordered and unordered)
 ====================================*/
@@ -122,8 +121,6 @@ table {
 	float: right;
 	margin: -70px 0px 0px;
 }
-
-
 
 .ja-megamenu li
 {
@@ -138,8 +135,7 @@ table {
 	margin-bottom: 0px;
 
 }
-.ja-megamenu li a {
-	color:#000000;}
+.ja-megamenu li a {	color:#000000;}
 
 .ja-megamenu li
 {
@@ -163,19 +159,11 @@ table {
 	padding-top: 10px;
 }
 
-#menu5585
-{
-
-	}
-	
-	
+#menu5585 {	}
+		
 /*HOME PAGE*/
 
-
-
-#home-wrapper {
-	width:1280px;
-}
+#home-wrapper { 	width:1280px; }
 
 #home-video-title {
 	display:inline-block;
@@ -193,13 +181,8 @@ table {
 	height:424px;
 }
 
-#home-who-is-god {
-	display:inline-block;
-	width:244px;
-	height:212px;
-}
-
-#home-who-is-jesus {
+#home-who-is-god, #home-who-is-jesus 
+{
 	display:inline-block;
 	width:244px;
 	height:212px;
@@ -212,17 +195,6 @@ table {
 	background-color:#000000;
 }
 
-#home-relationship {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#home-experience {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
 
 #home-video-footer {
 	display:inline-block;
@@ -244,240 +216,74 @@ table {
 }*/
 
 #home-text-box {
-display: inline-block;
-width: 100%;
-max-width: 489px;
-height: 211px;
-background-color: #007C96;
-margin: 0px;
+	display: inline-block;
+	width: 100%;
+	max-width: 489px;
+	height: 211px;
+	background-color: #007C96;
+	margin: 0px;
 }
+
+
+/* =====================================================
+SQUARE THUMBNAILS
+display:inline-block; width:244px; height:211px; 
+===================================================== */ 
+
+#home-relationship, #home-experience, #live-sinless-life, #born-to-virgin, #greatest-teacher-of-all-time, #healed-sick-raised-dead, #substitutionary-sacrifice, #came-back-to-life, #famous-rabbi, #jesus-messiah, #who-is-jesus-study-guide, #whats-next, #god-is-one, #god-created-heavens-earth, #god-is-all-powerful, #god-knows-everything, #god-loves-us, #god-forgives-our-sins1, #who-is-god-interactive-study-guide, #connect-with-god-2, #repentance, #faith, #personal-relationship-interactive-study-guide, #connect-with-god-2, #listen-to-god-daily, #spend-time-with-other-followers-of-jesus, #experience-god-daily-study-guide, #connect-with-god-4 {
+	display:inline-block;
+	width:244px;
+	height:211px;
+	}
+
  #who-is-god-text {
 	color: #FFFFFF; 
 	font-size: 19px; 
 	/*line-height: 1.5em!important; */
 		font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
-
 	margin: 0px;
 	padding: 0px;
 }
-#home-faith-video {
+
+#home-faith-video, #return-to-heaven, #experience-god-daily-textbox, #talk-to-god-daily, {
 	display:inline-block;
 	width:489px;
 	height:211px;
 }
 
 
-
-
-
 /*JESUS CATEGORY*/
 
-#Table_01 {
-	width:1200px;
-}
+#Table_01 {	width:1200px; }
 
-#who-is-jesus-heading {
+#who-is-jesus-heading,#who-is-god-heading, #how-to-have-a-personal-relationship-with-god {
 	display:inline-block;
 	width:491px;
 	height:287px;
 }
 
-#jesus-category-980-04 {
+#jesus-category-980-04, #relationship-video, #layout-god-cat-1-web-02 {
 	display:inline-block;
 	width:489px;
 	height:287px;
 }
 
-#born-to-virgin {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#live-sinless-life {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#greatest-teacher-of-all-time {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#healed-sick-raised-dead {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#substitutionary-sacrifice {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#came-back-to-life {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#return-to-heaven {
-	display:inline-block;
-	width:489px;
-	height:211px;
-}
-
-#famous-rabbi {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#jesus-messiah {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#who-is-jesus-study-guide {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#whats-next {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
 #next-bar-sample {
 	display:inline-block;
 	width:980px;
 	height:67px;
 }
 
-
 /*WHO IS GOD CATEGORY*/
 
-
-
-#who-is-god-wrapper {
+#who-is-god-wrapper, #relationship-wrapper, #experience-wrapper {
 	display:inline-block;
 	width:1205px;
 }
 
-#who-is-god-heading {
-	display:inline-block;
-	width:491px;
-	height:287px;
-}
-
-#layout-god-cat-1-web-02 {
-	display:inline-block;
-	width:489px;
-	height:287px;
-}
-
-#god-is-one {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#god-created-heavens-earth {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#god-is-all-powerful {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#god-knows-everything {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#god-loves-us {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#god-forgives-our-sins1 {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#who-is-god-interactive-study-guide {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#connect-with-god-2 {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
 /*PERSONAL RELATIONSHIP*/
 
-#relationship-wrapper {
-	display:inline-block;
-	width: 1205px;
-}
-
-#how-to-have-a-personal-relationship-with-god {
-	display:inline-block;
-	width:491px;
-	height:287px;
-}
-
-#relationship-video {
-	display:inline-block;
-	width:489px;
-	height:287px;
-}
-
-#repentance {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#faith {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#god-forgives-our-sins {
-	display:inline-block;
-	width:491px;
-	height:428px;
-}
-
-#personal-relationship-interactive-study-guide {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#connect-with-god-2 {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-#boxes-relationship {
+#god-forgives-our-sins, #boxes-relationship {
 	display:inline-block;
 	width:491px;
 	height:428px;
@@ -485,60 +291,11 @@ margin: 0px;
 
 /*EXPERIENCE GOD DAILY CATEGORY*/
 
-
-#experience-wrapper {
-	display:inline-block;
-	width:1205px;
-}
-
-#how-to-experience-god-daily {
+#how-to-experience-god-daily, #experience-video {
 	display:inline-block;
 	width:489px;
 	height:288px;
 }
-
-#experience-video {
-	display:inline-block;
-	width:489px;
-	height:288px;
-}
-
-#experience-god-daily-textbox {
-	display:inline-block;
-	width:489px;
-	height:211px;
-}
-
-#talk-to-god-daily {
-	display:inline-block;
-	width:489px;
-	height:211px;
-}
-
-#listen-to-god-daily {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#spend-time-with-other-followers-of-jesus {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#experience-god-daily-study-guide {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-
-#connect-with-god-4 {
-	display:inline-block;
-	width:244px;
-	height:211px;
-}
-	
 
 /*====================================
 3. Main Body Content (paragraphs, image styling)
@@ -569,12 +326,15 @@ div#ja-megamenu, #ja-top  { background:none; }
 
 #ja-content { margin-top: 0px;}	
 
-#ja-content img { border: 1px #6699cc; padding: 15px; }
-
-#ja-content img {
+#ja-content img { 
+	border: 1px #6699cc; 
+	padding: 15px; 
+	}
+	
+/*#ja-content img {
 	border: 0px;
 	padding: 0px;
-}
+}*/
 
 /* JA-CONTAINER */
 
@@ -582,9 +342,11 @@ div#ja-megamenu, #ja-top  { background:none; }
 	font-size: 2.25em;
 	color: #585858;
 	}
-
 	
-#ja-container p { font-size: 1.1em; /*line-height: 2.25em;*/ padding-bottom: 30px; } /* 12px; line-height: 24px; padding-bottom: 30px; */
+#ja-container p { 
+	font-size: 1.1em; /*line-height: 2.25em;*/ 
+	padding-bottom: 30px; 
+	} /* 12px; line-height: 24px; padding-bottom: 30px; */
 
 #ja-container blockquote {}
 
@@ -595,14 +357,11 @@ div#ja-megamenu, #ja-top  { background:none; }
 }
 
 #ja-container {background-color: #FFFFE4;}
-
 #ja-container .main .main-inner1 {width:1225px; }
+
+
     
 
-h1.componentheading, .componentheading {
-visibility: hidden;
-height: 0px;	
-}
 
 div#Mod17, ul.menutopnavjfj { display: none; }
 
@@ -622,9 +381,6 @@ dd.category-name {
 	font-size: 50px; 
 	color: #6f438e; 
 }
-
-
-
 
 /*====================================
 4. Side bar content (adds, search bar, )
@@ -675,12 +431,8 @@ dd.category-name {
 	background:#ECF7FF; 
 	width:100px;
 	}
-#questions .inputbox, select  {
-	background:#ECF7FF;
-	}
-#questions ol { 
-	margin-left: 100px; 
-	}
+#questions .inputbox, select  {	background:#ECF7FF;	}
+#questions ol {	margin-left: 100px;	}
 
 #questions li {
 	font-size: 4em;
@@ -696,12 +448,9 @@ dd.category-name {
 	border: aliceblue;
 	border-style: none;
 }
-#questions ol {
-	line-height: 180%;
-}
-#questions li {
-	line-height: 100%;
-}
+
+#questions ol {	line-height: 180%; }
+#questions li {	line-height: 100%; }
 
 #ja-container a.lbsBibleRef, dl.article-info a.lbsBibleRef:hover, dl.article-info a.lbsBibleRef:focus {
 	text-decoration: underline;
@@ -735,9 +484,7 @@ dd.category-name {
 	line-height: 1.8em;
 	}
 	
-.passage::-webkit-scrollbar {
-    width: 12px;
-}
+.passage::-webkit-scrollbar { width: 12px; }
 
 .passage::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
@@ -788,12 +535,11 @@ dd.category-name {
 	width: 265px!important;
 	height: 346px;
 	overflow-y: hidden;
-
 }
+
 #toggle_search{	
 	/*margin: 0px 0px 0px 10px!important;*/
 }
-
 
 /*====================================
 6. Footer Content (images, forms, twitter, facebook icons)
