@@ -38,12 +38,13 @@ window.addEvent('domready', function() {
 		selected_list = "";
 		
 		if(this.checked){
+		/*
 			if(fees_25.indexOf(this.id) > -1 ){
 				totalFee = totalFee + 25;
 			}else if(fees_50.indexOf(this.id) > -1 ){
 				totalFee = totalFee + 50;
 			}
-			console.log(this.value);
+		*/
 				// add camp fee
 				switch(this.value){
 					case "Junior Camp (Midwest)":
@@ -69,12 +70,13 @@ window.addEvent('domready', function() {
 						break;
 				}
 		}else{
-			console.log(this.value);
+			/*
 			if(fees_25.indexOf(this.id) > -1 ){
 				totalFee = totalFee - 25;
 			}else if(fees_50.indexOf(this.id) > -1 ){
 				totalFee = totalFee - 50;
 			}
+			*/
 				// subtract camp fee
 				switch(this.value){
 					case "Junior Camp (Midwest)":
