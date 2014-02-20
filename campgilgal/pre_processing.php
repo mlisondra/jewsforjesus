@@ -5,12 +5,15 @@ $form->data['full_name']  = $form->data['fname'].' '.$form->data['lname'];
 switch($form->data['chronoform_data']['select_region']){
 	case "West":
 		$form->data['admin_email']  = 'campgilgalwest@jewsforjesus.org';
+		$form->data['region_label'] = "Camp Gilgal West";
 		break;
 	case "Midwest":
 		$form->data['admin_email']  = 'campgilgalmidwest@jewsforjesus.org';
+		$form->data['region_label'] = "Camp Gilgal Midwest";
 		break;
 	case "East":
 		$form->data['admin_email']  = 'campgilgaleast@jewsforjesus.org';
+		$form->data['region_label'] = "Camp Gilgal East";
 		break;
 }
 // temporary override; use during debugging
