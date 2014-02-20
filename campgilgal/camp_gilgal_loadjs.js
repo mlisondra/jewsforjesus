@@ -38,13 +38,14 @@ window.addEvent('domready', function() {
 		selected_list = "";
 		
 		if(this.checked){
-		/*
+		
 			if(fees_25.indexOf(this.id) > -1 ){
 				totalFee = totalFee + 25;
 			}else if(fees_50.indexOf(this.id) > -1 ){
 				totalFee = totalFee + 50;
 			}
-		*/
+		
+		/*
 				// add camp fee
 				switch(this.value){
 					case "Junior Camp (Midwest)":
@@ -69,14 +70,15 @@ window.addEvent('domready', function() {
 						totalFee = totalFee + 95;
 						break;
 				}
+				*/
 		}else{
-			/*
+			
 			if(fees_25.indexOf(this.id) > -1 ){
 				totalFee = totalFee - 25;
 			}else if(fees_50.indexOf(this.id) > -1 ){
 				totalFee = totalFee - 50;
 			}
-			*/
+			/*
 				// subtract camp fee
 				switch(this.value){
 					case "Junior Camp (Midwest)":
@@ -100,7 +102,8 @@ window.addEvent('domready', function() {
 					case "WWW Southern California (West)":
 						totalFee = totalFee - 95;
 						break;
-				}			
+				}	
+			*/				
 		}	
 			// get all sibling checkboxes
 			checkboxes_group = this.getParent().getElementsByTagName('input');
