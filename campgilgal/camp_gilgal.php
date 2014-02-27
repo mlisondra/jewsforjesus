@@ -89,21 +89,21 @@
 	<span style="font-weight: bold; color: #FF0000;">* Starred fields are required.<br/></span>
 	<p style="padding-left:5px;"><strong>Child 1</strong></p>
 	<div class="ccms_form_element cfdiv_text label_over" id="child_1_fname_container_div" style="float:left; clear:left;">
-		<label for="child_1_fname">First Name</label>
+		<label for="child_1_fname">First Name*</label>
 		<input id="child_1_fname" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_fname" />
 	<div class="clear"></div>
 	<div id="error-message-child_1_fname"></div>
 	</div>
 
 	<div class="ccms_form_element cfdiv_text label_over" id="child_1_lname_container_div" style="float:left;clear:none;">
-		<label for="child_1_lname">Last Name</label>
+		<label for="child_1_lname">Last Name*</label>
 		<input id="child_1_lname" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_lname" />
 	<div class="clear"></div>
 	<div id="error-message-child_1_lname"></div>
 	</div>
 	
 	<div class="ccms_form_element cfdiv_text label_over" id="child_1_dob_container_div" style="float:left; clear:none; padding-left:5px;">
-		<label for="child_1_dob">Date of Birth (mm/dd/yyyy)</label>
+		<label for="child_1_dob">Date of Birth (mm/dd/yyyy)*</label>
 		<input id="child_1_dob" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_dob" />
 		<div class="clear"></div>
 		<div id="error-message-child_1_dob"></div>
@@ -111,21 +111,22 @@
 	
 	<div class="clear"></div>
 	
+	<div class="ccms_form_element cfdiv_radio label_over" id="child_1_gender_container_div" style="float:left; clear:none; padding-left:5px;">
+            <label for="child_1_gender">Gender*</label>
+            <input type="hidden" name="child_1_gender" value="" alt="ghost" />
+            <div style="float:left; clear:none;"><input type="radio" name="child_1_gender" id="child_1_gender_0" title="" value="Male" class="" />
+            <label for="child_1_gender_0">Male</label>
+            <input type="radio" name="child_1_gender" id="child_1_gender_1" title="" value="Female" class="" />
+                    <label for="child_1_gender_1">Female</label>
+            </div>
+            <div class="clear"></div><div id="error-message-child_1_gender"></div>	
+	</div>
 	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left; clear:none; padding-left:5px;">
-		<label for="child_1_comment">Comment</label>
+		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
 		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" />
 		<div class="clear"></div>
 		<div id="error-message-child_1_comment"></div>
-	</div>	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_1_gender_container_div" style="float:left; clear:none; padding-left:5px;"><label for="child_1_gender">Gender</label>
-	<input type="hidden" name="child_1_gender" value="" alt="ghost" />
-	<div style="float:left; clear:none;"><input type="radio" name="child_1_gender" id="child_1_gender_0" title="" value="Male" class="" />
-	<label for="child_1_gender_0">Male</label>
-	<input type="radio" name="child_1_gender" id="child_1_gender_1" title="" value="Female" class="" />
-		<label for="child_1_gender_1">Female</label>
-	</div>
-	<div class="clear"></div><div id="error-message-child_1_gender"></div>	
-	</div>
+	</div>	        
 	
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_1_camp_container_div" style="float:left; clear:left; background-color:#F7F7F7;">
 	
@@ -172,17 +173,42 @@
 	<input type="hidden" id="child_2_camp" name="child_2_camp" value="">
 	<hr size="1">
 	<p style="padding-left:5px;"><strong>Child 2</strong></p>	
-		<div class="ccms_form_element cfdiv_text label_over" id="child_2_name_container_div" style="float:left; clear:left;"><label for="child_2_name">Child's Name</label><input id="child_2_name" maxlength="150" size="30" class="" title="" type="text" value="" name="child_2_name" />
-		<div class="clear"></div><div id="error-message-child_2_name"></div></div>
-		<div class="ccms_form_element cfdiv_text label_over" id="child_2_dob_container_div" style="float:left; clear:none; padding-left:5px;"><label for="child_2_dob">Date of Birth (mm/dd/yyyy)</label><input id="child_2_dob" maxlength="150" size="30" class="" title="" type="text" value="" name="child_2_dob" />
-		<div class="clear"></div><div id="error-message-child_2_dob"></div></div>
-		<div class="ccms_form_element cfdiv_radio label_over" id="child_2_gender_container_div" style="float:left; clear:none; padding-left:5px;"><label for="child_2_gender">Gender</label><input type="hidden" name="child_2_gender" value="" alt="ghost" />
-		<div style="float:left; clear:none;"><input type="radio" name="child_2_gender" id="child_2_gender_0" title="" value="Male" class="" />
-		<label for="child_2_gender_0">Male</label>
-		<input type="radio" name="child_2_gender" id="child_2_gender_1" title="" value="Female" class="" />
-		<label for="child_2_gender_1">Female</label>
-		</div><div class="clear"></div><div id="error-message-child_2_gender"></div></div>
-
+		<div class="ccms_form_element cfdiv_text label_over" id="child_2_name_container_div" style="float:left; clear:left;">
+                    <label for="child_2_fname">First Name*</label>
+                    <input id="child_2_fname" maxlength="150" size="30" class="" title="" type="text" value="" name="child_2_fname" />
+                    <div class="clear"></div>
+                    <div id="error-message-child_2_name"></div>                        
+                </div>
+		<div class="ccms_form_element cfdiv_text label_over" id="child_2_name_container_div" style="float:left; clear:none;">
+                    <label for="child_2_lname">Last Name*</label>
+                    <input id="child_2_lname" maxlength="150" size="30" class="" title="" type="text" value="" name="child_2_lname" />
+                    <div class="clear"></div>
+                    <div id="error-message-child_2_lname"></div>                        
+                </div>        
+		<div class="ccms_form_element cfdiv_text label_over" id="child_2_dob_container_div" style="float:left; clear:none; padding-left:5px;">
+                    <label for="child_2_dob">Date of Birth (mm/dd/yyyy)*</label>
+                    <input id="child_2_dob" maxlength="150" size="30" class="" title="" type="text" value="" name="child_2_dob" />
+                    <div class="clear"></div>
+                    <div id="error-message-child_2_dob"></div>                       
+                </div>
+		<div class="ccms_form_element cfdiv_radio label_over" id="child_2_gender_container_div" style="float:left; padding-left:5px;">
+                    <label for="child_2_gender">Gender*</label>
+                    <input type="hidden" name="child_2_gender" value="" alt="ghost" />
+                    <div style="float:left; clear:none;">
+                        <input type="radio" name="child_2_gender" id="child_2_gender_0" title="" value="Male" class="" />
+                    <label for="child_2_gender_0">Male</label>
+                        <input type="radio" name="child_2_gender" id="child_2_gender_1" title="" value="Female" class="" />
+                    <label for="child_2_gender_1">Female</label>
+                    </div>
+                    <div class="clear"></div>
+                    <div id="error-message-child_2_gender"></div>
+                </div>
+                <div class="ccms_form_element cfdiv_text label_over" id="child_2_comment_container_div" style="float:left; clear:none; padding-left:5px;">
+                        <label for="child_2_comment">Please describe any food allergies or other special considerations here</label>
+                        <input id="child_2_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_2_comment" />
+                        <div class="clear"></div>
+                        <div id="error-message-child_2_comment"></div>
+                </div>
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_2_camp_container_div" style="float:left; clear:left; background-color:#F7F7F7;">
 		<label for="child_2_camp" style="display:none;">Child 2 Camp</label>
 		<div style="float:left; clear:none;display:none;" class="east_camps">
@@ -649,17 +675,38 @@
 	</div>
 </div>
 
-<div style="clear:left;padding-top:20px;"><p><strong><label id="additional_gift_label" name="additional_gift_label">Additional Gift<strong></label> <strong>$
-	<input type="text" id="additional_gift_input" name="additional_gift_input" style="width:50px;" value="0.00" /></strong></p>
+<div style="clear:left; color: #FF0000;padding-top:10px;">
+    <p>
+        Total Camp Balance: <br/>
+        Total Deposit: <strong>$<label id="total_reg_fee_label" name="total_reg_fee_label">0.00</label></strong><br/>
+    </p>
+</div>
+        
+<div>
+    <p><strong><label id="additional_gift_label" name="additional_gift_label">Additional Gift<strong></label> 
+        <strong>$<input type="text" id="additional_gift_input" name="additional_gift_input" style="width:50px;" value="0.00" /></strong>
+        (Your donation here will help families in need send their campers to Camp Gilgal)
+    </p>
 </div>
 
-<div style="clear:left; color: #FF0000;"><p>Total Deposit: <strong>$<label id="total_reg_fee_label" name="total_reg_fee_label">0.00</label></strong></p></div>	
-
-<div style="background-color:#79BAEC; font-weight:bold">&nbsp;&nbsp;SEND US A NAME</div>
+<div style="background-color:#79BAEC; font-weight:bold">&nbsp;&nbsp;FAMILY REFERRAL</div>
 <p><em>I know a Jewish family who might want to send their child(ren) to Camp Gilgal.</em></p>
 
-<div class="ccms_form_element cfdiv_text" id="refer_name_container_div" style=""><label for="refer_name">Parent/Guardian's Name</label><input id="refer_name" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_name" />
-<div class="clear"></div><div id="error-message-refer_name"></div></div><div class="ccms_form_element cfdiv_text" id="refer_address_1_container_div" style=""><label for="refer_address_1">Address</label><input id="refer_address_1" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_address_1" />
+<div class="ccms_form_element cfdiv_text" id="refer_name_container_div" style="">
+    <label for="refer_name">Parent/Guardian's Name</label>
+    <input id="refer_name" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_name" />    
+    <div class="clear"></div>    
+    <div id="error-message-refer_name"></div>        
+</div>
+
+<div class="ccms_form_element cfdiv_text" id="refer_child_container_div" style="">
+    <label for="refer_child">Child's Name</label>
+    <input id="refer_child" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_child" />    
+    <div class="clear"></div>    
+    <div id="error-message-refer_child"></div>        
+</div>
+
+    <div class="ccms_form_element cfdiv_text" id="refer_address_1_container_div" style=""><label for="refer_address_1">Address</label><input id="refer_address_1" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_address_1" />
 <div class="clear"></div><div id="error-message-refer_address_1"></div></div><div class="ccms_form_element cfdiv_text" id="refer_address_2_container_div" style=""><label for="refer_address_2">Address Line 2</label><input id="refer_address_2" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_address_2" />
 <div class="clear"></div><div id="error-message-refer_address_2"></div></div><div class="ccms_form_element cfdiv_text" id="refer_city_container_div" style=""><label for="refer_city">City</label><input id="refer_city" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_city" />
 <div class="clear"></div><div id="error-message-refer_city"></div></div><div class="ccms_form_element cfdiv_text" id="refer_state_container_div" style=""><label for="refer_state">State/Province</label><input id="refer_state" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_state" />
