@@ -1,3 +1,4 @@
+<?php $base_url = JURI::base(); ?>
 <table width="600px">
 <tr>
 <td style="font-family:Helvetica, Arial, sans-serif;"><h3>A user has registered for Camp Gilgal</h3></td>
@@ -10,7 +11,7 @@
 <!-- Basic Information - Start -->
 <table width="100%">
 <tr>
-<td colspan="3" bgcolor="#79BAEC" style="font-family:Helvetica, Arial, sans-serif;"><strong>BASIC INFORMATION</strong></td>
+<td colspan="3" bgcolor="#79BAEC" style="font-family:Helvetica, Arial, sans-serif;"><strong>PARENT OR GUARDIAN INFORMATION</strong></td>
 </tr>
 <tr>
 <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>User's IP Address</strong></td>
@@ -113,6 +114,8 @@ if($belief == 'Believe in Jesus' || $belief == 'Do believe in Jesus'){
 <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Gender</strong></td>
 <td>&nbsp;&nbsp;&nbsp;</td>
 <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Camp</strong></td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Special Considerations</strong></td>
 </tr>
 <?php
 /* check and loop through all children's records */
@@ -120,7 +123,7 @@ $childctr = $form->data['chronoform_data']['child_count'];
 for($x = 1;$x <= $childctr; $x++){ 
 ?>
 <tr>
-<td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{child_<?php echo $x; ?>_name}</td>
+<td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{child_<?php echo $x; ?>_fname} {child_<?php echo $x; ?>_lname}</td>
 <td>&nbsp;&nbsp;&nbsp;</td>
 <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{child_<?php echo $x; ?>_dob}</td>
 <td>&nbsp;&nbsp;&nbsp;</td>
@@ -140,10 +143,13 @@ for($x = 1;$x <= $childctr; $x++){
 		print $camp_label;
 	?>
 </td>
+<td>&nbsp;&nbsp;&nbsp;</td>
+<td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{child_<?php echo $x; ?>_comment}</td>
 </tr>
 <?php } ?>
 <tr>
-<td colspan="7" align="center" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><a href="https://store.jewsforjesus.org/index.php/event_payment/?event_type={event_type}&uid={registration_id}&amount={total_reg_fee}" target="_blank">Payment Link</a></td>
+<td colspan="7" align="center" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">
+    <a href="<?php print $base_url; ?>registration-payment?event=<?php echo $form->data['chronoform_data']['fundid'];?>&ref=<?php echo $form->data['chronoform_data']['cf_uid'];?>">Payment Link</a></td>
 </tr>
 </table>
 <!-- Children Information - End -->
@@ -159,7 +165,7 @@ if($friendName)
 <td>
 <table width="100%">
 <tr>
-<td bgcolor="#79BAEC" colspan="3" style="font-family:Helvetica, Arial, sans-serif;"><strong>SEND US A NAME</strong></td>
+<td bgcolor="#79BAEC" colspan="3" style="font-family:Helvetica, Arial, sans-serif;"><strong>FAMILY REFERRAL</strong></td>
 </tr>
 <tr>
 <td colspan="3" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><em>A Jewish family who might want to send their child(ren) to Camp Gilgal.</em></td>
@@ -225,7 +231,7 @@ if($comments)
 </td>
 </tr>
 <tr>
-<td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{comments}
+<td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{comment}
 </td>
 </tr>
 <?php
