@@ -30,15 +30,15 @@
     </tr>
     <tr>
         <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Camper's Name</strong></td>
-        <td colspan="5"></td>
         <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Camp</strong></td>
+        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Special Considerations</strong></td>
+        <td colspan="4"></td>
     </tr>
     <?php
         for($x=1;$x<=$childctr;$x++)
     {?>
     <tr>
         <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{child_<?php echo $x; ?>_fname} {child_<?php echo $x; ?>_lname}</td>
-        <td colspan="5"></td>
         <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{region_label}: 
             <?php
 
@@ -52,16 +52,13 @@
                     $camp_label = str_replace(" ,",",",$camp_label);
                     print $camp_label;
             ?>
-    </td>
+        </td>
+        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{child_<?php echo $x; ?>_comment}</td>
+         <td colspan="4"></td>
     </tr>
     <?php
     };
     ?>
-    <tr>
-    <td colspan="7" align="center" style="font-family:Helvetica, Arial, sans-serif;font-weight: bold; color: #ff0000;font-size:10pt;">
-        <span>Total Deposit:</span>&nbsp;$ {total_reg_fee}
-    </td>
-    </tr>
     </table>
     <?php 
     };
