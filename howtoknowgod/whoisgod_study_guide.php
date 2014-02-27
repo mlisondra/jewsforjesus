@@ -95,9 +95,11 @@
 	<li>
 	<p >When King David wrote Psalm 139:2, clearly he was feeling that:</p>
 	<ol type="a"  class="answer_list" rel="Psalm 139:2">
- 		<span class="incorrect-response"><strong>Incorrect:</strong> though the verse alludes to distance, or &quot;from afar&quot; God is unlimited in his ability to pay attention to and understand us, no matter where we are.</span>
+		<li  rel="incorrect"> God was far away
+ 		<span class="incorrect-response"><strong>Incorrect:</strong> though the verse alludes to distance, or &quot;from 
+		afar&quot; God is unlimited in his ability to pay attention to and understand us, no matter where we are.</span>
 		</li>
-		<li  rel="correct">God not only knew every detail of his life, but understood him
+		<li  rel="correct">Wherever David went, God knew every detail of his life, and understood all his thoughts
 		<span class="correct-answer">Correct</span>
 		</li>
 	</ol>
@@ -108,7 +110,8 @@
 		<p>In Exodus 34:6 when God revealed Himself to Moses, he described himself as compassionate, gracious, slow to anger, abounding in love and faithfulness because he wanted Moses to know that:</p>
 		<ol type="a"  class="answer_list" rel="Exodus 34:6">
 			<li  rel="incorrect">God does not judge people
-			<span class="incorrect-response"><strong>Incorrect:</strong> God&#8217;s righteousness requires him to pronounce judgment on evil, plus his care for us includes wanting something better for us when we err</span>
+			<span class="incorrect-response"><strong>Incorrect:</strong> God&#8217;s righteousness requires him to pronounce judgment on evil, 
+			plus his care for us includes wanting something better for us when we err</span>
 			</li>
 			<li  rel="correct">God's love compels him to offer everyone eternal life on his (God's) own terms, that is, through his son, Yeshua 
 			<span class="correct-answer">Correct</span>
@@ -163,18 +166,18 @@
 <div id="biblia_search">
 	<div id="container">
     
-    	<a href="###" class="toggle_search_link">[-] Hide Bible search</a>
+    	<!--<a href="###" class="toggle_search_link">[-] Hide Bible search</a>-->
      
 	
 		<div id="example3">
 			<!-- Embedded Bible. http://biblia.com/plugins/embeddedbible -->
             <div class="biblia_plugin">
-            	<biblia:bible layout="normal" resource="esv" width="360" height="400" startingReference="Ge1.1"></biblia:bible>
+            	<biblia:bible layout="normal" resource="esv" width="265" height="400" startingReference="Ge1.1"></biblia:bible>
             </div>
 		</div>	
 	</div>
 </div></div>	
 </div>
 
-{module HTKHandler}
+
 {jcomments off}
