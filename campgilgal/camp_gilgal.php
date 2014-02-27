@@ -1,12 +1,34 @@
-<h2>Camp Gilgal Information, Registration and Referral</h2>
-<p>Please fill this out to register. If you'd like to hear more about camp, please complete the form for Camp Gilgal <a href="contact?form-id=206" target="_blank">East</a>, <a href="contact?form-id=207" target="_blank">West</a> or <a href="contact?form-id=208" target="_blank">Midwest</a> and we'll give you a call. There's also a section at the bottom if you know a Jewish family that might be interested. We look forward to hearing from you!</p>
+<h2>Camp Gilgal Registration and Referral</h2>
+
 <p><span style="font-weight: bold; color: #FF0000;">* Starred fields are required.</span></p>
-<div style="background-color:#79BAEC; font-weight:bold">&nbsp;&nbsp;BASIC INFORMATION</div>
+
+<div style="background-color:#79BAEC; font-weight:bold">&nbsp;&nbsp;PARENT OR GUARDIAN INFORMATION</div>
 <br />
-<div class="ccms_form_element cfdiv_text" id="fname_container_div" style="">
-	<label for="fname">First Name*</label><input id="fname" maxlength="150" size="30" class=" validate['required']" title="Enter First Name" type="text" value="" name="fname" />
-<div class="clear"></div><div id="error-message-fname"></div></div><div class="ccms_form_element cfdiv_text" id="lname_container_div" style=""><label for="lname">Last Name*</label><input id="lname" maxlength="150" size="30" class="validate['required']" title="Enter Last Name" type="text" value="" name="lname" />
-<div class="clear"></div><div id="error-message-lname"></div></div><div class="ccms_form_element cfdiv_text" id="phone_container_div" style=""><label for="phone">Phone*</label><input id="phone" maxlength="150" size="30" class=" validate['required','phone']" title="Enter Phone Number" type="text" value="" name="phone" />
+    <div class="ccms_form_element cfdiv_text" id="fname_container_div" style="">
+            <label for="fname">First Name*</label>
+                <input id="fname" maxlength="150" size="30" class=" validate['required']" title="Enter First Name" type="text" value="" name="fname" />
+            <div class="clear"></div>
+            <div id="error-message-fname"></div>
+    </div>
+	
+	<div class="ccms_form_element cfdiv_text" id="lname_container_div" style="">
+            <label for="lname">Last Name*</label>
+            <input id="lname" maxlength="150" size="30" class="validate['required']" title="Enter Last Name" type="text" value="" name="lname" />
+            <div class="clear"></div>
+
+            <div id="error-message-lname"></div>
+        </div>
+
+<div class="ccms_form_element cfdiv_text" id="relationship_container_div" style="">
+	<label for="fname">Relationship to Camper(s)*</label>
+		<input id="relationship_to_campers" maxlength="150" size="30" class=" validate['required']" title="Enter Relationship" type="text" value="" name="relationship_to_campers" />
+	<div class="clear"></div>
+	<div id="error-message-relationship_to_campers"></div>
+</div>
+
+<div class="ccms_form_element cfdiv_text" id="phone_container_div" style="">
+<label for="phone">Phone*</label>
+<input id="phone" maxlength="150" size="30" class=" validate['required','phone']" title="Enter Phone Number" type="text" value="" name="phone" />
 <div class="clear"></div><div id="error-message-phone"></div></div><div class="ccms_form_element cfdiv_text" id="email_container_div" style=""><label for="email">Email*</label><input id="email" maxlength="150" size="30" class=" validate['required','email']" title="Enter Email" type="text" value="" name="email" />
 <div class="clear"></div><div id="error-message-email"></div></div><div class="ccms_form_element cfdiv_text" id="address_1_container_div" style=""><label for="address_1">Address</label><input id="address_1" maxlength="150" size="30" class="" title="" type="text" value="" name="address_1" />
 <div class="clear"></div><div id="error-message-address_1"></div></div><div class="ccms_form_element cfdiv_text" id="address_2_container_div" style=""><label for="address_2">Address Line 2</label><input id="address_2" maxlength="150" size="30" class="" title="" type="text" value="" name="address_2" />
@@ -34,9 +56,9 @@
 	<strong>Select Region</strong>
 	<select size="1" id="select_region" title="" name="select_region" class=" validate['required']">
 		<option value="Select Region ">Select Region</option>
+		<option value="East">East</option>
 		<option value="Midwest">Midwest</option>
 		<option value="West">West</option>
-		<option value="East">East</option>
 	</select>
 </p>
 
@@ -58,24 +80,53 @@
 		</select>
 	<div class="clear"></div>
 	<div id="error-message-child_count"></div></div>
-
+        
+        <!-- Camper 1 -->
 <div id="camp1">
+
 	<input type="hidden" id="child_1_camp" name="child_1_camp" value="" alt="ghost"/>
 	<hr size="1">
+	<span style="font-weight: bold; color: #FF0000;">* Starred fields are required.<br/></span>
 	<p style="padding-left:5px;"><strong>Child 1</strong></p>
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_name_container_div" style="float:left; clear:left;">
-	<label for="child_1_name">Name</label><input id="child_1_name" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_name" />
-	<div class="clear"></div><div id="error-message-child_1_name"></div></div>
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_dob_container_div" style="float:left; clear:none; padding-left:5px;"><label for="child_1_dob">Date of Birth (mm/dd/yyyy)</label><input id="child_1_dob" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_dob" />
-	<div class="clear"></div><div id="error-message-child_1_dob"></div></div>
+	<div class="ccms_form_element cfdiv_text label_over" id="child_1_fname_container_div" style="float:left; clear:left;">
+		<label for="child_1_fname">First Name</label>
+		<input id="child_1_fname" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_fname" />
+	<div class="clear"></div>
+	<div id="error-message-child_1_fname"></div>
+	</div>
+
+	<div class="ccms_form_element cfdiv_text label_over" id="child_1_lname_container_div" style="float:left;clear:none;">
+		<label for="child_1_lname">Last Name</label>
+		<input id="child_1_lname" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_lname" />
+	<div class="clear"></div>
+	<div id="error-message-child_1_lname"></div>
+	</div>
+	
+	<div class="ccms_form_element cfdiv_text label_over" id="child_1_dob_container_div" style="float:left; clear:none; padding-left:5px;">
+		<label for="child_1_dob">Date of Birth (mm/dd/yyyy)</label>
+		<input id="child_1_dob" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_dob" />
+		<div class="clear"></div>
+		<div id="error-message-child_1_dob"></div>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left; clear:none; padding-left:5px;">
+		<label for="child_1_comment">Comment</label>
+		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" />
+		<div class="clear"></div>
+		<div id="error-message-child_1_comment"></div>
+	</div>	
 	<div class="ccms_form_element cfdiv_radio label_over" id="child_1_gender_container_div" style="float:left; clear:none; padding-left:5px;"><label for="child_1_gender">Gender</label>
 	<input type="hidden" name="child_1_gender" value="" alt="ghost" />
 	<div style="float:left; clear:none;"><input type="radio" name="child_1_gender" id="child_1_gender_0" title="" value="Male" class="" />
 	<label for="child_1_gender_0">Male</label>
 	<input type="radio" name="child_1_gender" id="child_1_gender_1" title="" value="Female" class="" />
-	<label for="child_1_gender_1">Female</label>
-	</div><div class="clear"></div><div id="error-message-child_1_gender"></div></div>
-
+		<label for="child_1_gender_1">Female</label>
+	</div>
+	<div class="clear"></div><div id="error-message-child_1_gender"></div>	
+	</div>
+	
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_1_camp_container_div" style="float:left; clear:left; background-color:#F7F7F7;">
 	
 	<div style="float:left; clear:none;display:none;" class="east_camps">
@@ -110,12 +161,14 @@
 		<input type="checkbox" name="input_checkbox_group3[]" id="child_1_camp_9" title="" value="WWW Northern California (West)" class="" />
 		<label for="child_1_camp_9">WWW Northern California ($95)</label>
 	</div>
-	<div class="clear"></div><div id="error-message-child_1_camp"></div>
-</div>
+	<div class="clear"></div>
+        <div id="error-message-child_1_camp"></div>
+        </div>
 </div>
 
 
-<div id="camp2">
+        <!-- Camper 2 -->
+    <div id="camp2">
 	<input type="hidden" id="child_2_camp" name="child_2_camp" value="">
 	<hr size="1">
 	<p style="padding-left:5px;"><strong>Child 2</strong></p>	
@@ -605,7 +658,7 @@
 <div style="background-color:#79BAEC; font-weight:bold">&nbsp;&nbsp;SEND US A NAME</div>
 <p><em>I know a Jewish family who might want to send their child(ren) to Camp Gilgal.</em></p>
 
-<div class="ccms_form_element cfdiv_text" id="refer_name_container_div" style=""><label for="refer_name">Family's Name</label><input id="refer_name" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_name" />
+<div class="ccms_form_element cfdiv_text" id="refer_name_container_div" style=""><label for="refer_name">Parent/Guardian's Name</label><input id="refer_name" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_name" />
 <div class="clear"></div><div id="error-message-refer_name"></div></div><div class="ccms_form_element cfdiv_text" id="refer_address_1_container_div" style=""><label for="refer_address_1">Address</label><input id="refer_address_1" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_address_1" />
 <div class="clear"></div><div id="error-message-refer_address_1"></div></div><div class="ccms_form_element cfdiv_text" id="refer_address_2_container_div" style=""><label for="refer_address_2">Address Line 2</label><input id="refer_address_2" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_address_2" />
 <div class="clear"></div><div id="error-message-refer_address_2"></div></div><div class="ccms_form_element cfdiv_text" id="refer_city_container_div" style=""><label for="refer_city">City</label><input id="refer_city" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_city" />
@@ -616,6 +669,7 @@
 <div class="ccms_form_element cfdiv_text" id="refer_phone_container_div" style=""><label for="refer_phone">Phone</label>
 <input id="refer_phone" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_phone" />
 <div class="clear"></div><div id="error-message-refer_phone"></div></div>
+<!--
 <p>
 <em>We welcome your comments and questions. Please describe any food allergies or other special considerations here as well.</em>
 </p>
@@ -625,6 +679,7 @@
 	<div class="clear"></div>
 	<div id="error-message-comments"></div>
 	</div>
+	-->
 <table width="100%">
 <tr bgcolor="#D6DCEB">
 
@@ -640,5 +695,7 @@
 <input id="total_reg_fee" type="hidden" value="0.00" name="total_reg_fee" />
 <input id="additional_gift" type="hidden" value="0.00" name="additional_gift" />
 <input id="fundid" name="fundid" type="hidden" value="" />
-<div class="ccms_form_element cfdiv_submit" id="submit_container_div" style="text-align:left"><input name="submit" id="submit" class="" value="Submit" type="submit" />
+<input id="comments" name="comments" type="hidden" value=""/>
+<div class="ccms_form_element cfdiv_submit" id="submit_container_div" style="text-align:left;margin-top: 15px;padding:0px;">
+<input name="submit" id="submit" class="" value="Submit" type="submit" />
 &nbsp;<input type='reset' name='reset' value='Reset' /><div class="clear"></div><div id="error-message-submit"></div></div> 
