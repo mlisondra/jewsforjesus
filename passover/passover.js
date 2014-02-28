@@ -1,5 +1,17 @@
 window.addEvent('domready', function() {
 
+	var banquet_location = getParameterByName("location"); // retrieve url param for location
+	var given_location = "";
+	
+	if(banquet_location != ""){
+		for(i = 0; i < events_locations.length; i++){
+			if(events_locations[i].city == banquet_location){
+				given_location = events_locations[i].location;
+			}
+		}
+		change_location_info(given_location);
+	}
+	
 	// Selection binding for number of adults attending
 	$('num_adults').addEvent('change', function(){
 		calc_total_fees();
@@ -20,17 +32,21 @@ window.addEvent('domready', function() {
 	
 	// Add each venue to local array
 	for(i = 0; i < events_locations.length; i++){
-		venues_array.push(events_locations[i].venue);	   
+		venues_array.push(events_locations[i].location);
 	}	
 	venues_array.sort(); // sort
+	
 	// Add venues to drop down list
 	for(i = 0; i < venues_array.length; i++){
-		console.log(venues_array[i]);
 		var newoption = new Option(venues_array[i], venues_array[i]);
+		if(venues_array[i] == given_location){
+			newoption.setProperty('selected', 'selected');
+		}		
 		$('location').add(newoption, null);
 	}	
 	
 }); // end onload
+
 
 	var events_locations = [
         {"when":"Monday, April 21, 2014, 7 P.M.",
@@ -41,8 +57,14 @@ window.addEvent('domready', function() {
             "deadline":"Monday, April 18, 2014",
             "cost_adults":"25",
             "cost_children":"10",
+			"fundid":"NYBRAN-EV",
+			"city":"Brooklyn",
+			"state":"NY",
+			"location":"Brooklyn, NY",
+			"admin_name":"Sandy Epstein",
 			"admin_email":"ny@jewsforjesus.org",
-			"fundid":"NYBRAN"
+			"admin_phone":"(212) 683-7077",
+"pdf":"http://www.jewsforjesus.org/files/Passover2014/BRPassoverBanquetflyer.pdf"			
         },
         {
             "when":"Monday, April 21, 2014, 6:30 P.M.",
@@ -52,9 +74,15 @@ window.addEvent('domready', function() {
             "more_info":"Melanie Rose at (847) 679-2680 or chicago@jewsforjesus.org",
             "deadline":"Tuesday, April 15, 2014",
             "cost_adults":"33",
-            "cost_children":"0",
+            "cost_children":"33",
+			"fundid":"CHBRAN-EV",
+			"city":"Addison",
+			"state":"IL",
+			"location":"Addison, IL",
+			"admin_name":"Melanie Rose",
 			"admin_email":"chicago@jewsforjesus.org",
-			"fundid":"CHBRAN"
+			"admin_phone":"(847) 679-2680",
+"pdf":"http://www.jewsforjesus.org/files/Passover2014/CHPassoverBanquetflyer.pdf"				
         },
         {
             "when":"Monday, April 21, 2014, 7 P.M.",
@@ -64,9 +92,15 @@ window.addEvent('domready', function() {
             "more_info":"Shannon Serrfano (301) 770-4000, fax (301) 770-0900 or email dc@jewsforjesus.org",
 			"deadline":"Friday, April 11, 2014",
             "cost_adults":"40",
-            "cost_children":"25",	
+            "cost_children":"25",
+			"fundid":"DCBRAN-EV",
+			"city":"Silver Spring",
+			"state":"MD",
+			"location":"Silver Spring, MD",
+			"admin_name":"Shannon Serrfano",
 			"admin_email":"dc@jewsforjesus.org",
-			"fundid":"DCBRAN"			
+			"admin_phone":"(301) 770-4000",
+			"pdf":"http://www.jewsforjesus.org/files/Passover2014/DCPassoverBanquetflyer.pdf"
         },
         {
             "when":"Monday April 21, 2014, 6:30 P.M.",
@@ -77,20 +111,32 @@ window.addEvent('domready', function() {
             "deadline":"Monday, April 14, 2014",
             "cost_adults":"39",
             "cost_children":"30",
+			"fundid":"FLBRAN-EV",
+			"city":"Miami",
+			"state":"FL",
+			"location":"Miami, FL",
+			"admin_name":"Robyn Wilk",
 			"admin_email":"florida@jewsforjesus.org",
-			"fundid":"FLBRAN"
+			"admin_phone":"(954) 616-5050",
+			"pdf":"http://www.jewsforjesus.org/files/Passover2014/FLPassoverBanquetflyer.pdf"
         },
         {
             "when":"Monday, April 14, 2014, 6:30 P.M",
             "venue":"The Olympic Collection Banquet and Conference Center",
-            "address":"11301 Olympic Blvd. West Los Angeles, CA 90064",
+            "address":"11301 Olympic Blvd. West, Los Angeles, CA 90064",
             "menu":'Please contact us',
             "more_info":"(310) 637-7424 (310-MESSIAH) or la@jewsforjesus.org",
             "deadline":"Tuesday, April 8, 2014",
             "cost_adults":"45",
             "cost_children":"15",
+			"fundid":"LABRAN-EV",
+			"city":"Los Angeles",
+			"state":"CA",
+			"location":"Los Angeles, CA",
+			"admin_name":"",
 			"admin_email":"la@jewsforjesus.org",
-			"fundid":"LABRAN"
+			"admin_phone":"(310) 637-7424",
+			"pdf":"http://www.jewsforjesus.org/files/Passover2014/LAPassoverBanquetflyer.pdf"
 			
         },
         {
@@ -102,8 +148,14 @@ window.addEvent('domready', function() {
             "deadline":"Monday, April 14, 2014",
             "cost_adults":"40",
             "cost_children":"15",
-			"admin_email":"rob.wertheim@jewsforjesus.org",
-			"fundid":"SFBRAN"			
+			"fundid":"SFBRAN-EV",
+			"city":"San Rafael",
+			"state":"CA",
+			"location":"San Rafael, CA",
+			"admin_name":"Jill",
+			"admin_email":"jill@lookoutsource.com",
+			"admin_phone":"(415) 864-2600 x 1113",
+			"pdf":"http://www.jewsforjesus.org/files/Passover2014/SFPassoverBanquetflyer.pdf"
         },
         {
             "when":"Monday, April 21, 2014, 6:30 P.M.",
@@ -114,17 +166,20 @@ window.addEvent('domready', function() {
             "deadline":"Monday, April 14, 2014",
             "cost_adults":"42",
             "cost_children":"15",
-			"admin_email":"rob.wertheim@jewsforjesus.org",
-			"fundid":"SFBRAN"			
-        }		
-    ];
-		
+			"fundid":"SFBRAN-EV",
+			"city":"Sunnyvale",
+			"state":"CA",
+			"location":"Sunnyvale, CA",
+			"admin_name":"Jill",
+			"admin_email":"jill@lookoutsource.com ",
+			"admin_phone":"(415) 864-2600 x 1113",
+			"pdf":"http://www.jewsforjesus.org/files/Passover2014/SFPassoverBanquetflyer.pdf"
+    }];
 
 function calc_adults_fees(){
 	fee = 0;
 	venue_obj = get_selected_venue();
 	if(venue_obj != 0){
-		console.log(venue_obj.cost_adults);
 		num_adults = $('num_adults').value;
 		fee = num_adults * venue_obj.cost_adults;
 		return fee;	
@@ -137,7 +192,6 @@ function calc_children_fees(){
 	fee = 0;
 	venue_obj = get_selected_venue();
 	if(venue_obj != 0){
-		console.log(venue_obj.cost_adults);
 		num_adults = $('num_children').value;
 		fee = num_adults * venue_obj.cost_children;
 		return fee;	
@@ -165,11 +219,15 @@ function change_location_info(location){
 		$$('div.info td.deadline').set('html','');	
 		$('when').value = '';
 		$('where').value = '';
+		$('admin_name').value = '';
 		$('admin_email').value = '';
+		$('admin_phone').value = '';
 		$('fundid').value = '';
+		$$('div.info td.flyer').set('html','');
 	}else{
 		for(i = 0; i < events_locations.length; i++){
-			venue = events_locations[i].venue;
+			//venue = events_locations[i].venue;
+			venue = events_locations[i].location;
 			if(venue == location){
 				// get all the information associated with the venue
 				$$('div.info td.when').set('html',events_locations[i].when);
@@ -182,8 +240,12 @@ function change_location_info(location){
 				$$('div.info td.deadline').set('html',events_locations[i].deadline);
 				$('when').value = events_locations[i].when;
 				$('where').value = events_locations[i].venue;
+				$('admin_name').value = events_locations[i].admin_name;
 				$('admin_email').value = events_locations[i].admin_email;
+				$('admin_phone').value = events_locations[i].admin_phone;
 				$('fundid').value = events_locations[i].fundid;
+				link_to_flyer = '<a href="' + events_locations[i].pdf + '" target="_blank">View Flyer</a>';
+				$$('div.info td.flyer').set('html',link_to_flyer);
 			}
 		   
 		}
@@ -196,7 +258,8 @@ function get_selected_venue(){
 	selected_venue = $('location').value;
 	if(selected_venue != ""){
 		for(i = 0; i < events_locations.length; i++){
-			venue = events_locations[i].venue;
+			//venue = events_locations[i].venue;
+			venue = events_locations[i].location;
 			if(venue == selected_venue){
 				return events_locations[i];
 			}
@@ -205,3 +268,18 @@ function get_selected_venue(){
 		return 0;
 	}
 }
+
+
+function getParameterByName(name){
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regexS = "[\\?&]" + name + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.search);
+  if(results == null)
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+	
+	// example use
+	// var formID = getParameterByName("form-id");
+};
