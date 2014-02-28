@@ -1,5 +1,10 @@
-<div class="form_container" style="float:left;width:450px;">
+<div class="form_container" style="float:left;width:60%;padding-right:20px;">
 
+    <p style="margin-top:5px;width:95%">
+    These are full course dinners including a presenter and Jewish gospel music and require reservations in advance. 
+    You may register below.  Credit card payment is required at registration. 
+    If you would like to pay by check, please select the location and choose &quot;View Flyer&quot;, print it out, and mail to the address on the form with a check.        
+    </p>
 <div class="ccms_form_element cfdiv_text" id="first_name1_container_div" style="">
 	<label>Location</label>
 	<select class="validate['required']" title="Select Location" type="text" value="" name="location" id="location" />
@@ -28,8 +33,15 @@
 <option value="4">4</option>
 <option value="5">5</option>
 </select>
-<div class="clear"></div><div id="error-message-num_children"></div></div><div class="ccms_form_element cfdiv_submit" id="input_submit_141_container_div" style="text-align:left"><input name="input_submit_14" class="" value="Submit" type="submit" />
-<div class="clear"></div><div id="error-message-input_submit_14"></div></div>
+<div class="clear"></div><div id="error-message-num_children"></div></div><div class="ccms_form_element cfdiv_submit" id="input_submit_141_container_div" style="text-align:left">
+    <p>
+Upon submission of this form you will be redirected to our event payment form to fill in your credit card billing information.  
+Your registration will not be submitted without payment.
+        
+    </p>
+    <input name="input_submit_14" class="" value="Submit" type="submit" />
+    <div class="clear"></div>
+    <div id="error-message-input_submit_14"></div></div>
 
 <div class="clear"></div>
 
@@ -64,6 +76,10 @@
 		<tr valign="top">
 			<td class="first" style="font-weight:bold;">Deadline</td>
 			<td class="deadline"></td>
+		</tr>
+		<tr valign="top">
+			<td class="first" style="font-weight:bold;">Flyer</td>
+			<td class="flyer"></td>
 		</tr>		
 	</table>
 </div>
@@ -71,5 +87,7 @@
 <input type="hidden" name="total_reg_fee" id="total_reg_fee" value="">
 <input type="hidden" name="when" id="when" value="">
 <input type="hidden" name="where" id="where" value="">
+<input type="hidden" name="admin_name" id="admin_name" value="">
 <input type="hidden" name="admin_email" id="admin_email" value="">
+<input type="hidden" name="admin_phone" id="admin_phone" value="">
 <input type="hidden" name="fundid" id="fundid" value="">
