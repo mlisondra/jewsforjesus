@@ -152,8 +152,8 @@ window.addEvent('domready', function() {
 			"city":"San Rafael",
 			"state":"CA",
 			"location":"San Rafael, CA",
-			"admin_name":"Jill Dodsworth",
-			"admin_email":"jill@lookoutsource.com",
+			"admin_name":"Sandy Wertheim",
+			"admin_email":"sandy.wertheim@jewsforjesus.org",
 			"admin_phone":"(415) 864-2600 x 1113",
 			"pdf":"http://www.jewsforjesus.org/files/Passover2014/SFPassoverBanquetflyer.pdf"
         },
@@ -170,8 +170,8 @@ window.addEvent('domready', function() {
 			"city":"Sunnyvale",
 			"state":"CA",
 			"location":"Sunnyvale, CA",
-			"admin_name":"Jill Dodsworth",
-			"admin_email":"jill@lookoutsource.com ",
+			"admin_name":"Sandy Wertheim",
+			"admin_email":"sandy.wertheim@jewsforjesus.org",
 			"admin_phone":"(415) 864-2600 x 1113",
 			"pdf":"http://www.jewsforjesus.org/files/Passover2014/SFPassoverBanquetflyer.pdf"
     }];
