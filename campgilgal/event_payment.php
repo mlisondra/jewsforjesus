@@ -1,5 +1,5 @@
 <?php
-$event = $_GET['event'];
+$event = strtolower($_GET['event']);
 $uid = $_GET['ref'];
 
 //initialize variables
@@ -27,6 +27,9 @@ switch ($event){
 		$subtittle = 'East Coast Ingathering';
 		break;
 	case "campgilgal":
+	case "cawest":
+	case "caeast":
+	case "camidw":
 		$tablename = "#__chronoforms_data_campgilgalregistration";
 		$subtittle = 'Camp Gilgal';
 		break;			
@@ -41,7 +44,7 @@ $database = JFactory::getDBO();
 $database->setQuery($sql, 0, 1);
 $registrationDetails = $database->loadAssoc();
 
-if($event == 'evgilgal' || $event == "campgilgal"){
+if($event == 'evgilgal' || $event == "campgilgal" || $event == "cawest" || $event == "caeast" || $event == "camidw"){
 	$balance = $registrationDetails[total_reg_fee] - $registrationDetails[CurrentPayment];
 }else{
 	$balance = $registrationDetails[grand_total] - $registrationDetails[CurrentPayment];
@@ -91,6 +94,12 @@ function isNumberKey(evt){
 	}else{
         return true;
     }
+}
+
+function pay_deposit(){
+	console.log($("pay_deposit_button").getProperty("rel"));
+	window.location = $("pay_deposit_button").getProperty("rel");
+	
 }
 
 	//-->
@@ -152,18 +161,25 @@ function isNumberKey(evt){
     </tr>
     <tr>
     	<td><strong>I believe in Jesus:</strong></td>
-        <td><?php 
-			if($registrationDetails[belief] == 'Do believe in Jesus' || $registrationDetails[belief] == 'Believe in Jesus'){
-				echo 'Yes';
-			}else{
-				echo 'No';
-			}?></td>
+        <td>
+            <?php 
+                if($registrationDetails[belief] == 'Do believe in Jesus' || $registrationDetails[belief] == 'Believe in Jesus'){
+                        echo 'Yes';
+                }else{
+                        echo 'No';
+                }
+            ?>
+        </td>
     </tr>
     <tr>
-    	<td><strong>Total Registration Fee:</strong></td>
+    	<td><strong>Total Deposit:</strong></td>
         <td>$<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></td>
     </tr>
     <?php if($event != 'evgilgal'){?>
+    <tr>
+    	<td><strong>Total Camp Fees:</strong></td>
+        <td>$<?php echo number_format($registrationDetails[total_camp_fee],2,'.', '');?></td>
+    </tr>	
     <tr>
     	<td><strong>Additional Gift:</strong></td>
         <td>$<?php echo number_format($registrationDetails[additional_gift],2,'.', '');?></td>
@@ -181,19 +197,22 @@ function isNumberKey(evt){
     <?php }?>
 </table>
 <input type="hidden" value="<?php echo $registrationDetails[CurrentPayment];?>" id="partialPayment" />
-<h2>Payment Option</h2>
+<h2>Payment Options</h2>
 <?php
 if($event == 'evgilgal'){ ?>
 <p>The next step is to make a deposit of $<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?>. You can do this by:</p>
 <ul>
 	<li><a href="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>"><strong>Paying online</strong></a></li>
-    <li><strong>Writing a check. Make it payable to Jews for Jesus</strong> and in the memo section write, "Camp Gilgal payment." Mail it to: Jews for Jesus, 60 Haight Street, San Francisco, CA 94102-5895.</li>
+    <li><strong>Writing a check. Make it payable to Jews for Jesus</strong> and in the memo section write, "Camp Gilgal payment." 
+	Mail it to: Jews for Jesus, 60 Haight Street, San Francisco, CA 94102-5895.</li>
     <li>Any questions? Call Cricket – Kathy Nichols at (415) 864-2600, ext. 1153.</li>
 </ul>	
 <?php }else{ ?>
 <p>If you have not made arrangements for payment, you may pay online by selecting an option below.</p>
 <ul>
-	<li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>">Pay the total amount of $<?php echo number_format($balance,2,'.', '');?></a></li>
-    <li><strong>Option 2:</strong> Pay the amount of $&nbsp;<input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;<input id="make_payment" type="button" value="Make Payment" onclick="takePayment()" /></li>
+	<li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>">Pay Deposit and Additional Gift amount 
+	of $<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></a> <input id="pay_deposit_button" type="button" onclick="pay_deposit(this)" value="Pay Deposit" style="margin-left: 20px;" rel="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>" /></li>
+    <li><strong>Option 2:</strong> Pay the amount of $&nbsp;<input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;
+	<input id="make_payment" type="button" value="Pay Other Amount" onclick="takePayment()" /></li>
 </ul>
 <?php }?>
