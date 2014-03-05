@@ -1,5 +1,5 @@
 window.addEvent('domready', function() {
-	
+
 	/* Initialize Children/Camper Information visibility */
 	for(i = 1; i <= 10; i++){
 		camp = "camp" + i;
@@ -26,7 +26,10 @@ window.addEvent('domready', function() {
 	}
 	
 	function manage_camp_fees(){
-		console.log(totalCampFees);
+            console.log(totalCampFees);
+            $("total_camp_fee").value = totalCampFees.toFixed(2);
+            $("total_camp_fee_label").innerHTML = totalCampFees.toFixed(2);                
+                
 	}	
 		
 	// Array to hold all elements that have a price of $25
@@ -228,8 +231,10 @@ window.addEvent('domready', function() {
 		if(elements_array.length == 1){
 			var found_index = all_elements.indexOf(1);
 			all_elements.splice(found_index, 1); // Remove from all elements array
-			var elem_id = "child_1_name";
+			var elem_id = "child_1_fname";
 			makeRequired(elem_id);
+			var elem_id = "child_1_lname";
+			makeRequired(elem_id);			
 			var elem_id = "child_1_dob";
 			makeRequired(elem_id);
 			
@@ -243,8 +248,10 @@ window.addEvent('domready', function() {
 			// Then remove each element item from all_elements
 			 for (var i=0; i<elements_array.length; i++){	
 				var current = elements_array[i];
-				var elem_id = "child_" + current + "_name";
+				var elem_id = "child_" + current + "_fname";
 				makeRequired(elem_id);
+				var elem_id = "child_" + current + "_lname";
+				makeRequired(elem_id);				
 				var elem_id = "child_" + current + "_dob";
 				makeRequired(elem_id);				
 				
@@ -266,8 +273,10 @@ window.addEvent('domready', function() {
 		// Make remaining elements in array optional
 		for (var i=0; i<all_elements.length; i++){	
 			var current = all_elements[i];
-			var elem_id = "child_" + current + "_name";
+			var elem_id = "child_" + current + "_fname";
 			makeOptional(elem_id);
+			var elem_id = "child_" + current + "_lname";
+			makeOptional(elem_id);			
 			var elem_id = "child_" + current + "_dob";
 			makeOptional(elem_id);		
 			
@@ -302,7 +311,7 @@ window.addEvent('domready', function() {
 		}
 	}	
 	
-	function makeRequired(elem_id){ 
+	function makeRequired(elem_id){
 		var req = "validate['required']";
 		var elem = document.getElementById(elem_id);
 		elem.addClass(req);
@@ -310,6 +319,7 @@ window.addEvent('domready', function() {
 	}
 	
 	function makeOptional(elem_id){
+
 		var elem = document.getElementById(elem_id);
 		elem.setProperty('class', '');
 		formCheck_CampGilgalRegistration_v4.removeError(elem);
@@ -332,8 +342,10 @@ window.addEvent('domready', function() {
 			camp_region = camper_section.getElementsByClassName(selected_region);
 			camp_region_checkboxes = camp_region[0].getElementsByTagName('input');
 				// Take care of textboxes to make them required
-				var elem_id = "child_" + i + "_name";
+				var elem_id = "child_" + i + "_fname";
 				makeRequired(elem_id);
+				var elem_id = "child_" + i + "_lname";
+				makeRequired(elem_id);				
 				var elem_id = "child_" + i + "_dob";
 				makeRequired(elem_id);
 
@@ -362,8 +374,10 @@ window.addEvent('domready', function() {
 			camper_section.style.display = "none";
 			
 				// Take care of textboxes to make them optional
-				var elem_id = "child_" + all_elements[i] + "_name";
+				var elem_id = "child_" + all_elements[i] + "_fname";
 				makeOptional(elem_id);
+				var elem_id = "child_" + all_elements[i] + "_lname";
+				makeOptional(elem_id);				
 				var elem_id = "child_" + all_elements[i] + "_dob";
 				makeOptional(elem_id);
 				
@@ -408,18 +422,6 @@ window.addEvent('domready', function() {
 			
 		}
 	}
-	
-	// Pass in camper object
-	/**
-	function toggle_region_checkboxes(camper_section){
-		selected_region = get_selected_region();
-		camps = camper_section.getElementsByClassName(selected_region);
-		camps_checkboxes = camps[0].getElementsByTagName('input');
-		for(i = 0; i < camps_checkboxes.length - 1; i++){
-			//console.log(camps_checkboxes[i].id);
-		}
-
-	}*/
 	
 	
 	// Get selected region

@@ -83,6 +83,7 @@
 
 
 
+
 <!-- Camper 1 -->
 <div id="camp1">
 
@@ -114,19 +115,7 @@
         
 	<div class="clear"></div>
 	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_1_gender_container_div" style="float:left; clear:none; padding-left:5px;">
-            <label for="child_1_gender">Gender*</label>
-            <input type="hidden" name="child_1_gender" value="" alt="ghost" />
-            <div style="float:left; clear:none;"><input type="radio" name="child_1_gender" id="child_1_gender_0" title="" value="Male" class="" />
-            <label for="child_1_gender_0">Male</label>
-            <input type="radio" name="child_1_gender" id="child_1_gender_1" title="" value="Female" class="" />
-                    <label for="child_1_gender_1">Female</label>
-            </div>
-            <div class="clear"></div><div id="error-message-child_1_gender"></div>	
-	</div>
-       
-	
-	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_1_camp_container_div" style="float:left; clear:none; background-color:#F7F7F7;margin-left:60px;">
+	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_1_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
                     <input type="checkbox" name="input_checkbox_group1[]" id="child_1_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
@@ -165,13 +154,25 @@
         <div id="error-message-child_1_camp"></div>
         </div>
 
-        
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;width:440px;">
-		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" style="width:435px;height:50px;"/>
-		<div class="clear"></div>
-		<div id="error-message-child_1_comment"></div>
-	</div>          
+        <div class="gender_comment_container" style="float:left;clear:none;">
+            <div class="ccms_form_element cfdiv_radio label_over" id="child_1_gender_container_div" style="float:left; clear:none; padding-left:0px;">
+                <label for="child_1_gender">Gender*</label>
+                <input type="hidden" name="child_1_gender" value="" alt="ghost" />
+                <div style="float:left; clear:none;"><input type="radio" name="child_1_gender" id="child_1_gender_0" title="" value="Male" class="" />
+                <label for="child_1_gender_0">Male</label>
+                <input type="radio" name="child_1_gender" id="child_1_gender_1" title="" value="Female" class="" />
+                        <label for="child_1_gender_1">Female</label>
+                </div>
+                <div class="clear"></div><div id="error-message-child_1_gender"></div>	
+            </div>
+            <div class="clear"></div>
+            <div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;clear:none;width:440px;">
+                    <label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
+                    <textarea id="child_1_comment" maxlength="150" class="" title="" type="text" value="" name="child_1_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <div class="clear"></div>
+                    <div id="error-message-child_1_comment"></div>
+            </div> 
+        </div>     
 </div>
 
 <div style="clear:both;"></div>
@@ -205,19 +206,7 @@
         
 	<div class="clear"></div>
 	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_2_gender_container_div" style="float:left; clear:none; padding-left:5px;">
-            <label for="child_2_gender">Gender*</label>
-            <input type="hidden" name="child_2_gender" value="" alt="ghost" />
-            <div style="float:left; clear:none;"><input type="radio" name="child_2_gender" id="child_2_gender_0" title="" value="Male" class="" />
-            <label for="child_2_gender_0">Male</label>
-            <input type="radio" name="child_2_gender" id="child_2_gender_1" title="" value="Female" class="" />
-                    <label for="child_2_gender_1">Female</label>
-            </div>
-            <div class="clear"></div><div id="error-message-child_2_gender"></div>	
-	</div>
-       
-	
-	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_2_camp_container_div" style="float:left; clear:none; background-color:#F7F7F7;margin-left:60px;">
+	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_2_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
                     <input type="checkbox" name="input_checkbox_group1[]" id="child_2_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
@@ -256,13 +245,25 @@
         <div id="error-message-child_2_camp"></div>
         </div>
 
-        
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;width:440px;">
-		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" style="width:435px;height:50px;"/>
-		<div class="clear"></div>
-		<div id="error-message-child_1_comment"></div>
-	</div>          
+        <div class="gender_comment_container" style="float:left;clear:none;">
+            <div class="ccms_form_element cfdiv_radio label_over" id="child_2_gender_container_div" style="float:left; clear:none; padding-left:0px;">
+                <label for="child_2_gender">Gender*</label>
+                <input type="hidden" name="child_2_gender" value="" alt="ghost" />
+                <div style="float:left; clear:none;"><input type="radio" name="child_2_gender" id="child_2_gender_0" title="" value="Male" class="" />
+                <label for="child_2_gender_0">Male</label>
+                <input type="radio" name="child_2_gender" id="child_2_gender_1" title="" value="Female" class="" />
+                        <label for="child_2_gender_1">Female</label>
+                </div>
+                <div class="clear"></div><div id="error-message-child_2_gender"></div>	
+            </div>
+            <div class="clear"></div>
+            <div class="ccms_form_element cfdiv_text label_over" id="child_2_comment_container_div" style="float:left;clear:none;width:440px;">
+                    <label for="child_2_comment">Please describe any food allergies or other special considerations here</label>
+                    <textarea id="child_2_comment" maxlength="150" class="" title="" type="text" value="" name="child_2_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <div class="clear"></div>
+                    <div id="error-message-child_2_comment"></div>
+            </div> 
+        </div>     
 </div>
 
 <div style="clear:both;"></div>
@@ -296,19 +297,7 @@
         
 	<div class="clear"></div>
 	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_3_gender_container_div" style="float:left; clear:none; padding-left:5px;">
-            <label for="child_3_gender">Gender*</label>
-            <input type="hidden" name="child_3_gender" value="" alt="ghost" />
-            <div style="float:left; clear:none;"><input type="radio" name="child_3_gender" id="child_3_gender_0" title="" value="Male" class="" />
-            <label for="child_3_gender_0">Male</label>
-            <input type="radio" name="child_3_gender" id="child_3_gender_1" title="" value="Female" class="" />
-                    <label for="child_3_gender_1">Female</label>
-            </div>
-            <div class="clear"></div><div id="error-message-child_3_gender"></div>	
-	</div>
-       
-	
-	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_3_camp_container_div" style="float:left; clear:none; background-color:#F7F7F7;margin-left:60px;">
+	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_3_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
                     <input type="checkbox" name="input_checkbox_group1[]" id="child_3_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
@@ -347,13 +336,25 @@
         <div id="error-message-child_3_camp"></div>
         </div>
 
-        
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;width:440px;">
-		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" style="width:435px;height:50px;"/>
-		<div class="clear"></div>
-		<div id="error-message-child_1_comment"></div>
-	</div>          
+        <div class="gender_comment_container" style="float:left;clear:none;">
+            <div class="ccms_form_element cfdiv_radio label_over" id="child_3_gender_container_div" style="float:left; clear:none; padding-left:0px;">
+                <label for="child_3_gender">Gender*</label>
+                <input type="hidden" name="child_3_gender" value="" alt="ghost" />
+                <div style="float:left; clear:none;"><input type="radio" name="child_3_gender" id="child_3_gender_0" title="" value="Male" class="" />
+                <label for="child_3_gender_0">Male</label>
+                <input type="radio" name="child_3_gender" id="child_3_gender_1" title="" value="Female" class="" />
+                        <label for="child_3_gender_1">Female</label>
+                </div>
+                <div class="clear"></div><div id="error-message-child_3_gender"></div>	
+            </div>
+            <div class="clear"></div>
+            <div class="ccms_form_element cfdiv_text label_over" id="child_3_comment_container_div" style="float:left;clear:none;width:440px;">
+                    <label for="child_3_comment">Please describe any food allergies or other special considerations here</label>
+                    <textarea id="child_3_comment" maxlength="150" class="" title="" type="text" value="" name="child_3_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <div class="clear"></div>
+                    <div id="error-message-child_3_comment"></div>
+            </div> 
+        </div>     
 </div>
 
 <div style="clear:both;"></div>
@@ -387,19 +388,7 @@
         
 	<div class="clear"></div>
 	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_4_gender_container_div" style="float:left; clear:none; padding-left:5px;">
-            <label for="child_4_gender">Gender*</label>
-            <input type="hidden" name="child_4_gender" value="" alt="ghost" />
-            <div style="float:left; clear:none;"><input type="radio" name="child_4_gender" id="child_4_gender_0" title="" value="Male" class="" />
-            <label for="child_4_gender_0">Male</label>
-            <input type="radio" name="child_4_gender" id="child_4_gender_1" title="" value="Female" class="" />
-                    <label for="child_4_gender_1">Female</label>
-            </div>
-            <div class="clear"></div><div id="error-message-child_4_gender"></div>	
-	</div>
-       
-	
-	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_4_camp_container_div" style="float:left; clear:none; background-color:#F7F7F7;margin-left:60px;">
+	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_4_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
                     <input type="checkbox" name="input_checkbox_group1[]" id="child_4_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
@@ -438,13 +427,25 @@
         <div id="error-message-child_4_camp"></div>
         </div>
 
-        
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;width:440px;">
-		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" style="width:435px;height:50px;"/>
-		<div class="clear"></div>
-		<div id="error-message-child_1_comment"></div>
-	</div>          
+        <div class="gender_comment_container" style="float:left;clear:none;">
+            <div class="ccms_form_element cfdiv_radio label_over" id="child_4_gender_container_div" style="float:left; clear:none; padding-left:0px;">
+                <label for="child_4_gender">Gender*</label>
+                <input type="hidden" name="child_4_gender" value="" alt="ghost" />
+                <div style="float:left; clear:none;"><input type="radio" name="child_4_gender" id="child_4_gender_0" title="" value="Male" class="" />
+                <label for="child_4_gender_0">Male</label>
+                <input type="radio" name="child_4_gender" id="child_4_gender_1" title="" value="Female" class="" />
+                        <label for="child_4_gender_1">Female</label>
+                </div>
+                <div class="clear"></div><div id="error-message-child_4_gender"></div>	
+            </div>
+            <div class="clear"></div>
+            <div class="ccms_form_element cfdiv_text label_over" id="child_4_comment_container_div" style="float:left;clear:none;width:440px;">
+                    <label for="child_4_comment">Please describe any food allergies or other special considerations here</label>
+                    <textarea id="child_4_comment" maxlength="150" class="" title="" type="text" value="" name="child_4_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <div class="clear"></div>
+                    <div id="error-message-child_4_comment"></div>
+            </div> 
+        </div>     
 </div>
 
 <div style="clear:both;"></div>
@@ -478,19 +479,7 @@
         
 	<div class="clear"></div>
 	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_5_gender_container_div" style="float:left; clear:none; padding-left:5px;">
-            <label for="child_5_gender">Gender*</label>
-            <input type="hidden" name="child_5_gender" value="" alt="ghost" />
-            <div style="float:left; clear:none;"><input type="radio" name="child_5_gender" id="child_5_gender_0" title="" value="Male" class="" />
-            <label for="child_5_gender_0">Male</label>
-            <input type="radio" name="child_5_gender" id="child_5_gender_1" title="" value="Female" class="" />
-                    <label for="child_5_gender_1">Female</label>
-            </div>
-            <div class="clear"></div><div id="error-message-child_5_gender"></div>	
-	</div>
-       
-	
-	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_5_camp_container_div" style="float:left; clear:none; background-color:#F7F7F7;margin-left:60px;">
+	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_5_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
                     <input type="checkbox" name="input_checkbox_group1[]" id="child_5_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
@@ -529,13 +518,25 @@
         <div id="error-message-child_5_camp"></div>
         </div>
 
-        
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;width:440px;">
-		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" style="width:435px;height:50px;"/>
-		<div class="clear"></div>
-		<div id="error-message-child_1_comment"></div>
-	</div>          
+        <div class="gender_comment_container" style="float:left;clear:none;">
+            <div class="ccms_form_element cfdiv_radio label_over" id="child_5_gender_container_div" style="float:left; clear:none; padding-left:0px;">
+                <label for="child_5_gender">Gender*</label>
+                <input type="hidden" name="child_5_gender" value="" alt="ghost" />
+                <div style="float:left; clear:none;"><input type="radio" name="child_5_gender" id="child_5_gender_0" title="" value="Male" class="" />
+                <label for="child_5_gender_0">Male</label>
+                <input type="radio" name="child_5_gender" id="child_5_gender_1" title="" value="Female" class="" />
+                        <label for="child_5_gender_1">Female</label>
+                </div>
+                <div class="clear"></div><div id="error-message-child_5_gender"></div>	
+            </div>
+            <div class="clear"></div>
+            <div class="ccms_form_element cfdiv_text label_over" id="child_5_comment_container_div" style="float:left;clear:none;width:440px;">
+                    <label for="child_5_comment">Please describe any food allergies or other special considerations here</label>
+                    <textarea id="child_5_comment" maxlength="150" class="" title="" type="text" value="" name="child_5_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <div class="clear"></div>
+                    <div id="error-message-child_5_comment"></div>
+            </div> 
+        </div>     
 </div>
 
 <div style="clear:both;"></div>
@@ -569,19 +570,7 @@
         
 	<div class="clear"></div>
 	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_6_gender_container_div" style="float:left; clear:none; padding-left:5px;">
-            <label for="child_6_gender">Gender*</label>
-            <input type="hidden" name="child_6_gender" value="" alt="ghost" />
-            <div style="float:left; clear:none;"><input type="radio" name="child_6_gender" id="child_6_gender_0" title="" value="Male" class="" />
-            <label for="child_6_gender_0">Male</label>
-            <input type="radio" name="child_6_gender" id="child_6_gender_1" title="" value="Female" class="" />
-                    <label for="child_6_gender_1">Female</label>
-            </div>
-            <div class="clear"></div><div id="error-message-child_6_gender"></div>	
-	</div>
-       
-	
-	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_6_camp_container_div" style="float:left; clear:none; background-color:#F7F7F7;margin-left:60px;">
+	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_6_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
                     <input type="checkbox" name="input_checkbox_group1[]" id="child_6_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
@@ -620,13 +609,25 @@
         <div id="error-message-child_6_camp"></div>
         </div>
 
-        
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;width:440px;">
-		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" style="width:435px;height:50px;"/>
-		<div class="clear"></div>
-		<div id="error-message-child_1_comment"></div>
-	</div>          
+        <div class="gender_comment_container" style="float:left;clear:none;">
+            <div class="ccms_form_element cfdiv_radio label_over" id="child_6_gender_container_div" style="float:left; clear:none; padding-left:0px;">
+                <label for="child_6_gender">Gender*</label>
+                <input type="hidden" name="child_6_gender" value="" alt="ghost" />
+                <div style="float:left; clear:none;"><input type="radio" name="child_6_gender" id="child_6_gender_0" title="" value="Male" class="" />
+                <label for="child_6_gender_0">Male</label>
+                <input type="radio" name="child_6_gender" id="child_6_gender_1" title="" value="Female" class="" />
+                        <label for="child_6_gender_1">Female</label>
+                </div>
+                <div class="clear"></div><div id="error-message-child_6_gender"></div>	
+            </div>
+            <div class="clear"></div>
+            <div class="ccms_form_element cfdiv_text label_over" id="child_6_comment_container_div" style="float:left;clear:none;width:440px;">
+                    <label for="child_6_comment">Please describe any food allergies or other special considerations here</label>
+                    <textarea id="child_6_comment" maxlength="150" class="" title="" type="text" value="" name="child_6_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <div class="clear"></div>
+                    <div id="error-message-child_6_comment"></div>
+            </div> 
+        </div>     
 </div>
 
 <div style="clear:both;"></div>
@@ -660,19 +661,7 @@
         
 	<div class="clear"></div>
 	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_7_gender_container_div" style="float:left; clear:none; padding-left:5px;">
-            <label for="child_7_gender">Gender*</label>
-            <input type="hidden" name="child_7_gender" value="" alt="ghost" />
-            <div style="float:left; clear:none;"><input type="radio" name="child_7_gender" id="child_7_gender_0" title="" value="Male" class="" />
-            <label for="child_7_gender_0">Male</label>
-            <input type="radio" name="child_7_gender" id="child_7_gender_1" title="" value="Female" class="" />
-                    <label for="child_7_gender_1">Female</label>
-            </div>
-            <div class="clear"></div><div id="error-message-child_7_gender"></div>	
-	</div>
-       
-	
-	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_7_camp_container_div" style="float:left; clear:none; background-color:#F7F7F7;margin-left:60px;">
+	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_7_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
                     <input type="checkbox" name="input_checkbox_group1[]" id="child_7_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
@@ -711,13 +700,25 @@
         <div id="error-message-child_7_camp"></div>
         </div>
 
-        
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;width:440px;">
-		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" style="width:435px;height:50px;"/>
-		<div class="clear"></div>
-		<div id="error-message-child_1_comment"></div>
-	</div>          
+        <div class="gender_comment_container" style="float:left;clear:none;">
+            <div class="ccms_form_element cfdiv_radio label_over" id="child_7_gender_container_div" style="float:left; clear:none; padding-left:0px;">
+                <label for="child_7_gender">Gender*</label>
+                <input type="hidden" name="child_7_gender" value="" alt="ghost" />
+                <div style="float:left; clear:none;"><input type="radio" name="child_7_gender" id="child_7_gender_0" title="" value="Male" class="" />
+                <label for="child_7_gender_0">Male</label>
+                <input type="radio" name="child_7_gender" id="child_7_gender_1" title="" value="Female" class="" />
+                        <label for="child_7_gender_1">Female</label>
+                </div>
+                <div class="clear"></div><div id="error-message-child_7_gender"></div>	
+            </div>
+            <div class="clear"></div>
+            <div class="ccms_form_element cfdiv_text label_over" id="child_7_comment_container_div" style="float:left;clear:none;width:440px;">
+                    <label for="child_7_comment">Please describe any food allergies or other special considerations here</label>
+                    <textarea id="child_7_comment" maxlength="150" class="" title="" type="text" value="" name="child_7_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <div class="clear"></div>
+                    <div id="error-message-child_7_comment"></div>
+            </div> 
+        </div>     
 </div>
 
 <div style="clear:both;"></div>
@@ -751,19 +752,7 @@
         
 	<div class="clear"></div>
 	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_8_gender_container_div" style="float:left; clear:none; padding-left:5px;">
-            <label for="child_8_gender">Gender*</label>
-            <input type="hidden" name="child_8_gender" value="" alt="ghost" />
-            <div style="float:left; clear:none;"><input type="radio" name="child_8_gender" id="child_8_gender_0" title="" value="Male" class="" />
-            <label for="child_8_gender_0">Male</label>
-            <input type="radio" name="child_8_gender" id="child_8_gender_1" title="" value="Female" class="" />
-                    <label for="child_8_gender_1">Female</label>
-            </div>
-            <div class="clear"></div><div id="error-message-child_8_gender"></div>	
-	</div>
-       
-	
-	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_8_camp_container_div" style="float:left; clear:none; background-color:#F7F7F7;margin-left:60px;">
+	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_8_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
                     <input type="checkbox" name="input_checkbox_group1[]" id="child_8_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
@@ -802,13 +791,25 @@
         <div id="error-message-child_8_camp"></div>
         </div>
 
-        
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;width:440px;">
-		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" style="width:435px;height:50px;"/>
-		<div class="clear"></div>
-		<div id="error-message-child_1_comment"></div>
-	</div>          
+        <div class="gender_comment_container" style="float:left;clear:none;">
+            <div class="ccms_form_element cfdiv_radio label_over" id="child_8_gender_container_div" style="float:left; clear:none; padding-left:0px;">
+                <label for="child_8_gender">Gender*</label>
+                <input type="hidden" name="child_8_gender" value="" alt="ghost" />
+                <div style="float:left; clear:none;"><input type="radio" name="child_8_gender" id="child_8_gender_0" title="" value="Male" class="" />
+                <label for="child_8_gender_0">Male</label>
+                <input type="radio" name="child_8_gender" id="child_8_gender_1" title="" value="Female" class="" />
+                        <label for="child_8_gender_1">Female</label>
+                </div>
+                <div class="clear"></div><div id="error-message-child_8_gender"></div>	
+            </div>
+            <div class="clear"></div>
+            <div class="ccms_form_element cfdiv_text label_over" id="child_8_comment_container_div" style="float:left;clear:none;width:440px;">
+                    <label for="child_8_comment">Please describe any food allergies or other special considerations here</label>
+                    <textarea id="child_8_comment" maxlength="150" class="" title="" type="text" value="" name="child_8_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <div class="clear"></div>
+                    <div id="error-message-child_8_comment"></div>
+            </div> 
+        </div>     
 </div>
 
 <div style="clear:both;"></div>
@@ -842,19 +843,7 @@
         
 	<div class="clear"></div>
 	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_9_gender_container_div" style="float:left; clear:none; padding-left:5px;">
-            <label for="child_9_gender">Gender*</label>
-            <input type="hidden" name="child_9_gender" value="" alt="ghost" />
-            <div style="float:left; clear:none;"><input type="radio" name="child_9_gender" id="child_9_gender_0" title="" value="Male" class="" />
-            <label for="child_9_gender_0">Male</label>
-            <input type="radio" name="child_9_gender" id="child_9_gender_1" title="" value="Female" class="" />
-                    <label for="child_9_gender_1">Female</label>
-            </div>
-            <div class="clear"></div><div id="error-message-child_9_gender"></div>	
-	</div>
-       
-	
-	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_9_camp_container_div" style="float:left; clear:none; background-color:#F7F7F7;margin-left:60px;">
+	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_9_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
                     <input type="checkbox" name="input_checkbox_group1[]" id="child_9_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
@@ -893,13 +882,25 @@
         <div id="error-message-child_9_camp"></div>
         </div>
 
-        
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;width:440px;">
-		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" style="width:435px;height:50px;"/>
-		<div class="clear"></div>
-		<div id="error-message-child_1_comment"></div>
-	</div>          
+        <div class="gender_comment_container" style="float:left;clear:none;">
+            <div class="ccms_form_element cfdiv_radio label_over" id="child_9_gender_container_div" style="float:left; clear:none; padding-left:0px;">
+                <label for="child_9_gender">Gender*</label>
+                <input type="hidden" name="child_9_gender" value="" alt="ghost" />
+                <div style="float:left; clear:none;"><input type="radio" name="child_9_gender" id="child_9_gender_0" title="" value="Male" class="" />
+                <label for="child_9_gender_0">Male</label>
+                <input type="radio" name="child_9_gender" id="child_9_gender_1" title="" value="Female" class="" />
+                        <label for="child_9_gender_1">Female</label>
+                </div>
+                <div class="clear"></div><div id="error-message-child_9_gender"></div>	
+            </div>
+            <div class="clear"></div>
+            <div class="ccms_form_element cfdiv_text label_over" id="child_9_comment_container_div" style="float:left;clear:none;width:440px;">
+                    <label for="child_9_comment">Please describe any food allergies or other special considerations here</label>
+                    <textarea id="child_9_comment" maxlength="150" class="" title="" type="text" value="" name="child_9_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <div class="clear"></div>
+                    <div id="error-message-child_9_comment"></div>
+            </div> 
+        </div>     
 </div>
 
 <div style="clear:both;"></div>
@@ -933,19 +934,7 @@
         
 	<div class="clear"></div>
 	
-	<div class="ccms_form_element cfdiv_radio label_over" id="child_10_gender_container_div" style="float:left; clear:none; padding-left:5px;">
-            <label for="child_10_gender">Gender*</label>
-            <input type="hidden" name="child_10_gender" value="" alt="ghost" />
-            <div style="float:left; clear:none;"><input type="radio" name="child_10_gender" id="child_10_gender_0" title="" value="Male" class="" />
-            <label for="child_10_gender_0">Male</label>
-            <input type="radio" name="child_10_gender" id="child_10_gender_1" title="" value="Female" class="" />
-                    <label for="child_10_gender_1">Female</label>
-            </div>
-            <div class="clear"></div><div id="error-message-child_10_gender"></div>	
-	</div>
-       
-	
-	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_10_camp_container_div" style="float:left; clear:none; background-color:#F7F7F7;margin-left:60px;">
+	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_10_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
                     <input type="checkbox" name="input_checkbox_group1[]" id="child_10_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
@@ -984,21 +973,34 @@
         <div id="error-message-child_10_camp"></div>
         </div>
 
-        
-	<div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;width:440px;">
-		<label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-		<input id="child_1_comment" maxlength="150" size="30" class="" title="" type="text" value="" name="child_1_comment" style="width:435px;height:50px;"/>
-		<div class="clear"></div>
-		<div id="error-message-child_1_comment"></div>
-	</div>          
+        <div class="gender_comment_container" style="float:left;clear:none;">
+            <div class="ccms_form_element cfdiv_radio label_over" id="child_10_gender_container_div" style="float:left; clear:none; padding-left:0px;">
+                <label for="child_10_gender">Gender*</label>
+                <input type="hidden" name="child_10_gender" value="" alt="ghost" />
+                <div style="float:left; clear:none;"><input type="radio" name="child_10_gender" id="child_10_gender_0" title="" value="Male" class="" />
+                <label for="child_10_gender_0">Male</label>
+                <input type="radio" name="child_10_gender" id="child_10_gender_1" title="" value="Female" class="" />
+                        <label for="child_10_gender_1">Female</label>
+                </div>
+                <div class="clear"></div><div id="error-message-child_10_gender"></div>	
+            </div>
+            <div class="clear"></div>
+            <div class="ccms_form_element cfdiv_text label_over" id="child_10_comment_container_div" style="float:left;clear:none;width:440px;">
+                    <label for="child_10_comment">Please describe any food allergies or other special considerations here</label>
+                    <textarea id="child_10_comment" maxlength="150" class="" title="" type="text" value="" name="child_10_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <div class="clear"></div>
+                    <div id="error-message-child_10_comment"></div>
+            </div> 
+        </div>     
 </div>
 
 <div style="clear:both;"></div>
 
 <div style="clear:left; color: #FF0000;padding-top:10px;">
     <p>
-        Total Camp Balance: <br/>
+        Total Camp Balance: <strong>$<label id="total_camp_fee_label" name="total_camp_fee_label">0.00</label></strong><br/>
         Total Deposit: <strong>$<label id="total_reg_fee_label" name="total_reg_fee_label">0.00</label></strong><br/>
+        Remaining Balance: <strong>$<label id="remaining_balance_label" name="remaining_balance_label">0.00</label></strong><br/>
     </p>
 </div>
         
@@ -1036,17 +1038,7 @@
 <div class="ccms_form_element cfdiv_text" id="refer_phone_container_div" style=""><label for="refer_phone">Phone</label>
 <input id="refer_phone" maxlength="150" size="30" class="" title="" type="text" value="" name="refer_phone" />
 <div class="clear"></div><div id="error-message-refer_phone"></div></div>
-<!--
-<p>
-<em>We welcome your comments and questions. Please describe any food allergies or other special considerations here as well.</em>
-</p>
-	<div class="ccms_form_element cfdiv_textarea" id="comments_container_div" style="">
-		<label for="comments" style="display:none;">Comments</label>
-		<textarea id="comments" cols="100" rows="12" class="" title="" name="comments"></textarea>
-	<div class="clear"></div>
-	<div id="error-message-comments"></div>
-	</div>
-	-->
+
 <table width="100%">
 <tr bgcolor="#D6DCEB">
 
@@ -1060,6 +1052,7 @@
 <input id="CurrentPayment" type="hidden" value="0.00" name="CurrentPayment" />
 <input id="appeal_code" type="hidden" value="gilgal" name="appeal_code" />
 <input id="total_reg_fee" type="hidden" value="0.00" name="total_reg_fee" />
+<input id="total_camp_fee" type="hidden" value="0.00" name="total_camp_fee" />
 <input id="additional_gift" type="hidden" value="0.00" name="additional_gift" />
 <input id="fundid" name="fundid" type="hidden" value="" />
 <input id="comments" name="comments" type="hidden" value=""/>
