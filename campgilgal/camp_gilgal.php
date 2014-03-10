@@ -997,10 +997,11 @@
 <div style="clear:both;"></div>
 
 <div style="clear:left; color: #FF0000;padding-top:10px;">
+    <hr size="1">
     <p>
         Total Camp Balance: <strong>$<label id="total_camp_fee_label" name="total_camp_fee_label">0.00</label></strong><br/>
         Total Deposit: <strong>$<label id="total_reg_fee_label" name="total_reg_fee_label">0.00</label></strong><br/>
-        Remaining Balance: <strong>$<label id="remaining_balance_label" name="remaining_balance_label">0.00</label></strong><br/>
+        <!-- Remaining Balance: <strong>$<label id="remaining_balance_label" name="remaining_balance_label">0.00</label></strong><br/> -->
     </p>
 </div>
         

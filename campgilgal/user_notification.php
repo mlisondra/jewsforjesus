@@ -108,10 +108,23 @@
     <td colspan="3" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><em>A Jewish family who might want to send their child(ren) to Camp Gilgal.</em></td>
     </tr>
     <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Family's Name</strong></td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Parent/Guardian's Name</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
     <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_name}</td>
     </tr>
+    
+    <tr>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Child's Name</strong></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_child}</td>
+    </tr>
+    
+    <tr>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Relationship to Family</strong></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_relationship}</td>
+    </tr>
+    
     <tr>
     <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Address</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>

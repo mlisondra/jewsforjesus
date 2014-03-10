@@ -171,36 +171,47 @@ function pay_deposit(){
             ?>
         </td>
     </tr>
+    <?php if($registrationDetails[CurrentPayment] == 0){?>
     <tr>
     	<td><strong>Total Deposit:</strong></td>
         <td>$<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></td>
     </tr>
+    <?php } ?>
     <?php if($event != 'evgilgal'){?>
-    <tr>
-    	<td><strong>Total Camp Fees:</strong></td>
-        <td>$<?php echo number_format($registrationDetails[total_camp_fee],2,'.', '');?></td>
-    </tr>	
-    <tr>
-    	<td><strong>Additional Gift:</strong></td>
-        <td>$<?php echo number_format($registrationDetails[additional_gift],2,'.', '');?></td>
-    </tr>
+        <?php if($registrationDetails[CurrentPayment] == 0){?>
+            <tr>
+                <td><strong>Total Camp Fees:</strong></td>
+                <td>$<?php echo number_format($registrationDetails[total_camp_fee],2,'.', '');?></td>
+            </tr>	
+            <tr>
+                <td><strong>Additional Gift:</strong></td>
+                <td>$<?php echo number_format($registrationDetails[additional_gift],2,'.', '');?></td>
+            </tr>
+        <?php } ?>
     <?php }?>
+            
     <?php if($registrationDetails[CurrentPayment] > 0){?>
     <tr>
-    	<td><strong>Partial Payment:</strong></td>
+    	<td><strong>Total Paid:</strong></td>
         <td>$<?php echo number_format($registrationDetails[CurrentPayment],2,'.', '');?></td>
     </tr>
     <tr>
-    	<td><strong>Remaining Balance:</strong></td>
-        <td>$<?php echo number_format($balance,2,'.', '');?></td>
+    	<td><strong>Remaining Camp Balance:</strong></td>
+        <?php $remaining_balance = $registrationDetails[total_camp_fee] - $registrationDetails[CurrentPayment]; ?>
+        <td>$<?php echo number_format($remaining_balance,2,'.', '');?></td>
     </tr>
     <?php }?>
 </table>
 <input type="hidden" value="<?php echo $registrationDetails[CurrentPayment];?>" id="partialPayment" />
-<h2>Payment Options</h2>
-<?php
+<?php if($registrationDetails[CurrentPayment] == 0){?>
+    <h2>Payment Options</h2>
+<?php }else{ ?>
+    <h2>Make a Payment</h2>
+<?php } ?>
+ <?php
 if($event == 'evgilgal'){ ?>
-<p>The next step is to make a deposit of $<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?>. You can do this by:</p>
+    <p>The next step is to make a deposit of $<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?>. You can do this by:</p>
+
 <ul>
 	<li><a href="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>"><strong>Paying online</strong></a></li>
     <li><strong>Writing a check. Make it payable to Jews for Jesus</strong> and in the memo section write, "Camp Gilgal payment." 
@@ -208,11 +219,22 @@ if($event == 'evgilgal'){ ?>
     <li>Any questions? Call Cricket – Kathy Nichols at (415) 864-2600, ext. 1153.</li>
 </ul>	
 <?php }else{ ?>
-<p>If you have not made arrangements for payment, you may pay online by selecting an option below.</p>
+    <?php if($registrationDetails[CurrentPayment] == 0){ ?>
+        <p>If you have not made arrangements for payment, you may pay online by selecting an option below.</p>
+    <?php } ?>
 <ul>
-	<li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>">Pay Deposit and Additional Gift amount 
+        <?php if($registrationDetails[CurrentPayment] == 0){?>
+	<li>
+            <strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>">Pay Deposit and Additional Gift amount 
 	of $<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></a> <input id="pay_deposit_button" type="button" onclick="pay_deposit(this)" value="Pay Deposit" style="margin-left: 20px;" rel="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>" /></li>
-    <li><strong>Option 2:</strong> Pay the amount of $&nbsp;<input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;
+        <li>
+            <strong>Option 2:</strong> Pay the amount of $&nbsp;<input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;
 	<input id="make_payment" type="button" value="Pay Other Amount" onclick="takePayment()" /></li>
+        <?php }else{ ?>
+        <li>
+            Pay the amount of $&nbsp;<input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;
+            <input id="make_payment" type="button" value="Pay Amount" onclick="takePayment()" />
+        </li>
+        <?php }  ?>
 </ul>
 <?php }?>
