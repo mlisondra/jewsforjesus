@@ -121,12 +121,12 @@ window.addEvent('domready', function() {
 			"pdf":"http://www.jewsforjesus.org/files/Passover2014/FLPassoverBanquetflyer.pdf"
         },
         {
-            "when":"Monday, April 14, 2014, 7:00 P.M",
+            "when":"Monday, April 14, 2014, 6:30 P.M",
             "venue":"The Olympic Collection Banquet and Conference Center",
             "address":"11301 Olympic Blvd. West, Los Angeles, CA 90064",
             "menu":'Matzoh Ball Soup, Grilled Half Chicken with Wild Mushroom Sauce on the side, Roasted Rosemary Potatoes, and Mélange of Vegetables. Dessert, tea and coffee.',
             "more_info":"Susan Montroy (310) 443-9553 or la@jewsforjesus.org",
-            "deadline":"Friday, April 7, 2014",
+            "deadline":"Monday, April 7, 2014",
             "cost_adults":"45",
             "cost_children":"15",
 			"fundid":"LABRAN-EV",
