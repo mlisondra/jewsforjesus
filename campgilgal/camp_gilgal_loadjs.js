@@ -1,10 +1,13 @@
 window.addEvent('domready', function() {
 
+        $$('.cfdiv_text label').setStyle('width','200px');
+        $$('.cfdiv_radio label:first-child').setStyle('width','200px');
+        
 	/* Initialize Children/Camper Information visibility */
 	for(i = 1; i <= 10; i++){
-		camp = "camp" + i;
-		$(camp).setStyle('display','none');
-        $(camp).setStyle('clear','both'); 
+            camp = "camp" + i;
+            $(camp).setStyle('display','none');
+            $(camp).setStyle('clear','both'); 
 	}	
 
 
