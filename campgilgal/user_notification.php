@@ -3,7 +3,7 @@
     ?>
     <table width="100%" style="width:100%;">
         <tr>
-            <td style="font-family:Helvetica, Arial, sans-serif;"><h3>Thank you, {fname}, you for registering for Camp Gilgal</h3>
+            <td style="font-family:Helvetica, Arial, sans-serif;"><h3>Thank you, {fname}, for registering for Camp Gilgal</h3>
             <h3 style="font-weight:bold;color:red;font-family:Helvetica, Arial, sans-serif;">
                 For balance information and future payment, please use link in Payment and Balance section.
             </h3>
@@ -80,7 +80,7 @@
                     </p>
                 </li>
                 <li>
-                  <p><strong>Mail a check.</strong> Make payable to Jews for Jesus with memo: &rdquo;Camp Gilgal payment&rdquo;. Mail to: Jews  for Jesus, 60 Haight Street, San Francisco, CA 94102-5895. </p>
+                  <p><strong>Mail a check.</strong> Make payable to Jews for Jesus with memo: &rdquo;Camp Gilgal payment.&rdquo; Mail to: Jews  for Jesus, 60 Haight Street, San Francisco, CA 94102-5895. </p>
                 </li>
                 <li>
                     <p><strong>Make a credit card payment by phone.</strong> Call LouAnn Gonzalez at (415) 864-2600 ext. 1119.</p>
