@@ -1,9 +1,9 @@
-    <?php
+<?php
     $base_url = JURI::base();
     ?>
     <table width="100%" style="width:100%;">
         <tr>
-            <td style="font-family:Helvetica, Arial, sans-serif;"><h3>Thank you, {fname}, for registering for Camp Gilgal</h3>
+            <td style="font-family:Helvetica, Arial, sans-serif;color:#656667;"><h3>Thank you, {fname}, for registering for Camp Gilgal</h3>
             <h3 style="font-weight:bold;color:red;font-family:Helvetica, Arial, sans-serif;">
                 For balance information and future payment, please use link in Payment and Balance section.
             </h3>
@@ -19,30 +19,33 @@
 
     if($childctr > 0){
     ?>
-    <table width="100%">
+    <table width="100%" cellspacing="5">
     <tr>
-    <td bgcolor="#79BAEC" colspan="7" style="font-family:Helvetica, Arial, sans-serif;"><strong>CAMPER INFORMATION</strong></td>
+        <td bgcolor="#79BAEC" colspan="7" style="font-family:Helvetica, Arial, sans-serif;"><strong>CAMPER INFORMATION</strong></td>
     </tr>
 
     <tr>
-    <td align="left" colspan="7" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">
-        <strong>Number of registered child(ren)</strong>&nbsp;&nbsp;&nbsp;{child_count}</td>
+        <td align="left" colspan="7" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">
+            <strong>Number of registered child(ren)</strong>&nbsp;&nbsp;&nbsp;{child_count}
+        </td>
     </tr>
     <tr>
-        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Camper's Name</strong></td>
-        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Camp</strong></td>
-        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Special Considerations</strong></td>
+        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>Camper's Name</strong></td>
+        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>Camp</strong></td>
+        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>Special Considerations</strong></td>
         <td colspan="4"></td>
     </tr>
     <?php
         for($x=1;$x<=$childctr;$x++)
     {?>
     <tr>
-        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{child_<?php echo $x; ?>_fname} {child_<?php echo $x; ?>_lname}</td>
-        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{region_label}: 
+        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{child_<?php echo $x; ?>_fname} {child_<?php echo $x; ?>_lname}</td>
+        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{region_label}: 
             <?php
-
+                    $camp_label = "";
                     $key = "child_" . $x . "_camps";
+                    //print $key;
+                    //echo $form->data['chronoform_data'][$key];
                     $camp_label = str_replace("(Midwest)","",$form->data['chronoform_data'][$key]);
                     $camp_label = str_replace("(West)","",$camp_label);
                     $camp_label = str_replace("(East)","",$camp_label);
@@ -50,10 +53,11 @@
                     $camp_label = str_replace("WWW Southern California","WWW South",$camp_label);
                     $camp_label = str_replace("Wonderful Winter Weekend","WWW",$camp_label);
                     $camp_label = str_replace(" ,",",",$camp_label);
+                    
                     print $camp_label;
             ?>
         </td>
-        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{child_<?php echo $x; ?>_comment}</td>
+        <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{child_<?php echo $x; ?>_comment}</td>
          <td colspan="4"></td>
     </tr>
     <?php
@@ -72,7 +76,7 @@
     <td bgcolor="#79BAEC" style="font-family:Helvetica, Arial, sans-serif;"><strong>PAYMENT AND BALANCE INFORMATION</strong></td>
     </tr>
     <tr>
-    <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">
+    <td style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">
             <ul>
                 <li>
                     <a href="<?php print $base_url; ?>registration-payment?event=<?php echo $form->data['chronoform_data']['fundid'];?>&ref=<?php echo $form->data['chronoform_data']['cf_uid'];?>"><strong>Click here to pay online</strong></a>
@@ -100,65 +104,65 @@
     { ?>
     <tr>
     <td>
-    <table width="100%">
+    <table width="100%" cellspacing="5">
     <tr>
     <td bgcolor="#79BAEC" colspan="3" style="font-family:Helvetica, Arial, sans-serif;"><strong>FAMILY REFERRAL</strong></td>
     </tr>
     <tr>
-    <td colspan="3" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><em>A Jewish family who might want to send their child(ren) to Camp Gilgal.</em></td>
+    <td colspan="3" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><em>A Jewish family who might want to send their child(ren) to Camp Gilgal.</em></td>
     </tr>
     <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Parent/Guardian's Name</strong></td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>Parent/Guardian's Name</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_name}</td>
-    </tr>
-    
-    <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Child's Name</strong></td>
-    <td>&nbsp;&nbsp;&nbsp;</td>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_child}</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{refer_name}</td>
     </tr>
     
     <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Relationship to Family</strong></td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>Child's Name</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_relationship}</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{refer_child}</td>
     </tr>
     
     <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Address</strong></td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>Relationship to Family</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_address_1}</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{refer_relationship}</td>
+    </tr>
+    
+    <tr>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>Address</strong></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{refer_address_1}</td>
     </tr>
     <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>&nbsp;</strong></td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>&nbsp;</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_address_2}</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{refer_address_2}</td>
     </tr>
     <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>City</strong></td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>City</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_city}</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{refer_city}</td>
     </tr>
     <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>State/Province</strong></td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>State/Province</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_state}</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{refer_state}</td>
     </tr>
     <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Postal/Zip Code</strong></td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>Postal/Zip Code</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_zip}</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{refer_zip}</td>
     </tr>
     <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Country</strong></td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>Country</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_country}</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{refer_country}</td>
     </tr>
     <tr>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;"><strong>Phone</strong></td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;"><strong>Phone</strong></td>
     <td>&nbsp;&nbsp;&nbsp;</td>
-    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">{refer_phone}</td>
+    <td align="left" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">{refer_phone}</td>
     </tr>
     </table>
     </td>
@@ -170,7 +174,7 @@
 
 
     <tr>
-        <td align="center" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;">
+        <td align="center" style="font-family:Helvetica, Arial, sans-serif;font-size:10pt;color:#656667;">
         <br />
         <p>
             <img src="http://www.jewsforjesus.org/images/logo/jews-for-jesus-logo300.png" width="300" height="45" border="0" /></p>
