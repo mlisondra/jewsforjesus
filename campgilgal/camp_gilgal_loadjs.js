@@ -2,12 +2,12 @@ window.addEvent('domready', function() {
 
         $$('.cfdiv_text label').setStyle('width','200px');
         $$('.cfdiv_radio label:first-child').setStyle('width','200px');
-        
+
 	/* Initialize Children/Camper Information visibility */
 	for(i = 1; i <= 10; i++){
-            camp = "camp" + i;
-            $(camp).setStyle('display','none');
-            $(camp).setStyle('clear','both'); 
+		camp = "camp" + i;
+		$(camp).setStyle('display','none');
+        $(camp).setStyle('clear','both'); 
 	}	
 
 
@@ -208,16 +208,16 @@ window.addEvent('domready', function() {
 		if(this.value == "" || Number(this.value) == 0){
 			current_gift = $('additional_gift').value; // get current donation amount
 			$('additional_gift').value = 0; // set hidden input to zero
-			totalFee = totalFee - Number(current_gift); // remove the previously given donation amount from total fee
-			changeFee();
+			//totalFee = totalFee - Number(current_gift); // remove the previously given donation amount from total fee
+			//changeFee();
 		}else{
 			current_gift = $('additional_gift').value; // get current donation
-			totalFee = totalFee - Number(current_gift); // subtract the previously entered donation amount from total fee	
-			changeFee();
+			//totalFee = totalFee - Number(current_gift); // subtract the previously entered donation amount from total fee	
+			//changeFee();
 			
 			$('additional_gift').value = Number(this.value); // set hidden input to new value
-			totalFee = totalFee + Number(this.value); // add new donation amount to total fee
-			changeFee();
+			//totalFee = totalFee + Number(this.value); // add new donation amount to total fee
+			//changeFee();
 		}	
 		
 	});
