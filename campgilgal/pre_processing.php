@@ -17,7 +17,7 @@ switch($form->data['chronoform_data']['select_region']){
 		break;
 }
 // temporary override; use during debugging
-$form->data['admin_email']  = 'mlisondra@lisondraconsulting.com';
+$form->data['admin_email']  = 'milder.lisondra@jewforjesus.org';
 
 // Get the number of campers selected
 $num_child = $form->data['chronoform_data']['child_count'];
