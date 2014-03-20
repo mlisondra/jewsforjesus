@@ -65,7 +65,7 @@
 	<div class="ccms_form_element cfdiv_select" id="child_count_container_div" style="display:none;">
 		<p><strong>Please register my child(ren) for the following camp(s):</strong></p>
 		<label for="child_count">Select number of campers</label>
-		<select size="1" id="child_count" class=" validate['required']" title="" name="child_count">
+		<select size="1" id="child_count" class=" validate['required']" title="Select number of campers" name="child_count">
 			<option value="">(Please select)</option>
 			<option value="1">1</option>
 			<option value="2">2</option>
@@ -158,9 +158,10 @@
             <div class="ccms_form_element cfdiv_radio label_over" id="child_1_gender_container_div" style="float:left; clear:none; padding-left:0px;">
                 <label for="child_1_gender">Gender*</label>
                 <input type="hidden" name="child_1_gender" value="" alt="ghost" />
-                <div style="float:left; clear:none;"><input type="radio" name="child_1_gender" id="child_1_gender_0" title="" value="Male" class="" />
+                <div style="float:left; clear:none;">
+                    <input type="radio" name="child_1_gender" id="child_1_gender_0" title="Select an option" value="Male" class="" />
                 <label for="child_1_gender_0">Male</label>
-                <input type="radio" name="child_1_gender" id="child_1_gender_1" title="" value="Female" class="" />
+                <input type="radio" name="child_1_gender" id="child_1_gender_1" title="Select an option" value="Female" class="" />
                         <label for="child_1_gender_1">Female</label>
                 </div>
                 <div class="clear"></div><div id="error-message-child_1_gender"></div>	
@@ -168,7 +169,7 @@
             <div class="clear"></div>
             <div class="ccms_form_element cfdiv_text label_over" id="child_1_comment_container_div" style="float:left;clear:none;width:440px;">
                     <label for="child_1_comment">Please describe any food allergies or other special considerations here</label>
-                    <textarea id="child_1_comment" maxlength="150" class="" title="" type="text" value="" name="child_1_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <textarea id="child_1_comment" class="" title="" value="" name="child_1_comment" style="resize:none;height:50px;width:100%"/></textarea>
                     <div class="clear"></div>
                     <div id="error-message-child_1_comment"></div>
             </div> 
@@ -209,35 +210,35 @@
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_2_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_2_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
+                    <input type="checkbox" name="input_checkbox_group4[]" id="child_2_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
                     <label for="child_2_camp_1">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_2_camp_2" title="" value="Teen Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group4[]" id="child_2_camp_2" title="" value="Teen Camp (East)" class="" />
                     <label for="child_2_camp_2">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_2_camp_3" title="" value="Adventure Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group4[]" id="child_2_camp_3" title="" value="Adventure Camp (East)" class="" />
                     <label for="child_2_camp_3">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_2_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group4[]" id="child_2_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
                     <label for="child_2_camp_0">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="midwest_camps">
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_2_camp_5" title="" value="Junior Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group5[]" id="child_2_camp_5" title="" value="Junior Camp (Midwest)" class="" />
                     <label for="child_2_camp_5">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_2_camp_6" title="" value="Teen Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group5[]" id="child_2_camp_6" title="" value="Teen Camp (Midwest)" class="" />
                     <label for="child_2_camp_6">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_2_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group5[]" id="child_2_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
                     <label for="child_2_camp_7">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_2_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group5[]" id="child_2_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
                     <label for="child_2_camp_4">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="west_camps">
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_2_camp_10" title="" value="Junior Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group6[]" id="child_2_camp_10" title="" value="Junior Camp (West)" class="" />
                     <label for="child_2_camp_10">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_2_camp_11" title="" value="Teen Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group6[]" id="child_2_camp_11" title="" value="Teen Camp (West)" class="" />
                     <label for="child_2_camp_11">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_2_camp_12" title="" value="Adventure Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group6[]" id="child_2_camp_12" title="" value="Adventure Camp (West)" class="" />
                     <label for="child_2_camp_12">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_2_camp_8" title="" value="WWW Southern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group6[]" id="child_2_camp_8" title="" value="WWW Southern California (West)" class="" />
                     <label for="child_2_camp_8">WWW Southern California ($95)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_2_camp_9" title="" value="WWW Northern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group6[]" id="child_2_camp_9" title="" value="WWW Northern California (West)" class="" />
                     <label for="child_2_camp_9">WWW Northern California ($95)</label>
             </div>
             <div class="clear"></div>
@@ -249,9 +250,10 @@
             <div class="ccms_form_element cfdiv_radio label_over" id="child_2_gender_container_div" style="float:left; clear:none; padding-left:0px;">
                 <label for="child_2_gender">Gender*</label>
                 <input type="hidden" name="child_2_gender" value="" alt="ghost" />
-                <div style="float:left; clear:none;"><input type="radio" name="child_2_gender" id="child_2_gender_0" title="" value="Male" class="" />
+                <div style="float:left; clear:none;">
+                    <input type="radio" name="child_2_gender" id="child_2_gender_0" title="Select an option" value="Male" class="" />
                 <label for="child_2_gender_0">Male</label>
-                <input type="radio" name="child_2_gender" id="child_2_gender_1" title="" value="Female" class="" />
+                <input type="radio" name="child_2_gender" id="child_2_gender_1" title="Select an option" value="Female" class="" />
                         <label for="child_2_gender_1">Female</label>
                 </div>
                 <div class="clear"></div><div id="error-message-child_2_gender"></div>	
@@ -259,7 +261,7 @@
             <div class="clear"></div>
             <div class="ccms_form_element cfdiv_text label_over" id="child_2_comment_container_div" style="float:left;clear:none;width:440px;">
                     <label for="child_2_comment">Please describe any food allergies or other special considerations here</label>
-                    <textarea id="child_2_comment" maxlength="150" class="" title="" type="text" value="" name="child_2_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <textarea id="child_2_comment" class="" title="" value="" name="child_2_comment" style="resize:none;height:50px;width:100%"/></textarea>
                     <div class="clear"></div>
                     <div id="error-message-child_2_comment"></div>
             </div> 
@@ -300,35 +302,35 @@
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_3_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_3_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
+                    <input type="checkbox" name="input_checkbox_group7[]" id="child_3_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
                     <label for="child_3_camp_1">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_3_camp_2" title="" value="Teen Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group7[]" id="child_3_camp_2" title="" value="Teen Camp (East)" class="" />
                     <label for="child_3_camp_2">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_3_camp_3" title="" value="Adventure Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group7[]" id="child_3_camp_3" title="" value="Adventure Camp (East)" class="" />
                     <label for="child_3_camp_3">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_3_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group7[]" id="child_3_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
                     <label for="child_3_camp_0">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="midwest_camps">
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_3_camp_5" title="" value="Junior Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group8[]" id="child_3_camp_5" title="" value="Junior Camp (Midwest)" class="" />
                     <label for="child_3_camp_5">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_3_camp_6" title="" value="Teen Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group8[]" id="child_3_camp_6" title="" value="Teen Camp (Midwest)" class="" />
                     <label for="child_3_camp_6">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_3_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group8[]" id="child_3_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
                     <label for="child_3_camp_7">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_3_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group8[]" id="child_3_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
                     <label for="child_3_camp_4">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="west_camps">
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_3_camp_10" title="" value="Junior Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group9[]" id="child_3_camp_10" title="" value="Junior Camp (West)" class="" />
                     <label for="child_3_camp_10">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_3_camp_11" title="" value="Teen Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group9[]" id="child_3_camp_11" title="" value="Teen Camp (West)" class="" />
                     <label for="child_3_camp_11">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_3_camp_12" title="" value="Adventure Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group9[]" id="child_3_camp_12" title="" value="Adventure Camp (West)" class="" />
                     <label for="child_3_camp_12">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_3_camp_8" title="" value="WWW Southern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group9[]" id="child_3_camp_8" title="" value="WWW Southern California (West)" class="" />
                     <label for="child_3_camp_8">WWW Southern California ($95)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_3_camp_9" title="" value="WWW Northern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group9[]" id="child_3_camp_9" title="" value="WWW Northern California (West)" class="" />
                     <label for="child_3_camp_9">WWW Northern California ($95)</label>
             </div>
             <div class="clear"></div>
@@ -340,9 +342,10 @@
             <div class="ccms_form_element cfdiv_radio label_over" id="child_3_gender_container_div" style="float:left; clear:none; padding-left:0px;">
                 <label for="child_3_gender">Gender*</label>
                 <input type="hidden" name="child_3_gender" value="" alt="ghost" />
-                <div style="float:left; clear:none;"><input type="radio" name="child_3_gender" id="child_3_gender_0" title="" value="Male" class="" />
+                <div style="float:left; clear:none;">
+                    <input type="radio" name="child_3_gender" id="child_3_gender_0" title="Select an option" value="Male" class="" />
                 <label for="child_3_gender_0">Male</label>
-                <input type="radio" name="child_3_gender" id="child_3_gender_1" title="" value="Female" class="" />
+                <input type="radio" name="child_3_gender" id="child_3_gender_1" title="Select an option" value="Female" class="" />
                         <label for="child_3_gender_1">Female</label>
                 </div>
                 <div class="clear"></div><div id="error-message-child_3_gender"></div>	
@@ -350,7 +353,7 @@
             <div class="clear"></div>
             <div class="ccms_form_element cfdiv_text label_over" id="child_3_comment_container_div" style="float:left;clear:none;width:440px;">
                     <label for="child_3_comment">Please describe any food allergies or other special considerations here</label>
-                    <textarea id="child_3_comment" maxlength="150" class="" title="" type="text" value="" name="child_3_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <textarea id="child_3_comment" class="" title="" value="" name="child_3_comment" style="resize:none;height:50px;width:100%"/></textarea>
                     <div class="clear"></div>
                     <div id="error-message-child_3_comment"></div>
             </div> 
@@ -391,35 +394,35 @@
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_4_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_4_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
+                    <input type="checkbox" name="input_checkbox_group10[]" id="child_4_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
                     <label for="child_4_camp_1">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_4_camp_2" title="" value="Teen Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group10[]" id="child_4_camp_2" title="" value="Teen Camp (East)" class="" />
                     <label for="child_4_camp_2">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_4_camp_3" title="" value="Adventure Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group10[]" id="child_4_camp_3" title="" value="Adventure Camp (East)" class="" />
                     <label for="child_4_camp_3">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_4_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group10[]" id="child_4_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
                     <label for="child_4_camp_0">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="midwest_camps">
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_4_camp_5" title="" value="Junior Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group11[]" id="child_4_camp_5" title="" value="Junior Camp (Midwest)" class="" />
                     <label for="child_4_camp_5">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_4_camp_6" title="" value="Teen Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group11[]" id="child_4_camp_6" title="" value="Teen Camp (Midwest)" class="" />
                     <label for="child_4_camp_6">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_4_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group11[]" id="child_4_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
                     <label for="child_4_camp_7">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_4_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group11[]" id="child_4_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
                     <label for="child_4_camp_4">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="west_camps">
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_4_camp_10" title="" value="Junior Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group12[]" id="child_4_camp_10" title="" value="Junior Camp (West)" class="" />
                     <label for="child_4_camp_10">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_4_camp_11" title="" value="Teen Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group12[]" id="child_4_camp_11" title="" value="Teen Camp (West)" class="" />
                     <label for="child_4_camp_11">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_4_camp_12" title="" value="Adventure Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group12[]" id="child_4_camp_12" title="" value="Adventure Camp (West)" class="" />
                     <label for="child_4_camp_12">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_4_camp_8" title="" value="WWW Southern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group12[]" id="child_4_camp_8" title="" value="WWW Southern California (West)" class="" />
                     <label for="child_4_camp_8">WWW Southern California ($95)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_4_camp_9" title="" value="WWW Northern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group12[]" id="child_4_camp_9" title="" value="WWW Northern California (West)" class="" />
                     <label for="child_4_camp_9">WWW Northern California ($95)</label>
             </div>
             <div class="clear"></div>
@@ -431,9 +434,10 @@
             <div class="ccms_form_element cfdiv_radio label_over" id="child_4_gender_container_div" style="float:left; clear:none; padding-left:0px;">
                 <label for="child_4_gender">Gender*</label>
                 <input type="hidden" name="child_4_gender" value="" alt="ghost" />
-                <div style="float:left; clear:none;"><input type="radio" name="child_4_gender" id="child_4_gender_0" title="" value="Male" class="" />
+                <div style="float:left; clear:none;">
+                    <input type="radio" name="child_4_gender" id="child_4_gender_0" title="Select an option" value="Male" class="" />
                 <label for="child_4_gender_0">Male</label>
-                <input type="radio" name="child_4_gender" id="child_4_gender_1" title="" value="Female" class="" />
+                <input type="radio" name="child_4_gender" id="child_4_gender_1" title="Select an option" value="Female" class="" />
                         <label for="child_4_gender_1">Female</label>
                 </div>
                 <div class="clear"></div><div id="error-message-child_4_gender"></div>	
@@ -441,7 +445,7 @@
             <div class="clear"></div>
             <div class="ccms_form_element cfdiv_text label_over" id="child_4_comment_container_div" style="float:left;clear:none;width:440px;">
                     <label for="child_4_comment">Please describe any food allergies or other special considerations here</label>
-                    <textarea id="child_4_comment" maxlength="150" class="" title="" type="text" value="" name="child_4_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <textarea id="child_4_comment" class="" title="" value="" name="child_4_comment" style="resize:none;height:50px;width:100%"/></textarea>
                     <div class="clear"></div>
                     <div id="error-message-child_4_comment"></div>
             </div> 
@@ -482,35 +486,35 @@
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_5_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_5_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
+                    <input type="checkbox" name="input_checkbox_group13[]" id="child_5_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
                     <label for="child_5_camp_1">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_5_camp_2" title="" value="Teen Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group13[]" id="child_5_camp_2" title="" value="Teen Camp (East)" class="" />
                     <label for="child_5_camp_2">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_5_camp_3" title="" value="Adventure Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group13[]" id="child_5_camp_3" title="" value="Adventure Camp (East)" class="" />
                     <label for="child_5_camp_3">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_5_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group13[]" id="child_5_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
                     <label for="child_5_camp_0">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="midwest_camps">
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_5_camp_5" title="" value="Junior Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group14[]" id="child_5_camp_5" title="" value="Junior Camp (Midwest)" class="" />
                     <label for="child_5_camp_5">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_5_camp_6" title="" value="Teen Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group14[]" id="child_5_camp_6" title="" value="Teen Camp (Midwest)" class="" />
                     <label for="child_5_camp_6">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_5_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group14[]" id="child_5_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
                     <label for="child_5_camp_7">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_5_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group14[]" id="child_5_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
                     <label for="child_5_camp_4">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="west_camps">
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_5_camp_10" title="" value="Junior Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group15[]" id="child_5_camp_10" title="" value="Junior Camp (West)" class="" />
                     <label for="child_5_camp_10">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_5_camp_11" title="" value="Teen Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group15[]" id="child_5_camp_11" title="" value="Teen Camp (West)" class="" />
                     <label for="child_5_camp_11">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_5_camp_12" title="" value="Adventure Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group15[]" id="child_5_camp_12" title="" value="Adventure Camp (West)" class="" />
                     <label for="child_5_camp_12">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_5_camp_8" title="" value="WWW Southern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group15[]" id="child_5_camp_8" title="" value="WWW Southern California (West)" class="" />
                     <label for="child_5_camp_8">WWW Southern California ($95)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_5_camp_9" title="" value="WWW Northern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group15[]" id="child_5_camp_9" title="" value="WWW Northern California (West)" class="" />
                     <label for="child_5_camp_9">WWW Northern California ($95)</label>
             </div>
             <div class="clear"></div>
@@ -522,9 +526,10 @@
             <div class="ccms_form_element cfdiv_radio label_over" id="child_5_gender_container_div" style="float:left; clear:none; padding-left:0px;">
                 <label for="child_5_gender">Gender*</label>
                 <input type="hidden" name="child_5_gender" value="" alt="ghost" />
-                <div style="float:left; clear:none;"><input type="radio" name="child_5_gender" id="child_5_gender_0" title="" value="Male" class="" />
+                <div style="float:left; clear:none;">
+                    <input type="radio" name="child_5_gender" id="child_5_gender_0" title="Select an option" value="Male" class="" />
                 <label for="child_5_gender_0">Male</label>
-                <input type="radio" name="child_5_gender" id="child_5_gender_1" title="" value="Female" class="" />
+                <input type="radio" name="child_5_gender" id="child_5_gender_1" title="Select an option" value="Female" class="" />
                         <label for="child_5_gender_1">Female</label>
                 </div>
                 <div class="clear"></div><div id="error-message-child_5_gender"></div>	
@@ -532,7 +537,7 @@
             <div class="clear"></div>
             <div class="ccms_form_element cfdiv_text label_over" id="child_5_comment_container_div" style="float:left;clear:none;width:440px;">
                     <label for="child_5_comment">Please describe any food allergies or other special considerations here</label>
-                    <textarea id="child_5_comment" maxlength="150" class="" title="" type="text" value="" name="child_5_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <textarea id="child_5_comment" class="" title="" value="" name="child_5_comment" style="resize:none;height:50px;width:100%"/></textarea>
                     <div class="clear"></div>
                     <div id="error-message-child_5_comment"></div>
             </div> 
@@ -573,35 +578,35 @@
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_6_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_6_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
+                    <input type="checkbox" name="input_checkbox_group16[]" id="child_6_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
                     <label for="child_6_camp_1">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_6_camp_2" title="" value="Teen Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group16[]" id="child_6_camp_2" title="" value="Teen Camp (East)" class="" />
                     <label for="child_6_camp_2">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_6_camp_3" title="" value="Adventure Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group16[]" id="child_6_camp_3" title="" value="Adventure Camp (East)" class="" />
                     <label for="child_6_camp_3">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_6_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group16[]" id="child_6_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
                     <label for="child_6_camp_0">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="midwest_camps">
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_6_camp_5" title="" value="Junior Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group17[]" id="child_6_camp_5" title="" value="Junior Camp (Midwest)" class="" />
                     <label for="child_6_camp_5">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_6_camp_6" title="" value="Teen Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group17[]" id="child_6_camp_6" title="" value="Teen Camp (Midwest)" class="" />
                     <label for="child_6_camp_6">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_6_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group17[]" id="child_6_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
                     <label for="child_6_camp_7">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_6_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group17[]" id="child_6_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
                     <label for="child_6_camp_4">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="west_camps">
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_6_camp_10" title="" value="Junior Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group18[]" id="child_6_camp_10" title="" value="Junior Camp (West)" class="" />
                     <label for="child_6_camp_10">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_6_camp_11" title="" value="Teen Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group18[]" id="child_6_camp_11" title="" value="Teen Camp (West)" class="" />
                     <label for="child_6_camp_11">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_6_camp_12" title="" value="Adventure Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group18[]" id="child_6_camp_12" title="" value="Adventure Camp (West)" class="" />
                     <label for="child_6_camp_12">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_6_camp_8" title="" value="WWW Southern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group18[]" id="child_6_camp_8" title="" value="WWW Southern California (West)" class="" />
                     <label for="child_6_camp_8">WWW Southern California ($95)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_6_camp_9" title="" value="WWW Northern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group18[]" id="child_6_camp_9" title="" value="WWW Northern California (West)" class="" />
                     <label for="child_6_camp_9">WWW Northern California ($95)</label>
             </div>
             <div class="clear"></div>
@@ -613,9 +618,10 @@
             <div class="ccms_form_element cfdiv_radio label_over" id="child_6_gender_container_div" style="float:left; clear:none; padding-left:0px;">
                 <label for="child_6_gender">Gender*</label>
                 <input type="hidden" name="child_6_gender" value="" alt="ghost" />
-                <div style="float:left; clear:none;"><input type="radio" name="child_6_gender" id="child_6_gender_0" title="" value="Male" class="" />
+                <div style="float:left; clear:none;">
+                    <input type="radio" name="child_6_gender" id="child_6_gender_0" title="Select an option" value="Male" class="" />
                 <label for="child_6_gender_0">Male</label>
-                <input type="radio" name="child_6_gender" id="child_6_gender_1" title="" value="Female" class="" />
+                <input type="radio" name="child_6_gender" id="child_6_gender_1" title="Select an option" value="Female" class="" />
                         <label for="child_6_gender_1">Female</label>
                 </div>
                 <div class="clear"></div><div id="error-message-child_6_gender"></div>	
@@ -623,7 +629,7 @@
             <div class="clear"></div>
             <div class="ccms_form_element cfdiv_text label_over" id="child_6_comment_container_div" style="float:left;clear:none;width:440px;">
                     <label for="child_6_comment">Please describe any food allergies or other special considerations here</label>
-                    <textarea id="child_6_comment" maxlength="150" class="" title="" type="text" value="" name="child_6_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <textarea id="child_6_comment" class="" title="" value="" name="child_6_comment" style="resize:none;height:50px;width:100%"/></textarea>
                     <div class="clear"></div>
                     <div id="error-message-child_6_comment"></div>
             </div> 
@@ -664,35 +670,35 @@
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_7_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_7_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
+                    <input type="checkbox" name="input_checkbox_group19[]" id="child_7_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
                     <label for="child_7_camp_1">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_7_camp_2" title="" value="Teen Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group19[]" id="child_7_camp_2" title="" value="Teen Camp (East)" class="" />
                     <label for="child_7_camp_2">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_7_camp_3" title="" value="Adventure Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group19[]" id="child_7_camp_3" title="" value="Adventure Camp (East)" class="" />
                     <label for="child_7_camp_3">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_7_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group19[]" id="child_7_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
                     <label for="child_7_camp_0">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="midwest_camps">
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_7_camp_5" title="" value="Junior Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group20[]" id="child_7_camp_5" title="" value="Junior Camp (Midwest)" class="" />
                     <label for="child_7_camp_5">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_7_camp_6" title="" value="Teen Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group20[]" id="child_7_camp_6" title="" value="Teen Camp (Midwest)" class="" />
                     <label for="child_7_camp_6">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_7_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group20[]" id="child_7_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
                     <label for="child_7_camp_7">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_7_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group20[]" id="child_7_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
                     <label for="child_7_camp_4">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="west_camps">
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_7_camp_10" title="" value="Junior Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group21[]" id="child_7_camp_10" title="" value="Junior Camp (West)" class="" />
                     <label for="child_7_camp_10">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_7_camp_11" title="" value="Teen Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group21[]" id="child_7_camp_11" title="" value="Teen Camp (West)" class="" />
                     <label for="child_7_camp_11">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_7_camp_12" title="" value="Adventure Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group21[]" id="child_7_camp_12" title="" value="Adventure Camp (West)" class="" />
                     <label for="child_7_camp_12">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_7_camp_8" title="" value="WWW Southern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group21[]" id="child_7_camp_8" title="" value="WWW Southern California (West)" class="" />
                     <label for="child_7_camp_8">WWW Southern California ($95)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_7_camp_9" title="" value="WWW Northern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group21[]" id="child_7_camp_9" title="" value="WWW Northern California (West)" class="" />
                     <label for="child_7_camp_9">WWW Northern California ($95)</label>
             </div>
             <div class="clear"></div>
@@ -704,9 +710,10 @@
             <div class="ccms_form_element cfdiv_radio label_over" id="child_7_gender_container_div" style="float:left; clear:none; padding-left:0px;">
                 <label for="child_7_gender">Gender*</label>
                 <input type="hidden" name="child_7_gender" value="" alt="ghost" />
-                <div style="float:left; clear:none;"><input type="radio" name="child_7_gender" id="child_7_gender_0" title="" value="Male" class="" />
+                <div style="float:left; clear:none;">
+                    <input type="radio" name="child_7_gender" id="child_7_gender_0" title="Select an option" value="Male" class="" />
                 <label for="child_7_gender_0">Male</label>
-                <input type="radio" name="child_7_gender" id="child_7_gender_1" title="" value="Female" class="" />
+                <input type="radio" name="child_7_gender" id="child_7_gender_1" title="Select an option" value="Female" class="" />
                         <label for="child_7_gender_1">Female</label>
                 </div>
                 <div class="clear"></div><div id="error-message-child_7_gender"></div>	
@@ -714,7 +721,7 @@
             <div class="clear"></div>
             <div class="ccms_form_element cfdiv_text label_over" id="child_7_comment_container_div" style="float:left;clear:none;width:440px;">
                     <label for="child_7_comment">Please describe any food allergies or other special considerations here</label>
-                    <textarea id="child_7_comment" maxlength="150" class="" title="" type="text" value="" name="child_7_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <textarea id="child_7_comment" class="" title="" value="" name="child_7_comment" style="resize:none;height:50px;width:100%"/></textarea>
                     <div class="clear"></div>
                     <div id="error-message-child_7_comment"></div>
             </div> 
@@ -755,35 +762,35 @@
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_8_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_8_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
+                    <input type="checkbox" name="input_checkbox_group22[]" id="child_8_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
                     <label for="child_8_camp_1">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_8_camp_2" title="" value="Teen Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group22[]" id="child_8_camp_2" title="" value="Teen Camp (East)" class="" />
                     <label for="child_8_camp_2">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_8_camp_3" title="" value="Adventure Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group22[]" id="child_8_camp_3" title="" value="Adventure Camp (East)" class="" />
                     <label for="child_8_camp_3">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_8_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group22[]" id="child_8_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
                     <label for="child_8_camp_0">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="midwest_camps">
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_8_camp_5" title="" value="Junior Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group23[]" id="child_8_camp_5" title="" value="Junior Camp (Midwest)" class="" />
                     <label for="child_8_camp_5">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_8_camp_6" title="" value="Teen Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group23[]" id="child_8_camp_6" title="" value="Teen Camp (Midwest)" class="" />
                     <label for="child_8_camp_6">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_8_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group23[]" id="child_8_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
                     <label for="child_8_camp_7">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_8_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group23[]" id="child_8_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
                     <label for="child_8_camp_4">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="west_camps">
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_8_camp_10" title="" value="Junior Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group24[]" id="child_8_camp_10" title="" value="Junior Camp (West)" class="" />
                     <label for="child_8_camp_10">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_8_camp_11" title="" value="Teen Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group24[]" id="child_8_camp_11" title="" value="Teen Camp (West)" class="" />
                     <label for="child_8_camp_11">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_8_camp_12" title="" value="Adventure Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group24[]" id="child_8_camp_12" title="" value="Adventure Camp (West)" class="" />
                     <label for="child_8_camp_12">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_8_camp_8" title="" value="WWW Southern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group24[]" id="child_8_camp_8" title="" value="WWW Southern California (West)" class="" />
                     <label for="child_8_camp_8">WWW Southern California ($95)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_8_camp_9" title="" value="WWW Northern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group24[]" id="child_8_camp_9" title="" value="WWW Northern California (West)" class="" />
                     <label for="child_8_camp_9">WWW Northern California ($95)</label>
             </div>
             <div class="clear"></div>
@@ -795,9 +802,10 @@
             <div class="ccms_form_element cfdiv_radio label_over" id="child_8_gender_container_div" style="float:left; clear:none; padding-left:0px;">
                 <label for="child_8_gender">Gender*</label>
                 <input type="hidden" name="child_8_gender" value="" alt="ghost" />
-                <div style="float:left; clear:none;"><input type="radio" name="child_8_gender" id="child_8_gender_0" title="" value="Male" class="" />
+                <div style="float:left; clear:none;">
+                    <input type="radio" name="child_8_gender" id="child_8_gender_0" title="Select an option" value="Male" class="" />
                 <label for="child_8_gender_0">Male</label>
-                <input type="radio" name="child_8_gender" id="child_8_gender_1" title="" value="Female" class="" />
+                <input type="radio" name="child_8_gender" id="child_8_gender_1" title="Select an option" value="Female" class="" />
                         <label for="child_8_gender_1">Female</label>
                 </div>
                 <div class="clear"></div><div id="error-message-child_8_gender"></div>	
@@ -805,7 +813,7 @@
             <div class="clear"></div>
             <div class="ccms_form_element cfdiv_text label_over" id="child_8_comment_container_div" style="float:left;clear:none;width:440px;">
                     <label for="child_8_comment">Please describe any food allergies or other special considerations here</label>
-                    <textarea id="child_8_comment" maxlength="150" class="" title="" type="text" value="" name="child_8_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <textarea id="child_8_comment" class="" title="" value="" name="child_8_comment" style="resize:none;height:50px;width:100%"/></textarea>
                     <div class="clear"></div>
                     <div id="error-message-child_8_comment"></div>
             </div> 
@@ -846,35 +854,35 @@
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_9_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_9_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
+                    <input type="checkbox" name="input_checkbox_group25[]" id="child_9_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
                     <label for="child_9_camp_1">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_9_camp_2" title="" value="Teen Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group25[]" id="child_9_camp_2" title="" value="Teen Camp (East)" class="" />
                     <label for="child_9_camp_2">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_9_camp_3" title="" value="Adventure Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group25[]" id="child_9_camp_3" title="" value="Adventure Camp (East)" class="" />
                     <label for="child_9_camp_3">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_9_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group25[]" id="child_9_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
                     <label for="child_9_camp_0">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="midwest_camps">
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_9_camp_5" title="" value="Junior Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group26[]" id="child_9_camp_5" title="" value="Junior Camp (Midwest)" class="" />
                     <label for="child_9_camp_5">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_9_camp_6" title="" value="Teen Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group26[]" id="child_9_camp_6" title="" value="Teen Camp (Midwest)" class="" />
                     <label for="child_9_camp_6">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_9_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group26[]" id="child_9_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
                     <label for="child_9_camp_7">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_9_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group26[]" id="child_9_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
                     <label for="child_9_camp_4">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="west_camps">
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_9_camp_10" title="" value="Junior Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group27[]" id="child_9_camp_10" title="" value="Junior Camp (West)" class="" />
                     <label for="child_9_camp_10">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_9_camp_11" title="" value="Teen Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group27[]" id="child_9_camp_11" title="" value="Teen Camp (West)" class="" />
                     <label for="child_9_camp_11">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_9_camp_12" title="" value="Adventure Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group27[]" id="child_9_camp_12" title="" value="Adventure Camp (West)" class="" />
                     <label for="child_9_camp_12">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_9_camp_8" title="" value="WWW Southern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group27[]" id="child_9_camp_8" title="" value="WWW Southern California (West)" class="" />
                     <label for="child_9_camp_8">WWW Southern California ($95)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_9_camp_9" title="" value="WWW Northern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group27[]" id="child_9_camp_9" title="" value="WWW Northern California (West)" class="" />
                     <label for="child_9_camp_9">WWW Northern California ($95)</label>
             </div>
             <div class="clear"></div>
@@ -886,9 +894,10 @@
             <div class="ccms_form_element cfdiv_radio label_over" id="child_9_gender_container_div" style="float:left; clear:none; padding-left:0px;">
                 <label for="child_9_gender">Gender*</label>
                 <input type="hidden" name="child_9_gender" value="" alt="ghost" />
-                <div style="float:left; clear:none;"><input type="radio" name="child_9_gender" id="child_9_gender_0" title="" value="Male" class="" />
+                <div style="float:left; clear:none;">
+                    <input type="radio" name="child_9_gender" id="child_9_gender_0" title="Select an option" value="Male" class="" />
                 <label for="child_9_gender_0">Male</label>
-                <input type="radio" name="child_9_gender" id="child_9_gender_1" title="" value="Female" class="" />
+                <input type="radio" name="child_9_gender" id="child_9_gender_1" title="Select an option" value="Female" class="" />
                         <label for="child_9_gender_1">Female</label>
                 </div>
                 <div class="clear"></div><div id="error-message-child_9_gender"></div>	
@@ -896,7 +905,7 @@
             <div class="clear"></div>
             <div class="ccms_form_element cfdiv_text label_over" id="child_9_comment_container_div" style="float:left;clear:none;width:440px;">
                     <label for="child_9_comment">Please describe any food allergies or other special considerations here</label>
-                    <textarea id="child_9_comment" maxlength="150" class="" title="" type="text" value="" name="child_9_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <textarea id="child_9_comment" class="" title="" value="" name="child_9_comment" style="resize:none;height:50px;width:100%"/></textarea>
                     <div class="clear"></div>
                     <div id="error-message-child_9_comment"></div>
             </div> 
@@ -937,35 +946,35 @@
 	<div class="ccms_form_element cfdiv_checkboxgroup radios_over" id="child_10_camp_container_div" style="float:left; clear:none;width:230px;">
             <strong>Camps*</strong>
             <div style="float:left; clear:none;display:none;" class="east_camps">
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_10_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
+                    <input type="checkbox" name="input_checkbox_group28[]" id="child_10_camp_1" title="" value="Junior Camp (East)" class="" rel="50.00" />
                     <label for="child_10_camp_1">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_10_camp_2" title="" value="Teen Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group28[]" id="child_10_camp_2" title="" value="Teen Camp (East)" class="" />
                     <label for="child_10_camp_2">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_10_camp_3" title="" value="Adventure Camp (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group28[]" id="child_10_camp_3" title="" value="Adventure Camp (East)" class="" />
                     <label for="child_10_camp_3">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group1[]" id="child_10_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
+                    <input type="checkbox" name="input_checkbox_group28[]" id="child_10_camp_0" title="" value="Wonderful Winter Weekend (East)" class="" />
                     <label for="child_10_camp_0">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="midwest_camps">
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_10_camp_5" title="" value="Junior Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group29[]" id="child_10_camp_5" title="" value="Junior Camp (Midwest)" class="" />
                     <label for="child_10_camp_5">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_10_camp_6" title="" value="Teen Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group29[]" id="child_10_camp_6" title="" value="Teen Camp (Midwest)" class="" />
                     <label for="child_10_camp_6">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_10_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group29[]" id="child_10_camp_7" title="" value="Adventure Camp (Midwest)" class="" />
                     <label for="child_10_camp_7">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group2[]" id="child_10_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
+                    <input type="checkbox" name="input_checkbox_group29[]" id="child_10_camp_4" title="" value="Wonderful Winter Weekend (Midwest)" class="" />
                     <label for="child_10_camp_4">Wonderful Winter Weekend ($95)</label>
             </div>
             <div style="float:left; clear:none;display:none;" class="west_camps">
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_10_camp_10" title="" value="Junior Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group30[]" id="child_10_camp_10" title="" value="Junior Camp (West)" class="" />
                     <label for="child_10_camp_10">Junior Camp ($650)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_10_camp_11" title="" value="Teen Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group30[]" id="child_10_camp_11" title="" value="Teen Camp (West)" class="" />
                     <label for="child_10_camp_11">Teen Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_10_camp_12" title="" value="Adventure Camp (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group30[]" id="child_10_camp_12" title="" value="Adventure Camp (West)" class="" />
                     <label for="child_10_camp_12">Adventure Camp ($325)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_10_camp_8" title="" value="WWW Southern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group30[]" id="child_10_camp_8" title="" value="WWW Southern California (West)" class="" />
                     <label for="child_10_camp_8">WWW Southern California ($95)</label>
-                    <input type="checkbox" name="input_checkbox_group3[]" id="child_10_camp_9" title="" value="WWW Northern California (West)" class="" />
+                    <input type="checkbox" name="input_checkbox_group30[]" id="child_10_camp_9" title="" value="WWW Northern California (West)" class="" />
                     <label for="child_10_camp_9">WWW Northern California ($95)</label>
             </div>
             <div class="clear"></div>
@@ -977,9 +986,10 @@
             <div class="ccms_form_element cfdiv_radio label_over" id="child_10_gender_container_div" style="float:left; clear:none; padding-left:0px;">
                 <label for="child_10_gender">Gender*</label>
                 <input type="hidden" name="child_10_gender" value="" alt="ghost" />
-                <div style="float:left; clear:none;"><input type="radio" name="child_10_gender" id="child_10_gender_0" title="" value="Male" class="" />
+                <div style="float:left; clear:none;">
+                    <input type="radio" name="child_10_gender" id="child_10_gender_0" title="Select an option" value="Male" class="" />
                 <label for="child_10_gender_0">Male</label>
-                <input type="radio" name="child_10_gender" id="child_10_gender_1" title="" value="Female" class="" />
+                <input type="radio" name="child_10_gender" id="child_10_gender_1" title="Select an option" value="Female" class="" />
                         <label for="child_10_gender_1">Female</label>
                 </div>
                 <div class="clear"></div><div id="error-message-child_10_gender"></div>	
@@ -987,7 +997,7 @@
             <div class="clear"></div>
             <div class="ccms_form_element cfdiv_text label_over" id="child_10_comment_container_div" style="float:left;clear:none;width:440px;">
                     <label for="child_10_comment">Please describe any food allergies or other special considerations here</label>
-                    <textarea id="child_10_comment" maxlength="150" class="" title="" type="text" value="" name="child_10_comment" style="resize:none;height:50px;width:100%"/></textarea>
+                    <textarea id="child_10_comment" class="" title="" value="" name="child_10_comment" style="resize:none;height:50px;width:100%"/></textarea>
                     <div class="clear"></div>
                     <div id="error-message-child_10_comment"></div>
             </div> 
