@@ -151,13 +151,15 @@ function pay_deposit(){
     </tr>
     <tr>
     	<td><strong>I am Jewish:</strong></td>
-        <td><?php 
-
-			if($registrationDetails[heritage] == 'Jewish'){
-				echo 'Yes';
-			}else{
-				echo 'No';
-			}?></td>
+        <td>
+            <?php 
+                if($registrationDetails[heritage] == 'Jewish'){
+                        echo 'Yes';
+                }else{
+                        echo 'No';
+                }
+            ?>
+        </td>
     </tr>
     <tr>
     	<td><strong>I believe in Jesus:</strong></td>
@@ -172,17 +174,21 @@ function pay_deposit(){
         </td>
     </tr>
     <?php if($registrationDetails[CurrentPayment] == 0){?>
-    <tr>
+    <!--<tr>
     	<td><strong>Total Deposit:</strong></td>
         <td>$<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></td>
-    </tr>
+    </tr>-->
     <?php } ?>
     <?php if($event != 'evgilgal'){?>
         <?php if($registrationDetails[CurrentPayment] == 0){?>
             <tr>
-                <td><strong>Total Camp Fees:</strong></td>
+                <td><strong>Total Camp Balance:</strong></td>
                 <td>$<?php echo number_format($registrationDetails[total_camp_fee],2,'.', '');?></td>
-            </tr>	
+            </tr>
+                <tr>
+                    <td><strong>Deposit:</strong></td>
+                    <td>$<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></td>
+                </tr>            
             <tr>
                 <td><strong>Additional Gift:</strong></td>
                 <td>$<?php echo number_format($registrationDetails[additional_gift],2,'.', '');?></td>
@@ -204,7 +210,7 @@ function pay_deposit(){
 </table>
 <input type="hidden" value="<?php echo $registrationDetails[CurrentPayment];?>" id="partialPayment" />
 <?php if($registrationDetails[CurrentPayment] == 0){?>
-    <h2>Payment Options</h2>
+    <h2>Payment Amount</h2>
 <?php }else{ ?>
     <h2>Make a Payment</h2>
 <?php } ?>
@@ -220,15 +226,15 @@ if($event == 'evgilgal'){ ?>
 </ul>	
 <?php }else{ ?>
     <?php if($registrationDetails[CurrentPayment] == 0){ ?>
-        <p>If you have not made arrangements for payment, you may pay online by selecting an option below.</p>
+        <!--<p>If you have not made arrangements for payment, you may pay online by selecting an option below.</p>-->
     <?php } ?>
 <ul>
         <?php if($registrationDetails[CurrentPayment] == 0){?>
 	<li>
-            <strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>">Pay Deposit and Additional Gift amount 
-	of $<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></a> <input id="pay_deposit_button" type="button" onclick="pay_deposit(this)" value="Pay Deposit" style="margin-left: 20px;" rel="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>" /></li>
+            <!--<strong>Option 1:</strong>--> <a href="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee] + $registrationDetails[additional_gift];?>">Pay Deposit and Additional Gift amount 
+	of $<?php echo number_format($registrationDetails[total_reg_fee] + $registrationDetails[additional_gift],2,'.', '');?></a> <input id="pay_deposit_button" type="button" onclick="pay_deposit(this)" value="Pay Deposit" style="margin-left: 20px;" rel="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>" /></li>
         <li>
-            <strong>Option 2:</strong> Pay the amount of $&nbsp;<input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;
+            <!--<strong>Option 2:</strong>--> Pay the amount, including Additional Gift, of $&nbsp;<input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;
 	<input id="make_payment" type="button" value="Pay Other Amount" onclick="takePayment()" /></li>
         <?php }else{ ?>
         <li>
