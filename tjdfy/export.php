@@ -61,7 +61,8 @@ if($result->num_rows > 0){
 	// create string of ids
 	$ids_list = "'".implode("','",$ids_array) . "'";
 	// update db for exported records
-	$query = "UPDATE export_data SET exported = 1 WHERE id IN (".$ids_list.")";
+        $exported_datetime = date("Y-m-d H:i:s",time());
+	$query = "UPDATE export_data SET exported = 1, exported_datetime = '" . $exported_datetime . "' WHERE id IN (".$ids_list.")";
 	$mysqli->query($query);
 	print 'Exported data created';
 	send_notification($filename);
@@ -82,7 +83,8 @@ function send_notification($filename = ''){
 	
 	$mail->From = 'admin@jewsforjesus.org';
 	$mail->FromName = 'TJDFY Submissions Export';
-	$mail->addAddress('michael.butcher@jewsforjesus.org', 'Milder Lisondra');  // Add a recipient
+	$mail->addAddress('michael.butcher@jewsforjesus.org', 'Michael Butcher');  // Add a recipient
+	$mail->addCC('don.walker@jewsforjesus.org','Don Walker'); // Add cc recipient
 	//$mail->addAddress('ellen@example.com');               // Name is optional
 	//$mail->addReplyTo('info@example.com', 'Information');
 	//$mail->addCC('cc@example.com');
