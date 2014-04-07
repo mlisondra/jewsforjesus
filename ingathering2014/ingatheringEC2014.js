@@ -1,7 +1,7 @@
 window.addEvent('domready', function() {
 	
 	//early bird discount check
-	var discountDate = new Date('08-01-2013'),
+	var discountDate = new Date('08-01-2014'),
 	currentDate = new Date(),
 	discountEnable = false;
 	
@@ -27,21 +27,27 @@ window.addEvent('domready', function() {
 	
 	//compute for each option
 	$("onsite_adult_double").addEvent('change', function(){
-		$("onsite_adult_double_total").innerHTML = ($("onsite_adult_double").value * 172.00).toFixed(2);
+		$("onsite_adult_double_total").innerHTML = ($("onsite_adult_double").value * 230.00).toFixed(2);
 		computeRegistration();
 	});
 	
 	$("onsite_adult_single").addEvent('change', function(){
-		$("onsite_adult_single_total").innerHTML = ($("onsite_adult_single").value * 232.00).toFixed(2);
+		$("onsite_adult_single_total").innerHTML = ($("onsite_adult_single").value * 275.00).toFixed(2);
 		computeRegistration();
 	});
 	
 	$("onsite_college").addEvent('change', function(){
-		$("onsite_college_total").innerHTML = ($("onsite_college").value * 125.00).toFixed(2);
+		$("onsite_college_total").innerHTML = ($("onsite_college").value * 150.00).toFixed(2);
 		computeRegistration();
 	});
 	
 	$("onsite_teens").addEvent('change', function(){
+		computeChildren();
+		computeChildCount();
+		computeRegistration();
+	});
+	
+	$("onsite_children_2").addEvent('change', function(){
 		computeChildren();
 		computeChildCount();
 		computeRegistration();
@@ -57,152 +63,26 @@ window.addEvent('domready', function() {
 		computeChildCount();
 	});
 	
-	$("partial_adult_one").addEvent('change', function(){
-		$("partial_adult_one_total").innerHTML = ($("partial_adult_one").value * 92.00).toFixed(2);
+	$("transportation").addEvent('change', function(){
+		$("transportation_total").innerHTML = ($("transportation").value * 30.00).toFixed(2);
 		computeRegistration();
 	});
 	
-	$("partial_college_one").addEvent('change', function(){
-		$("partial_college_one_total").innerHTML = ($("partial_college_one").value * 80.00).toFixed(2);
+        // Lunch for ages 13 and up
+	$("lunch").addEvent('change', function(){
+		$("lunch_total").innerHTML = ($("lunch").value * 12.50).toFixed(2);
 		computeRegistration();
 	});
-	
-	$("partial_teens_one").addEvent('change', function(){
-		$("partial_teens_one_total").innerHTML = ($("partial_teens_one").value * 80.00).toFixed(2);
+        
+        // Lunch for ages 3 - 12
+	$("lunch2").addEvent('change', function(){
+		$("lunch2_total").innerHTML = ($("lunch2").value * 8.50).toFixed(2);
 		computeRegistration();
-		computeChildCount();
-	});
-	
-	$("partial_children_one").addEvent('change', function(){
-		$("partial_children_one_total").innerHTML = ($("partial_children_one").value * 45.00).toFixed(2);
-		computeChildCount();
-		computeRegistration();
-	});
-	
-	$("partial_adult_two").addEvent('change', function(){
-		$("partial_adult_two_total").innerHTML = ($("partial_adult_two").value * 125.00).toFixed(2);
-		computeRegistration();
-	});
-	
-	$("partial_college_two").addEvent('change', function(){
-		$("partial_college_two_total").innerHTML = ($("partial_college_two").value * 100.00).toFixed(2);
-		computeRegistration();
-	});
-	
-	$("partial_teens_two").addEvent('change', function(){
-		$("partial_teens_two_total").innerHTML = ($("partial_teens_two").value * 100.00).toFixed(2);
-		computeChildCount();
-		computeRegistration();
-	});
-	
-	$("partial_children_two").addEvent('change', function(){
-		$("partial_children_two_total").innerHTML = ($("partial_children_two").value * 70.00).toFixed(2);
-		computeChildCount();
-		computeRegistration();
-	});
+	});        
 	
 	$("additional_gift").addEvent('change', function(){
 		computeRegistration();
 	});
-	
-	$("partial_meal_one_0").addEvent('change', function(){
-		mealCount(1);
-	});
-	
-	$("partial_meal_one_1").addEvent('change', function(){
-		mealCount(1);
-	});
-	
-	$("partial_meal_one_2").addEvent('change', function(){
-		mealCount(1);
-	});
-	
-	$("partial_meal_one_3").addEvent('change', function(){
-		mealCount(1);
-	});
-	
-	$("partial_meal_one_4").addEvent('change', function(){
-		mealCount(1);
-	});
-	
-	$("partial_meal_one_5").addEvent('change', function(){
-		mealCount(1);
-	});
-	
-	$("partial_meal_one_6").addEvent('change', function(){
-		mealCount(1);
-	});
-	
-	$("partial_meal_one_7").addEvent('change', function(){
-		mealCount(1);
-	});
-	
-	$("partial_meal_two_0").addEvent('change', function(){
-		mealCount(2);
-	});
-	
-	$("partial_meal_two_1").addEvent('change', function(){
-		mealCount(2);
-	});
-	
-	$("partial_meal_two_2").addEvent('change', function(){
-		mealCount(2);
-	});
-	
-	$("partial_meal_two_3").addEvent('change', function(){
-		mealCount(2);
-	});
-	
-	$("partial_meal_two_4").addEvent('change', function(){
-		mealCount(2);
-	});
-	
-	$("partial_meal_two_5").addEvent('change', function(){
-		mealCount(2);
-	});
-	
-	$("partial_meal_two_6").addEvent('change', function(){
-		mealCount(2);
-	});
-	
-	$("partial_meal_two_7").addEvent('change', function(){
-		mealCount(2);
-	});
-	
-	function mealCount(meal){	
-		var mealOneCtr = 0,	
-		mealTwoCtr = 0;
-		
-		if(meal == 1){
-			if($("partial_meal_one_0").checked){ mealOneCtr++; };
-			if($("partial_meal_one_1").checked){ mealOneCtr++; };
-			if($("partial_meal_one_2").checked){ mealOneCtr++; };
-			if($("partial_meal_one_3").checked){ mealOneCtr++; };
-			if($("partial_meal_one_4").checked){ mealOneCtr++; };
-			if($("partial_meal_one_5").checked){ mealOneCtr++; };
-			if($("partial_meal_one_6").checked){ mealOneCtr++; };
-			if($("partial_meal_one_7").checked){ mealOneCtr++; };
-			
-			if(mealOneCtr > 4){
-				alert("You have selected more than four meals.");
-			};
-		}else{
-			if($("partial_meal_two_0").checked){ mealTwoCtr++; };
-			if($("partial_meal_two_1").checked){ mealTwoCtr++; };
-			if($("partial_meal_two_2").checked){ mealTwoCtr++; };
-			if($("partial_meal_two_3").checked){ mealTwoCtr++; };
-			if($("partial_meal_two_4").checked){ mealTwoCtr++; };
-			if($("partial_meal_two_5").checked){ mealTwoCtr++; };
-			if($("partial_meal_two_6").checked){ mealTwoCtr++; };
-			if($("partial_meal_two_7").checked){ mealTwoCtr++; };
-			
-			if(mealTwoCtr > 6){
-				alert("You have selected more than six meals.");
-			};
-		};
-	};
-	
-	
 	
 	function computeRegistration(){
 		var totalRegistration = 0;
@@ -212,16 +92,12 @@ window.addEvent('domready', function() {
 		totalRegistration += parseFloat($("onsite_college_total").innerHTML);
 		totalRegistration += parseFloat($("onsite_teens_total").innerHTML);
 		totalRegistration += parseFloat($("onsite_children_total").innerHTML);
+		totalRegistration += parseFloat($("onsite_children_2_total").innerHTML);
 		
-		totalRegistration += parseFloat($("partial_adult_one_total").innerHTML);
-		totalRegistration += parseFloat($("partial_college_one_total").innerHTML);
-		totalRegistration += parseFloat($("partial_teens_one_total").innerHTML);
-		totalRegistration += parseFloat($("partial_children_one_total").innerHTML);
-		
-		totalRegistration += parseFloat($("partial_adult_two_total").innerHTML);
-		totalRegistration += parseFloat($("partial_college_two_total").innerHTML);
-		totalRegistration += parseFloat($("partial_teens_two_total").innerHTML);
-		totalRegistration += parseFloat($("partial_children_two_total").innerHTML);
+		totalRegistration += parseFloat($("transportation_total").innerHTML);
+		totalRegistration += parseFloat($("lunch_total").innerHTML);
+                
+                totalRegistration += parseFloat($("lunch2_total").innerHTML); // Lunch for ages 3 - 12
 		
 		$("registration_fees_label").innerHTML = (totalRegistration).toFixed(2);
 		$("total_reg_fee").value = (totalRegistration).toFixed(2);
@@ -263,18 +139,30 @@ window.addEvent('domready', function() {
 		
 		if($("onsite_teens").value >= remainingChild){
 			//compute only for 3 teens
-			$("onsite_teens_total").innerHTML = (3 * 125.00).toFixed(2);
+			$("onsite_teens_total").innerHTML = (3 * 150.00).toFixed(2);
+			$("onsite_children_2_total").innerHTML = "0.00";
 			$("onsite_children_total").innerHTML = "0.00";
 		}else{
 			//teen is less than 3, compute for teen and check for children count
-			$("onsite_teens_total").innerHTML = ($("onsite_teens").value * 125.00).toFixed(2);
+			$("onsite_teens_total").innerHTML = ($("onsite_teens").value * 150.00).toFixed(2);
 			
 			remainingChild -= $("onsite_teens").value;
-			if($("onsite_children").value >= remainingChild){
-				//children is greater than remaining child, compute only for the remaining child
-				$("onsite_children_total").innerHTML = (remainingChild * 115.00).toFixed(2);
+			if($("onsite_children_2").value >= remainingChild){
+				//children 2 is greater than remaining child, compute only for the remaining child
+				$("onsite_children_2_total").innerHTML = (remainingChild * 75.00).toFixed(2);
+				$("onsite_children_total").innerHTML = "0.00";
 			}else{
-				$("onsite_children_total").innerHTML = ($("onsite_children").value * 115.00).toFixed(2);
+				//children 2 is less than remaining child, compute for children 2 and check for children
+				$("onsite_children_2_total").innerHTML = ($("onsite_children_2").value * 75.00).toFixed(2);
+				
+				remainingChild -= $("onsite_children_2").value;
+				if($("onsite_children").value >= remainingChild){
+					//children is greater than remaining child, compute for remaining child
+					$("onsite_children_total").innerHTML = (remainingChild * 40.00).toFixed(2);
+				}else{
+					//compute for children
+					$("onsite_children_total").innerHTML = ($("onsite_children").value * 40.00).toFixed(2);
+				}
 			}
 		}
 	};
@@ -283,12 +171,9 @@ window.addEvent('domready', function() {
 		//compute for the number of children needed for children info
 		var childCount = 0;
 		childCount += parseInt($("onsite_teens").value);
+		childCount += parseInt($("onsite_children_2").value);
 		childCount += parseInt($("onsite_children").value);
 		childCount += parseInt($("onsite_infant").value);
-		childCount += parseInt($("partial_teens_one").value);
-		childCount += parseInt($("partial_children_one").value);
-		childCount += parseInt($("partial_teens_two").value);
-		childCount += parseInt($("partial_children_two").value);
 		
 		//display child info based on child count
 		switch(childCount)
