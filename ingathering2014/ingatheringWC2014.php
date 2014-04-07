@@ -219,8 +219,9 @@ There will be (indicate number of children):</p>
 </div>
 
 <!-- Off-site registration -->
-<p><strong>Off-site Registration Only (overnight lodging not included)</strong><br />
-<em>Only fill this section out if you are not staying at Mission Springs. Meals are already included in the On-site full registration for those staying at Mission Springs</em>.</p>
+<p style="background-color:yellow;"><strong>Off-site Registration Only (overnight lodging not included)</strong><br />
+    <em>Only fill this section out if you are not staying at Mission Springs. Meals are already included in the On-site full registration for those staying at Mission Springs</em>.
+</p>
 <div style="background-color:#F7F7F7; padding-left:5px;">
 <p><em>There will be (indicate number of persons for each day/meal):</em></p>
 <div class="" id="partial_adult_container_div" style=""><label for="partial_adult" style="display:none;">Adults</label>
