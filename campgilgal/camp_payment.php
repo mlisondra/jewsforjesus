@@ -1,6 +1,7 @@
 <?php
 $event = strtolower($_GET['event']);
 $uid = $_GET['ref'];
+$ref = strtolower($_GET['ref']);
 
 //initialize variables
 $tablename = '';
@@ -132,34 +133,28 @@ function make_full_payment(){
     </tr>
     <tr>
     	<td><strong>I am Jewish:</strong></td>
-        <td><?php 
+        <td>
+        <?php 
 
-			if($registrationDetails[heritage] == 'Jewish'){
-				echo 'Yes';
-			}else{
-				echo 'No';
-			}?></td>
+        if($registrationDetails[heritage] == 'Jewish'){
+                echo 'Yes';
+        }else{
+                echo 'No';
+        }?>
+        </td>
     </tr>
     <tr>
     	<td><strong>I believe in Jesus:</strong></td>
-
-
-        <td><?php 
-			if($registrationDetails[belief] == 'Do believe in Jesus' || $registrationDetails[belief] == 'Believe in Jesus'){
-				echo 'Yes';
-			}else{
-				echo 'No';
-			}?></td>
+        <td>
+            <?php 
+                if($registrationDetails[belief] == 'Do believe in Jesus' || $registrationDetails[belief] == 'Believe in Jesus'){
+                    echo 'Yes';
+                }else{
+                    echo 'No';
+                }
+            ?>
+        </td>
     </tr>
-
-<!--
-    <tr>
-    	<td><strong>Total Registration Fee:</strong></td>
-        <td>$<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></td>
-
-
-    </tr>
-	-->
     <tr>
     	<td><strong>Total Paid:</strong></td>
         <td>$<?php echo number_format($registrationDetails[CurrentPayment],2,'.', '');?></td>
@@ -168,15 +163,15 @@ function make_full_payment(){
     	<td><strong>Remaining Camp Balance:</strong></td>
         <td>$<?php echo number_format($balance,2,'.', '');?></td>
     </tr>	
-    <?php if($event != 'evgilgal'){?>
-<!--
+    <?php if($ref != 'email'){?>
     <tr>
     	<td><strong>Additional Gift:</strong></td>
         <td>$<?php echo number_format($registrationDetails[additional_gift],2,'.', '');?></td>
-
-
     </tr>
-	-->
+    <tr>
+    	<td><strong>Total Deposit:</strong></td>
+        <td>$<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></td>
+    </tr>    
     <?php }?>
 
     
@@ -201,16 +196,9 @@ if($event == 'evgilgal'){ ?>
 <?php }else{ ?>
 
 <ul>
-	<?php
-	if($registrationDetails[CurrentPayment] == 0){
-	?>
-    <li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay total camp balance of $<?php echo number_format($balance,2,'.', '');?></a> 
-	<input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
-    <?php }else{ ?>
-	<li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay total remaining camp balance of $<?php echo number_format($balance,2,'.', '');?></a> 
-	<input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
-	<?php } ?>
-	<li><strong>Option 2:</strong> Pay the amount of $&nbsp;
-	<input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;<input id="make_payment" type="button" value="Make Payment" onclick="takePayment()" /></li>
+    <li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay total remaining camp balance of $<?php echo number_format($balance,2,'.', '');?></a> 
+        <input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
+    <li><strong>Option 2:</strong> Pay the amount of $&nbsp;
+        <input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;<input id="make_payment" type="button" value="Make Payment" onclick="takePayment()" /></li>
 </ul>
 <?php }?>
