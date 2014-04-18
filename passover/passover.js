@@ -1,15 +1,25 @@
 window.addEvent('domready', function() {
 
+    $$('.notification').hide(); // Make sure the notification is not viewable
+    
 	var banquet_location = getParameterByName("location"); // retrieve url param for location
 	var given_location = "";
-	
+	var closed_banquets = ["Los Angeles"]; // array to hold banquet locations which are closed; make sure to comment out the location in variable 'events_locations'
+        
 	if(banquet_location != ""){
+            if(closed_banquets.indexOf(banquet_location) == -1){
 		for(i = 0; i < events_locations.length; i++){
 			if(events_locations[i].city == banquet_location){
 				given_location = events_locations[i].location;
 			}
 		}
 		change_location_info(given_location);
+            }else{
+                var message = "Registration for the " + banquet_location + " banquet is now closed.";
+                $$('.notification').setStyle('color','red');
+                $$('.notification').set('html',message);
+                $$('.notification').show();
+            }
 	}
 	
 	// Selection binding for number of adults attending
@@ -24,6 +34,7 @@ window.addEvent('domready', function() {
 
 	// Selection binding for location attending
 	$('location').addEvent('change',function(){
+            $$('.notification').hide();
 		change_location_info($(this).value);
 		calc_total_fees(); // recalculate total registration fee
 	});
@@ -120,7 +131,7 @@ window.addEvent('domready', function() {
 			"admin_phone":"(954) 616-5050",
 			"pdf":"http://www.jewsforjesus.org/files/Passover2014/FLPassoverBanquetflyer.pdf"
         },
-        {
+       /* {
             "when":"Monday, April 14, 2014, 6:30 P.M",
             "venue":"The Olympic Collection Banquet and Conference Center",
             "address":"11301 Olympic Blvd. West, Los Angeles, CA 90064",
@@ -138,7 +149,7 @@ window.addEvent('domready', function() {
 			"admin_phone":"(310) 637-7424",
 			"pdf":"http://www.jewsforjesus.org/files/Passover2014/LAPassoverBanquetflyer.pdf"
 			
-        },
+        },*/
         {
             "when":"Monday, April 21, 2014, 6:30 P.M.",
             "venue":"Valley Baptist Church",
