@@ -1,7 +1,7 @@
 <?php
 $event = strtolower($_GET['event']);
 $uid = $_GET['ref'];
-$ref = strtolower($_GET['ref']);
+$source = strtolower($_GET['source']);
 
 //initialize variables
 $tablename = '';
@@ -133,18 +133,18 @@ function make_full_payment(){
     </tr>
     <tr>
     	<td><strong>I am Jewish:</strong></td>
-        <td>
-        <?php 
+        <td><?php 
 
-        if($registrationDetails[heritage] == 'Jewish'){
-                echo 'Yes';
-        }else{
-                echo 'No';
-        }?>
-        </td>
+			if($registrationDetails[heritage] == 'Jewish'){
+				echo 'Yes';
+			}else{
+				echo 'No';
+			}?></td>
     </tr>
     <tr>
     	<td><strong>I believe in Jesus:</strong></td>
+
+
         <td>
             <?php 
                 if($registrationDetails[belief] == 'Do believe in Jesus' || $registrationDetails[belief] == 'Believe in Jesus'){
@@ -155,25 +155,52 @@ function make_full_payment(){
             ?>
         </td>
     </tr>
-    <tr>
-    	<td><strong>Total Paid:</strong></td>
-        <td>$<?php echo number_format($registrationDetails[CurrentPayment],2,'.', '');?></td>
-    </tr>		
-    <tr>
-    	<td><strong>Remaining Camp Balance:</strong></td>
-        <td>$<?php echo number_format($balance,2,'.', '');?></td>
-    </tr>	
-    <?php if($ref != 'email'){?>
-    <tr>
-    	<td><strong>Additional Gift:</strong></td>
-        <td>$<?php echo number_format($registrationDetails[additional_gift],2,'.', '');?></td>
-    </tr>
+	
+    <?php if($source != 'email'){// Displayed immediately after registration submitted ?>
     <tr>
     	<td><strong>Total Deposit:</strong></td>
         <td>$<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></td>
+    </tr>
+    <tr>
+    	<td><strong>Total Camp Balance:</strong></td>
+        <td>$<?php echo number_format($registrationDetails[total_camp_fee],2,'.', '');?></td>
+    </tr>
+    <tr>
+    	<td><strong>Additional Gift:</strong></td>
+        <td>$<?php echo number_format($registrationDetails[additional_gift],2,'.', '');?></td>
     </tr>    
-    <?php }?>
-
+   
+    <tr><td colspan="2">
+        <h2>Payment Amount</h2>
+        <p>If you have not made arrangements for payment, you may pay online by selecting an option below.</p>
+        <ul>
+            <li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay Deposit and Additional Gift amount of $<?php echo number_format($balance,2,'.', '');?></a> 
+                <input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
+            <li><strong>Option 2:</strong> Pay the amount of $&nbsp;
+                <input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;<input id="make_payment" type="button" value="Make Payment" onclick="takePayment()" /></li>
+        </ul>
+    </td></tr>
+    <?php }else{ // Only displayed when user comes from email ?>
+    <?php $total_paid = $registrationDetails[total_camp_fee] - $registrationDetails[CurrentPayment]; ?>
+    <tr>
+    	<td><strong>Total Paid:</strong></td>
+        <td>$<?php echo number_format($total_paid,2,'.', '');?></td>
+    </tr>
+    <tr>
+    	<td><strong>Remaining Camp Balance:</strong></td>
+        <td>$<?php echo number_format($balance,2,'.', '');?></td>
+    </tr> 
+    <tr><td colspan="2">
+        <h2>Make a Payment</h2>
+        <p>If you have not made arrangements for payment, you may pay online by selecting an option below.</p>
+        <ul>
+            <li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay total remaining camp balance of $<?php echo number_format($balance,2,'.', '');?></a> 
+                <input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
+            <li><strong>Option 2:</strong> Pay the amount of $&nbsp;
+                <input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;<input id="make_payment" type="button" value="Make Payment" onclick="takePayment()" /></li>
+        </ul>
+    </td></tr>
+    <?php } ?>
     
 </table>
 <input type="hidden" value="<?php echo $registrationDetails[CurrentPayment];?>" id="partialPayment" />
