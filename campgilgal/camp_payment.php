@@ -204,28 +204,3 @@ function make_full_payment(){
     
 </table>
 <input type="hidden" value="<?php echo $registrationDetails[CurrentPayment];?>" id="partialPayment" />
-
-<h2>Make a Payment</h2>
-
-
-<?php
-
-if($event == 'evgilgal'){ ?>
-<p>The next step is to make a deposit of $<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?>. You can do this by:</p>
-
-<ul>
-	<li><a href="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>"><strong>Paying online</strong></a></li>
-
-
-    <li><strong>Writing a check. Make it payable to Jews for Jesus</strong> and in the memo section write, "Camp Gilgal payment." Mail it to: Jews for Jesus, 60 Haight Street, San Francisco, CA 94102-5895.</li>
-    <li>Any questions? Call Cricket – Kathy Nichols at (415) 864-2600, ext. 1153.</li>
-</ul>	
-<?php }else{ ?>
-
-<ul>
-    <li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay total remaining camp balance of $<?php echo number_format($balance,2,'.', '');?></a> 
-        <input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
-    <li><strong>Option 2:</strong> Pay the amount of $&nbsp;
-        <input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;<input id="make_payment" type="button" value="Make Payment" onclick="takePayment()" /></li>
-</ul>
-<?php }?>
