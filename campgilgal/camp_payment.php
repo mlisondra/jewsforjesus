@@ -79,7 +79,6 @@ function isNumberKey(evt){
 }
 
 function make_full_payment(){
-    //eventPayment = 'https://store.jewsforjesus.org/index.php/event_payment/?event_type=' + eventID + '&uid=' + recordID + '&amount=' + totalPayment.toString();
     eventPayment = 'https://store.jewsforjesus.org/index.php/event_payment/?event_type=' + eventID + '&uid=' + recordID + '&amount=' + <?php echo $balance; ?>;
     window.location = eventPayment;
 }
@@ -174,9 +173,9 @@ function make_full_payment(){
         <h2>Payment Amount</h2>
         <p>If you have not made arrangements for payment, you may pay online by selecting an option below.</p>
         <ul>
-            <li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay Deposit and Additional Gift amount of $<?php echo number_format($balance,2,'.', '');?></a> 
+            <li><a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay the amount, including my Additional Gift, of $<?php echo number_format($balance,2,'.', '');?></a> 
                 <input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
-            <li><strong>Option 2:</strong> Pay the amount of $&nbsp;
+            <li>Pay the amount of $&nbsp;
                 <input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;<input id="make_payment" type="button" value="Make Payment" onclick="takePayment()" /></li>
         </ul>
     </td></tr>
