@@ -1,7 +1,7 @@
 <?php
 
 $mysqli = new mysqli("localhost", "admin_root", "jfjweb777", "admin_thatjew");
-$sql = "SELECT * FROM export_data WHERE exported = 0 AND `jesus_belief` = 'No' LIMIT 500";
+$sql = "SELECT * FROM export_data WHERE exported = 0 AND `jesus_belief` = 'Yes' LIMIT 500";
 $result = $mysqli->query($sql);
 
 // Check that that records exist
@@ -47,7 +47,7 @@ if($result->num_rows > 0){
 			$missionary_code = 'issues ISSUES fund';
 		}
 		$data_string = "Individual," . $title . ",";
-		$data_string .= $r->first_name . ',' . ',' . $r->last_name . ',,United States,"' . $r->address1 . '",' . $r->city . ',' . $r->state . ',' . $r->zip . ',';
+		$data_string .= $r->first_name . "," . "," . $r->last_name . ",,United States," . $r->address1 . "," . $r->city . "," . $r->state . "," . $r->zip . ",";
 		$data_string .= $phone_type . "," . $phone . "," . $primary1 . ",General E-Mail," . $r->email . "," . $contact_code .",STNETTJDFY," . $missionary_code. "," . '"' .$r->comments. '",' . $solicit_code . "," . $submitted_date . "," . $comments ;     
 		$data_string .= "\r\n";
 		fwrite($file_handler,$data_string);
@@ -61,8 +61,7 @@ if($result->num_rows > 0){
 	// create string of ids
 	$ids_list = "'".implode("','",$ids_array) . "'";
 	// update db for exported records
-        $exported_datetime = date("Y-m-d H:i:s",time());
-	$query = "UPDATE export_data SET exported = 1, exported_datetime = '" . $exported_datetime . "' WHERE id IN (".$ids_list.")";
+	$query = "UPDATE export_data SET exported = 1 WHERE id IN (".$ids_list.")";
 	$mysqli->query($query);
 	print 'Exported data created';
 	send_notification($filename);
@@ -81,14 +80,13 @@ function send_notification($filename = ''){
 		$attachment = '/home/admin/public_html/maintenance/' . $filename;
 	}
 	
-	$mail->From = 'web@jewsforjesus.org';
+	$mail->From = 'admin@jewsforjesus.org';
 	$mail->FromName = 'TJDFY Submissions Export';
-	$mail->addAddress('michael.butcher@jewsforjesus.org', 'Michael Butcher');  // Add a recipient
-	$mail->addCC('don.walker@jewsforjesus.org','Don Walker'); // Add cc recipient
+	$mail->addAddress('milder.lisondra@jewsforjesus.org', 'Milder Lisondra');  // Add a recipient
 	//$mail->addAddress('ellen@example.com');               // Name is optional
 	//$mail->addReplyTo('info@example.com', 'Information');
 	//$mail->addCC('cc@example.com');
-	$mail->addBCC('milder.lisondra@jewsforjesus.org');
+	//$mail->addBCC('bcc@example.com');
 	
 	$mail->WordWrap = 50; // Set word wrap to 50 characters
 	$mail->addAttachment($attachment);         // Add attachments
