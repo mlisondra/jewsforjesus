@@ -1,7 +1,6 @@
 <?php
 $event = strtolower($_GET['event']);
 $uid = $_GET['ref'];
-$source = strtolower($_GET['source']);
 
 //initialize variables
 $tablename = '';
@@ -63,7 +62,7 @@ function takePayment(){
             alert("Please specify the amount");
     }else{
             totalPayment = parseInt($("partialPayment").value) + parseInt($("payment_amount").value);
-            eventPayment = '<?php echo $paymenturl; ?>';
+            eventPayment = '<?php echo $paymenturl; ?>' + '&amount=' + totalPayment;
             window.location = eventPayment;
     }
 }
@@ -79,6 +78,7 @@ function isNumberKey(evt){
 }
 
 function make_full_payment(){
+    //eventPayment = 'https://store.jewsforjesus.org/index.php/event_payment/?event_type=' + eventID + '&uid=' + recordID + '&amount=' + totalPayment.toString();
     eventPayment = 'https://store.jewsforjesus.org/index.php/event_payment/?event_type=' + eventID + '&uid=' + recordID + '&amount=' + <?php echo $balance; ?>;
     window.location = eventPayment;
 }
@@ -144,62 +144,73 @@ function make_full_payment(){
     	<td><strong>I believe in Jesus:</strong></td>
 
 
-        <td>
-            <?php 
-                if($registrationDetails[belief] == 'Do believe in Jesus' || $registrationDetails[belief] == 'Believe in Jesus'){
-                    echo 'Yes';
-                }else{
-                    echo 'No';
-                }
-            ?>
-        </td>
+        <td><?php 
+			if($registrationDetails[belief] == 'Do believe in Jesus' || $registrationDetails[belief] == 'Believe in Jesus'){
+				echo 'Yes';
+			}else{
+				echo 'No';
+			}?></td>
     </tr>
-	
-    <?php if($source != 'email'){// Displayed immediately after registration submitted ?>
+
+<!--
     <tr>
-    	<td><strong>Total Deposit:</strong></td>
+    	<td><strong>Total Registration Fee:</strong></td>
         <td>$<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?></td>
+
+
     </tr>
-    <tr>
-    	<td><strong>Total Camp Balance:</strong></td>
-        <td>$<?php echo number_format($registrationDetails[total_camp_fee],2,'.', '');?></td>
-    </tr>
-    <tr>
-    	<td><strong>Additional Gift:</strong></td>
-        <td>$<?php echo number_format($registrationDetails[additional_gift],2,'.', '');?></td>
-    </tr>    
-   
-    <tr><td colspan="2">
-        <h2>Payment Amount</h2>
-        <p>If you have not made arrangements for payment, you may pay online by selecting an option below.</p>
-        <ul>
-            <li><a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay the amount, including my Additional Gift, of $<?php echo number_format($balance,2,'.', '');?></a> 
-                <input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
-            <li>Pay the amount of $&nbsp;
-                <input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;<input id="make_payment" type="button" value="Make Payment" onclick="takePayment()" /></li>
-        </ul>
-    </td></tr>
-    <?php }else{ // Only displayed when user comes from email ?>
-    <?php $total_paid = $registrationDetails[total_camp_fee] - $registrationDetails[CurrentPayment]; ?>
+	-->
     <tr>
     	<td><strong>Total Paid:</strong></td>
-        <td>$<?php echo number_format($total_paid,2,'.', '');?></td>
-    </tr>
+        <td>$<?php echo number_format($registrationDetails[CurrentPayment],2,'.', '');?></td>
+    </tr>		
     <tr>
     	<td><strong>Remaining Camp Balance:</strong></td>
         <td>$<?php echo number_format($balance,2,'.', '');?></td>
-    </tr> 
-    <tr><td colspan="2">
-        <h2>Make a Payment</h2>
-        <p>If you have not made arrangements for payment, you may pay online by selecting an option below.</p>
-        <ul>
-            <li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay total remaining camp balance of $<?php echo number_format($balance,2,'.', '');?></a> 
-                <input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
-            <li><strong>Option 2:</strong> Pay the amount of $&nbsp;
-                <input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;<input id="make_payment" type="button" value="Make Payment" onclick="takePayment()" /></li>
-        </ul>
-    </td></tr>
-    <?php } ?>
+    </tr>	
+    <?php if($event != 'evgilgal'){?>
+<!--
+    <tr>
+    	<td><strong>Additional Gift:</strong></td>
+        <td>$<?php echo number_format($registrationDetails[additional_gift],2,'.', '');?></td>
+
+
+    </tr>
+	-->
+    <?php }?>
+
     
 </table>
 <input type="hidden" value="<?php echo $registrationDetails[CurrentPayment];?>" id="partialPayment" />
+
+<h2>Make a Payment</h2>
+
+
+<?php
+
+if($event == 'evgilgal'){ ?>
+<p>The next step is to make a deposit of $<?php echo number_format($registrationDetails[total_reg_fee],2,'.', '');?>. You can do this by:</p>
+
+<ul>
+	<li><a href="<?php echo $paymenturl;?>&amount=<?php echo $registrationDetails[total_reg_fee];?>"><strong>Paying online</strong></a></li>
+
+
+    <li><strong>Writing a check. Make it payable to Jews for Jesus</strong> and in the memo section write, "Camp Gilgal payment." Mail it to: Jews for Jesus, 60 Haight Street, San Francisco, CA 94102-5895.</li>
+    <li>Any questions? Call Cricket – Kathy Nichols at (415) 864-2600, ext. 1153.</li>
+</ul>	
+<?php }else{ ?>
+
+<ul>
+	<?php
+	if($registrationDetails[CurrentPayment] == 0){
+	?>
+    <li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay total camp balance of $<?php echo number_format($balance,2,'.', '');?></a> 
+	<input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
+    <?php }else{ ?>
+	<li><strong>Option 1:</strong> <a href="<?php echo $paymenturl;?>&amount=<?php echo $balance;?>">Pay total remaining camp balance of $<?php echo number_format($balance,2,'.', '');?></a> 
+	<input id="make_payment" type="button" value="Make Payment" onclick="make_full_payment()" /></li>
+	<?php } ?>
+	<li><strong>Option 2:</strong> Pay the amount of $&nbsp;
+	<input id="payment_amount" size="6" value="" type="text" onkeypress="return isNumberKey(event)" />&nbsp;<input id="make_payment" type="button" value="Make Payment" onclick="takePayment()" /></li>
+</ul>
+<?php }?>   
