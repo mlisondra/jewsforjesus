@@ -22,7 +22,10 @@
 <strong>Theme:</strong> &quot;He appeared...&quot; — Genesis 18:1a
 </blockquote>
 <div style="background-color:#79BAEC; font-weight:bold">ABOUT YOU</div>
-<div style="color:#FF0000; font-weight:bold"><p>*Starred fields are required.</p></div><div class="ccms_form_element cfdiv_text" id="fname_container_div" style=""><label for="fname">First Name*</label><input id="fname" maxlength="150" size="30" class=" validate['required']" title="" type="text" value="" name="fname" />
+<div style="color:#FF0000; font-weight:bold"><p>*Starred fields are required.</p></div>
+    <div class="ccms_form_element cfdiv_text" id="fname_container_div" style="">
+        <label for="fname">First Name*</label>
+        <input id="fname" maxlength="150" size="30" class=" validate['required']" title="" type="text" value="" name="fname" />
 <div class="clear"></div><div id="error-message-fname"></div></div><div class="ccms_form_element cfdiv_text" id="spouse_name_container_div" style=""><label for="spouse_name">Spouse Name</label><input id="spouse_name" maxlength="150" size="30" class="" title="" type="text" value="" name="spouse_name" />
 <div class="clear"></div><div id="error-message-spouse_name"></div></div><div class="ccms_form_element cfdiv_text" id="lname_container_div" style=""><label for="lname">Last Name*</label><input id="lname" maxlength="150" size="30" class=" validate['required']" title="" type="text" value="" name="lname" />
 <div class="clear"></div><div id="error-message-lname"></div></div><div class="ccms_form_element cfdiv_text" id="address_1_container_div" style=""><label for="address_1">Address*</label><input id="address_1" maxlength="150" size="30" class=" validate['required']" title="" type="text" value="" name="address_1" />

@@ -1,5 +1,13 @@
 window.addEvent('domready', function() {
 	
+        $('submit').addEvent('click', function(e) { 
+            e.stop();
+            if($('onsite_adult_deluxe_double').get('value') == 0){
+                alert('no');                
+                return false;
+            }
+            
+        });
 	//early bird discount check
 	var discountDate = new Date('08-29-2014'),
 	currentDate = new Date(),
